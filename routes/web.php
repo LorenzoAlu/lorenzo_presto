@@ -28,4 +28,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
  //ROTTE LOGGATE
 Route::middleware([Authenticate::class])->group(function(){
 Route::get('/announcements/create', [AnnouncementController::class, 'create'])->name('announcements.create');
+Route::post('/announcements/store', [AnnouncementController::class, 'store'])->name('announcements.store');
 });

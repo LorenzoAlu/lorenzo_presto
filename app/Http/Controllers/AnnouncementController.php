@@ -33,9 +33,10 @@ class AnnouncementController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Announcement $announcement)
     {
-        //
+        return redirect(route('home'))->with('message', "L'annuncio $announcement->title è stato creato con successo");
+
     }
 
     /**
