@@ -1,6 +1,12 @@
 <?php
 
+
+
+use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +19,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Auth::routes();
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+ //ROTTE LOGGATE
+Route::middleware([Authenticate::class])->group(function(){
+Route::get('/announcements/create', [AnnouncementController::class, 'create'])->name('announcements.create');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
