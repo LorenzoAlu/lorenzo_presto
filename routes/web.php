@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AnnouncementController;
 
 /*
@@ -23,6 +24,8 @@ use App\Http\Controllers\AnnouncementController;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/categories/{category}/index', [CategoryController::class, 'index'])->name('categories.index');
 
 
  //ROTTE LOGGATE
