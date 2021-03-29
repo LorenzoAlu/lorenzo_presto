@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class AnnouncementRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'title' => 'min:3 | max:20 | required',
+            'body' => 'min:3 | max:300 | required',
+            'price' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Il titolo è obbligatorio',
+            'title.min' => 'Il titolo deve contenere almeno 3 caratteri',
+            'title.max' => 'Il titolo deve contenere meno di 20 caratteri',
+            'body.required' => 'La descrizione è obbligatoria',
+            'body.min' => 'La descrizione deve contenere almeno 3 caratteri',
+            'body.max' => 'La descrizione deve contenere meno di 300 caratteri',
+            'price.required' => 'Il prezzo è obbligatorio'
+        ];
+    }
+}
