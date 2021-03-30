@@ -2,18 +2,16 @@
 
 @section('content')
 
-<div class="container">
+<div class="container my-5">
     <div class="row text-center">
         <div class="col-12">
             <h2>{{$announcement->title}}</h2>
-            <h3>{{$announcement->body}}</h3>
-            <p>{{$announcement->price}}</p>
         </div>
     </div>
 </div>
 
 
-<div class="container">
+<div class="container my-5">
     <div class="row">
         
         <div class="col-12 col-md-6">
@@ -55,11 +53,9 @@
 
         </div>
 
-        </div>
-
         <div class="col-12 col-md-6">
-            <h2>lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magnam tenetur quae sint esse nostrum, ullam, quod non molestias voluptas asperiores possimus? Quo, nobis excepturi eaque nisi totam aut nemo.</p>
+            <h3>{{$announcement->body}}</h3>
+            <p>{{$announcement->price}}</p>
         </div>
 
     </div>

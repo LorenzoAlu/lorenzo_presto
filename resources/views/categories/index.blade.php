@@ -16,7 +16,7 @@
                 price="{{$announcement->price}}"
                 user="{{$announcement->user->name}}"
                 route="{{route('categories.index', $announcement->category)}}"
-                body="{{$announcement->body}}"
+                
                 date="{{$announcement->created_at->format('d/m/Y')}}"
                 category="{{$announcement->category->name}}"
                 show="{{route('announcements.show', $announcement)}}"
