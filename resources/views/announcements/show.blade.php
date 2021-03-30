@@ -54,8 +54,9 @@
         </div>
 
         <div class="col-12 col-md-6">
-            <h3>{{$announcement->body}}</h3>
-            <p>{{$announcement->price}}</p>
+            <h3>{{$announcement->price}} €</h3>
+            <p>{{$announcement->body}}</p>
+            
         </div>
 
     </div>
