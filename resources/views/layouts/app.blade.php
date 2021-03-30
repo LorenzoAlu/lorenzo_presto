@@ -11,6 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/2af1bb5c84.js" crossorigin="anonymous"></script>
+    
+   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +21,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  {{--   <link rel="stylesheet" href="../package/swiper-bundle.min.css"> --}}
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
 </head>
 <body>
     <div id="app">
@@ -28,5 +34,8 @@
             @yield('content')
         </main>
     </div>
+
+
+
 </body>
 </html>

@@ -7,6 +7,6 @@
       <p class="card-text">{{$user}}</p>
       <p class="card-text">{{$body}}</p>
       <small class="card-text">{{$date}}</small>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="{{$show}}" class="btn btn-primary">Go somewhere</a>
     </div>
 </div>

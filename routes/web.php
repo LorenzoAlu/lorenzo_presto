@@ -24,9 +24,8 @@ use App\Http\Controllers\AnnouncementController;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
 Route::get('/categories/{category}/index', [CategoryController::class, 'index'])->name('categories.index');
-
+Route::get('/announcements/{announcement}/show', [AnnouncementController::class, 'show'])->name('announcements.show');
 
  //ROTTE LOGGATE
 Route::middleware([Authenticate::class])->group(function(){
