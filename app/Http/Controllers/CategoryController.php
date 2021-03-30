@@ -12,9 +12,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Category $category)
     {
-        //
+        $announcements = $category->announcements()->orderBy('id', 'desc')->paginate(5);
+        return view('categories.index', compact('announcements', 'category'));
     }
 
     /**

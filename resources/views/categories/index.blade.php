@@ -1,17 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row mb-3">
-        <div class="col-12 d-flex justify-content-between">
-            @foreach ($categories as $category)
-            <a href="{{route('categories.index', $category)}}">{{$category->name}}</a>
-            @endforeach
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2>Tutti gli articoli della categoria {{$category->name}}</h2>
         </div>
     </div>
-</div>
-
-<div class="container mt-5">
     <div class="row">
         
             @foreach ($announcements as $announcement)
@@ -29,7 +24,8 @@
             </div>
             @endforeach
             
-        
+        {{$announcements->links()}}
     </div>
 </div>
+    
 @endsection

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
 {
@@ -33,8 +35,16 @@ class AnnouncementController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AnnouncementRequest $request)
     {
+        $announcement = Announcement::create([
+            'title' => $request->input('title'),
+            'body' => $request->input('body'),
+            'category_id' => $request->input('category_id'),
+            'user_id' => Auth::id(),
+            'price' => $request->input('price')
+        ]);
+        return redirect(route('home'))->with('message', "L'annuncio $announcement->title è stato creato con successo");
 
     }
 
