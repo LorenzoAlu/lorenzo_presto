@@ -1,0 +1,441 @@
+// // HEADER
+
+// * {
+//   font-family: 'Montserrat', sans-serif;
+// }
+
+// :root {
+//   --main-color:#c3c3c3;
+//   --accent-color: #FF8983;
+//   --text-color: #ACABB9;
+//   --second-color: #1A0F91;
+// }
+
+// body {
+//    overflow-x:hidden;
+// }
+// .text-main-color {
+//   color: var(--main-color);
+// }
+// .text-second-color {
+//   color: var(--second-color);
+// }
+// .text-accent-color {
+//   color: var(--accent-color)
+// }
+// body {
+//   margin: 0px;
+// }
+// h1 {
+//    font-weight: 600;
+// }
+// .fw-600 {
+//   font-weight: 600;
+// }
+// .bg-img1 {
+//   /* width: 100%;
+//   height: 100vh; */
+//   /* width: 1920px; */
+//   height: 1080px;
+//   background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia_Tavola\ disegno\ 1\ copia.jpg');
+//   background-size: cover;
+//   background-position: center;
+// }
+// .text-decoration-none {
+//    text-decoration: none;
+// }
+
+// .font-size25 {
+//   font-size: 25px;
+// }
+// .btn1 {
+//   width: 150px;
+//   height: 50px;
+//   border-radius: 30px;
+//   border: 2px solid white;
+//   background-color: transparent;
+// }
+
+// .btn2 {
+//   width: 180px;
+//   height: 70px;
+//   border-radius: 40px;
+//   border: none;
+//   background-color: var(--accent-color)
+// }
+
+// .btn1:hover {
+//   border: none;
+//   background-color: var(--accent-color);
+// }
+// .bg-img2 {
+//   background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   /* width: 1920px; */
+//   height: 1080px;
+// }
+// .bg-img3 {
+//   background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-06.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   /* width: 100%;
+//   height: 100vh; */
+//   /* width: 1920px; */
+//   height: 1080px;
+// }
+
+// // CAROUSEL VISTA
+
+// .swiper-container {
+//     width: 100%;
+//     height: 300px;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+
+//   .swiper-slide {
+//     background-size: cover;
+//     background-position: center;
+//   }
+
+//   .gallery-top {
+//     height: 80%;
+//     width: 100%;
+//   }
+
+//   .gallery-thumbs {
+//     height: 20%;
+//     box-sizing: border-box;
+//     padding: 10px 0;
+//   }
+
+//   .gallery-thumbs .swiper-slide {
+//     height: 100%;
+//     opacity: 0.4;
+//   }
+
+//   .gallery-thumbs .swiper-slide-thumb-active {
+//     opacity: 1;
+//   }
+
+
+// 
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --main-color:#c3c3c3;
+  --accent-color: #FF8983;
+  --text-color: #ACABB9;
+  --second-color: #1A0F91;
+}
+
+body {
+   overflow-x:hidden;
+}
+.text-main-color {
+  color: var(--main-color);
+}
+.text-second-color {
+  color: var(--second-color);
+}
+.text-accent-color {
+  color: var(--accent-color)
+}
+body {
+  margin: 0px;
+}
+h1 {
+   font-weight: 600;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.bg-img1 {
+
+  height: 1080px;
+  background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia_Tavola\ disegno\ 1\ copia.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.text-decoration-none {
+   text-decoration: none;
+}
+
+.font-size25 {
+  font-size: 25px;
+}
+.btn1 {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.btn2 {
+  width: 180px;
+  height: 70px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--accent-color)
+}
+
+.btn1:hover {
+  border: none;
+  background-color: var(--accent-color);
+}
+.bg-img2 {
+  background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 1080px;
+}
+.bg-img3 {
+  background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-06.jpg');
+  background-size: cover;
+  background-position: center;
+ 
+  height: 1080px;
+}
+
+.bg-gradient-footer {
+  background: linear-gradient(90deg, #7E75FC,#7E76FC, #8487FB, #8998FB ,#91B3FA)
+}
+.bg-gradient-navbar {
+  background: linear-gradient(270deg, #7E75FC,#7E76FC, #8487FB, #8998FB ,#91B3FA)
+}
+.ps100 {
+  padding-left: 100px;
+}
+
+
+.text-align-end {
+  text-align: end;
+}
+
+.font-size20 {
+  font-size: 20px;
+}
+
+
+.position-custom-lg {
+  position: relative;
+  top: -40px;
+}
+.position-custom {
+  position: relative;
+  top: -10px;
+}
+
+
+.a-hover {
+  font-size: 25px;
+}
+.a-hover:hover {
+  font-size: 30px;
+}
+.h-75 {
+  height: 75%;
+}
+.btn3 {
+  width: 200px;
+  height: 70px;
+  border-radius: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.btn3:hover {
+  width: 210px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: transparent;
+}
+.btn3:hover a {
+ color: var(--main-color);
+ font-size: 25px;
+}
+.second-color {
+  color: var(--second-color);
+}
+.line-height40 {
+  line-height: 40px;
+}
+.card-prodotto {
+  width: 350px;
+  height: 500px;
+  border-radius: 50px;
+  box-shadow: 20px 20px 20px #b7c1c2 !important;
+}
+.line-height35 {
+  line-height: 35px;
+}
+.border-radius-custom {
+  border-radius: 30px;
+}
+.img-1 {
+  width: 300px;
+  height: 250px;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media screen and (max-width: 1676px) {
+  .new-bg1 {
+      background-image: url('/media/layout-md-8_Tavola\ disegno\ 1\ copia\ 2.jpg');
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+  }
+  .bg-new2 {
+      background-image: url('/media/layout-md-9-09.jpg');
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+  }
+  .bg-img3 {
+      background-image: none;
+  }
+}  
+
+.outline-transition-none {
+  outline: none !important;
+  transition: none !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.btn-info {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: var(--accent-color);
+  border: none;
+}
+.btn-info:hover {
+  background-color:var(--accent-color)!important;
+}
+.swiper-container {
+  height: 600px;
+}
+.position-custom2 {
+  position: relative;
+  top: -150px;
+}
+.swiper-button-next::after {
+font-family: "Font Awesome 5 Free"; 
+font-weight: 600;
+content: "\f054";
+font-size: 25px;
+}
+.swiper-button-next {
+  color: white;
+  text-shadow: 5px 5px 10px grey;
+  right: 0px;
+}
+.swiper-button-next:hover {
+  zoom: 110%;
+}
+
+.swiper-button-prev::after {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 600;
+  content: "\f053";
+  font-size: 25px;
+  }
+  .swiper-button-prev {
+      color: white;
+      text-shadow: 5px 5px 10px grey;
+      left: 0px;
+  }
+  .swiper-button-prev:hover {
+      zoom: 110%;
+  }
+
+@media screen and (min-width: 1676px) {
+  .img-new {
+      display: none !important;
+  }
+  .text-lg-white {
+      color: white; 
+  }
+  .w-lg-75 {
+      width: 75% !important;
+  }
+  .ms-xl-200 {
+      margin-left: 200px;
+  }
+
+  
+}
+@media screen and (min-width: 1400px) {
+  .swiper-container {
+      width: 1400px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .swiper-container {
+      width: 1000px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bg-img1 , .bg-img2 , .bg-lg-img3 {
+      height: auto;
+  } 
+  .d-md-hidden {
+      visibility: hidden;
+  }
+  .swiper-container {
+      width: 100%; 
+  }
+  .position-custom2 {
+      position: relative;
+      top: 40px;
+  }
+
+}
+@media screen and (min-width: 992px) {
+  .ps-lg-100 {
+      padding-left: 100px;
+  }
+  .mt-100 {
+      margin-top: 100px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .line-height60 {
+      line-height: 60px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .display-none {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-prodotto {
+      width: 300px;
+      box-shadow: 20px 20px 10px #b7c1c2 !important;
+
+  }
+  .img-1 {
+      width: 260px;
+  }
+  .swiper-button-next {
+      display: none
+  }
+  .swiper-button-prev {
+      display: none
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+}

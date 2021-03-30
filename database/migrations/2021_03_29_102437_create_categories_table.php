@@ -24,12 +24,14 @@ class CreateCategoriesTable extends Migration
         $categories = [
             'Motori',
             'Elettronica',
-            'Immobili',
+            'Letteratura',
             'Arredamento',
             'Musica',
             'Cinema',
             'Abbigliamento',
-            'Animali'
+            'Animali',
+            'Giochi',
+            'Sport'
         ];
 
         foreach($categories as $category){
