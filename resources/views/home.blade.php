@@ -4,6 +4,13 @@
 
 <header>
     <div class="container-fluid bg-img1 new-bg1">
+        <div class="row mb-3">
+            <div class="col-12 d-flex justify-content-around">
+                @foreach ($categories as $category)
+                <a class="a-category" href="{{route('categories.index', $category)}}">{{$category->name}}</a>
+                @endforeach
+            </div>
+        </div>
         {{-- <div class="row justify-content-between">
         </div> --}}
         <div class="row h-75 align-items-center justify-content-around">
@@ -21,27 +28,18 @@
     </div>
 </header>
 
-<div class="container">
-    <div class="row mb-3">
-        <div class="col-12 d-flex justify-content-between">
-            @foreach ($categories as $category)
-            <a href="{{route('categories.index', $category)}}">{{$category->name}}</a>
-            @endforeach
-        </div>
-    </div>
-</div>
-
 <div class="container mt-5">
+    @if (count($announcements) > 0)
     <div class="row">
         
             @foreach ($announcements as $announcement)
-            <div class="col-12 col-md-4 my-3">
+            <div class="col-12 col-md-4 my-5 p-5">
                 <x-card 
                 title="{{$announcement->title}}"
                 price="{{$announcement->price}}"
                 user="{{$announcement->user->name}}"
                 route="{{route('categories.index', $announcement->category)}}"
-                body="{{$announcement->body}}"
+                
                 date="{{$announcement->created_at->format('d/m/Y')}}"
                 category="{{$announcement->category->name}}"
                 show="{{route('announcements.show', $announcement)}}"
@@ -52,5 +50,12 @@
             
         
     </div>
+    @else
+    <div class="row">
+        <div class="col-12 my-5">
+            <h3 class="text-center">Non ci sono ancora articoli</h3>
+        </div>
+    </div>
+    @endif
 </div>
 @endsection

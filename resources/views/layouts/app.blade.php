@@ -33,6 +33,8 @@
         <main>
             @yield('content')
         </main>
+
+        <x-footer/>
     </div>
 
 
