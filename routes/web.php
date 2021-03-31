@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\RevisorController;
+use App\Http\Middleware\RevisorMiddleware;
+use Whoops\Run;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +35,11 @@ Route::middleware([Authenticate::class])->group(function(){
 Route::get('/announcements/create', [AnnouncementController::class, 'create'])->name('announcements.create');
 Route::post('/announcements/store', [AnnouncementController::class, 'store'])->name('announcements.store');
 });
+
+//ROUTE REVISOR
+Route::middleware([RevisorMiddleware::class])->group(function(){
+    Route::get('/revisors/dashboard', [RevisorController::class, 'revisorDashboard'])->name('revisors.dashboard');
+    Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept');
+    Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
+    });
+    

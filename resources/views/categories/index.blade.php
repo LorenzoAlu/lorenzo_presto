@@ -11,23 +11,19 @@
         </div>
     </div>
     <div class="row">
-        
         @foreach ($announcements as $announcement)
         <div class="col-12 col-md-4 my-5 p-5">
             <x-card 
             title="{{$announcement->title}}"
             price="{{$announcement->price}}"
             user="{{$announcement->user->name}}"
-            route="{{route('categories.index', $announcement->category)}}"
-            
+            route="{{route('categories.index', $announcement->category)}}"  
             date="{{$announcement->created_at->format('d/m/Y')}}"
             category="{{$announcement->category->name}}"
-            show="{{route('announcements.show', $announcement)}}"
-                
+            show="{{route('announcements.show', $announcement)}}"     
             />
         </div>
-        @endforeach
-            
+        @endforeach 
         {{$announcements->links()}}
         @endif
     </div>

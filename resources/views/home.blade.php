@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <header>
     <div class="container-fluid bg-img1 new-bg1">
         <div class="row mb-3">
@@ -27,11 +26,20 @@
         </div>
     </div>
 </header>
+@if (session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
+@if (session('negato'))
+    <div class="alert alert-danger">
+        {{ session('negato') }}
+    </div>
+@endif
 
 <div class="container mt-5">
     @if (count($announcements) > 0)
     <div class="row">
-        
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-4 my-5 p-5">
                 <x-card 
@@ -39,16 +47,12 @@
                 price="{{$announcement->price}}"
                 user="{{$announcement->user->name}}"
                 route="{{route('categories.index', $announcement->category)}}"
-                
                 date="{{$announcement->created_at->format('d/m/Y')}}"
                 category="{{$announcement->category->name}}"
-                show="{{route('announcements.show', $announcement)}}"
-                    
+                show="{{route('announcements.show', $announcement)}}"       
                 />
             </div>
             @endforeach
-            
-        
     </div>
     @else
     <div class="row">
