@@ -23,7 +23,7 @@
                     <div class="col-12 col-sm-6 col-lg-3 text-center text-sm-start">
                         <ul class="list-unstyled mt-5">
                             <li><a class="text-white text-decoration-none line-height40" href="">Chi siamo</a></li>
-                            <li><a class="text-white text-decoration-none line-height40" href="">Lavora con noi</a></li>
+                            <li><a class="text-white text-decoration-none line-height40" href="{{route('contacts.workWithUsPage')}}">Lavora con noi</a></li>
                             <li><a class="text-white text-decoration-none line-height40" href="">Sostenibilità</a></li>
                             <li><a class="text-white text-decoration-none line-height40" href="">Magazine</a></li>
                             <li><a class="text-white text-decoration-none line-height40" href="">Infojobs</a></li>

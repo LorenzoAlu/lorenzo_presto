@@ -15,7 +15,7 @@
                   @csrf
                     <div class="mb-3">
                       <label for="title" class="form-label">Titolo</label>
-                      <input required value="{{old('title')}}" autofocus name="title" type="text" class="form-control" id="title" aria-describedby="title">
+                      <input placeholder="Inserisci qui il titolo del tuo annuncio" required value="{{old('title')}}" autofocus name="title" type="text" class="form-control" id="title" aria-describedby="title">
                       @error('title')
                             <div class="alert background-accent d-inline-block my-3 text-dark text-uppercase">
                                 {{ $message }}</div>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="mb-3">
                       <label for="price" class="form-label">Prezzo</label>
-                      <input required autofocus name="price" type="number" min="0" value="{{old('price')}}" step=".01" class="form-control" id="price" aria-describedby="price">
+                      <input placeholder="Inserisci qui il prezzo del tuo annuncio" required autofocus name="price" type="number" min="0" value="{{old('price')}}" step=".01" class="form-control" id="price" aria-describedby="price">
                       @error('price')
                             <div class="alert background-accent d-inline-block my-3 text-dark text-uppercase">
                                 {{ $message }}</div>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="mb-3">
                       <label for="descrizione" class="form-label">Descrizione</label>
-                      <textarea required autofocus class="form-control" name="body" id="descrizione" cols="30" rows="10">{{old('body')}}</textarea>
+                      <textarea placeholder="Inserisci qui la descrizione del tuo annuncio" required autofocus class="form-control" name="body" id="descrizione" cols="30" rows="10">{{old('body')}}</textarea>
                       @error('body')
                             <div class="alert background-accent d-inline-block my-3 text-dark text-uppercase">
                                 {{ $message }}</div>
