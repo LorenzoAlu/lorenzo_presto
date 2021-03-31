@@ -39,5 +39,7 @@ Route::post('/announcements/store', [AnnouncementController::class, 'store'])->n
 //ROUTE REVISOR
 Route::middleware([RevisorMiddleware::class])->group(function(){
     Route::get('/revisors/dashboard', [RevisorController::class, 'revisorDashboard'])->name('revisors.dashboard');
+    Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.accept');
+    Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
     });
     

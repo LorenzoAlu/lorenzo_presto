@@ -29,7 +29,17 @@
                     </button>
                 @endif
             @else
-
+                <div class="d-flex">
+                @if(Auth::user() && Auth::user()->is_revisor)
+                <div class="nav-item d-inline">
+                    <a class="nav-link" href="{{route('revisors.dashboard')}}">
+                        Revisore
+                        <span class="badge badge-pill badge-warning">
+                            {{App\Models\Announcement::ToBeRevisionedCount()}}
+                        </span>
+                    </a>
+                </div>
+                @endif
                 <div class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -46,8 +56,12 @@
                             @csrf
                         </form>
                     </div>
+                    
+                </div>
                 </div>
             @endguest
+            {{-- qui --}}
+           
         </div>
 
         <div class="navbar-collapse collapse" id="navbarsExample01" style="">
