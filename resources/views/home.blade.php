@@ -31,6 +31,11 @@
         {{ session('message') }}
     </div>
 @endif
+@if (session('negato'))
+    <div class="alert alert-danger">
+        {{ session('negato') }}
+    </div>
+@endif
 
 <div class="container mt-5">
     @if (count($announcements) > 0)
