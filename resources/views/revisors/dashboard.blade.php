@@ -4,7 +4,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+@if($announcement != null)
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12">
@@ -86,7 +86,14 @@
         </div>
     </div>
 </div>
-
-
+@else
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>Non sono presenti annunci da rivisionare</h2>
+        </div>
+    </div>
+</div>
+@endif
 
 @endsection

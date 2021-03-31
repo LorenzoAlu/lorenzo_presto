@@ -5,6 +5,7 @@
     <div class="container-fluid bg-img1 new-bg1">
         <div class="row mb-3">
             <div class="col-12 d-flex justify-content-around">
+                <a class="a-category" href="{{route('announcements.index')}}">Tutti gli articoli</a>
                 @foreach ($categories as $category)
                 <a class="a-category" href="{{route('categories.index', $category)}}">{{$category->name}}</a>
                 @endforeach

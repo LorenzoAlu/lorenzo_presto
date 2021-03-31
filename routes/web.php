@@ -29,6 +29,7 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/categories/{category}/index', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('/announcements/{announcement}/show', [AnnouncementController::class, 'show'])->name('announcements.show');
+Route::get('/announcements/index', [AnnouncementController::class, 'index'])->name('announcements.index');
 
  //ROTTE LOGGATE
 Route::middleware([Authenticate::class])->group(function(){
