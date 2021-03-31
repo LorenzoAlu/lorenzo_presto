@@ -27,6 +27,11 @@
         </div>
     </div>
 </header>
+@if (session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
 
 <div class="container mt-5">
     @if (count($announcements) > 0)
