@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index(Category $category)
     {
-        $announcements = $category->announcements()->orderBy('id', 'desc')->paginate(5);
+        $announcements = $category->announcements()->where('is_accepted', true)->orderBy('id', 'desc')->paginate(5);
         return view('categories.index', compact('announcements', 'category'));
     }
 

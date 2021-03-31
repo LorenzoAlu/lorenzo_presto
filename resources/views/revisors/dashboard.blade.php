@@ -69,23 +69,47 @@
     </div>
     <div class="row justify-content-center mt-5">
         <div class="col-12 col-md-6">
-            <form action="{{route('revisor.reject', $announcement->id)}}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-danger">
-                    Reject
-                </button>
-            </form>
+            
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Rifiuta
+                  </button>
+                  
+                
+            
         </div>
         <div class="col-12 col-md-6">
             <form action="{{route('revisor.accept', $announcement->id)}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-success">
-                    Accept
+                    Accetta
                 </button>
             </form>
         </div>
     </div>
 </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Elimina annuncio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Sei sicuro?
+        </div>
+        <div class="modal-footer">
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <form action="{{route('revisor.reject', $announcement->id)}}" method="POST">
+              @csrf
+            <button type="submit" class="btn btn-danger">
+              Sì
+          </button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
 @else
 <div class="container-fluid">
     <div class="row">
@@ -96,4 +120,29 @@
 </div>
 @endif
 
+{{-- <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Elimina annuncio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Sei sicuro?</p>
+        </div>
+        <div class="modal-footer">
+            
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <form action="{{route('revisor.reject', $announcement->id)}}" method="POST">
+            @csrf
+          <button type="submit" class="btn btn-danger">
+            Sì
+        </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> --}}
+
+  
 @endsection
