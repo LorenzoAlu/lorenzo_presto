@@ -10876,10 +10876,6 @@ textarea.form-control-lg {
   --second-color: #1A0F91;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .text-main-color {
   color: var(--main-color);
 }
@@ -10894,6 +10890,8 @@ body {
 
 body {
   margin: 0px;
+  background-color: white;
+  overflow-x: hidden;
 }
 
 h1, .h1 {
@@ -11005,23 +11003,33 @@ a {
 }
 
 .btn3 {
-  width: 200px;
-  height: 70px;
+  height: 60px;
   border-radius: 40px;
   background-color: transparent;
   border: none;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
 }
 
 .btn3:hover {
-  width: 210px;
-  height: 80px;
+  height: 70px;
   border-radius: 40px;
   background-color: transparent;
 }
 
 .btn3:hover a {
   color: var(--main-color);
-  font-size: 25px;
+  font-size: 22px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-position-search {
+  position: relative;
+  right: 40px;
+}
+
+.input-shadow:focus {
+  box-shadow: none !important;
 }
 
 .second-color {
@@ -11179,7 +11187,7 @@ a {
 }
 
 .card-shadow {
-  box-shadow: 10px 10px 10px rgba(189, 189, 189, 0.842);
+  box-shadow: 7px 7px 15px rgba(189, 189, 189, 0.842);
 }
 
 .btn-card {
@@ -11189,4 +11197,13 @@ a {
 
 .btn-card a {
   color: #fefefe;
+}
+
+.form-custom {
+  border-radius: 40px;
+  box-shadow: 7px 7px 15px rgba(189, 189, 189, 0.842);
+}
+
+.input-shadow-form:focus {
+  box-shadow: 0px 0px 8px var(--text-color) !important;
 }
