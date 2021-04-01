@@ -51,6 +51,15 @@
                     </button>
                 </div>
                 @endif
+                @if(Auth::user() && Auth::user()->is_admin)
+                <div class="nav-item d-inline">
+                    <button class="btn1 shadow me-5 text-white">
+                    <a class="text-white" href="{{route('admin.dashboard')}}">
+                        Admin
+                    </a>
+                    </button>
+                </div>
+                @endif
                 <div class="nav-item dropdown">
                     <button class="btn1 shadow me-5 text-white">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
