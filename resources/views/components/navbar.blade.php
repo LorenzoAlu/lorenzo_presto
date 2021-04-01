@@ -13,10 +13,15 @@
             <a class="text-decoration-none" href="{{route('announcements.create')}}"> 
                 <h3 class="mb-0 ps-5 d-none d-md-block font-size20 fw-light text-white"> Aggiungi annuncio </h3></a>
         </div>
+
+        {{-- BARRA DI RICERCA --}}
+
         <form class="d-flex" action="{{route('announcements.search')}}" method="GET">
-            <input type="text" name="q" placeholder="cerca annunci">
-            <button type="submit"> <i class="fas fa-search"></i> </button>
+            <input class="form-control btn bg-white rounded-pill input-shadow" type="text" name="q" placeholder="cerca annunci">
+            <button class="btn btn-card rounded-pill input-shadow btn-position-search" type="submit"> <i class="fas fa-search text-white"></i> </button>
         </form>
+
+    
         <div class="px-5 py-5 d-none d-md-block">
             <!-- Authentication Links -->
             @guest
@@ -36,20 +41,23 @@
                 <div class="d-flex">
                 @if(Auth::user() && Auth::user()->is_revisor)
                 <div class="nav-item d-inline">
-                    <a class="nav-link" href="{{route('revisors.dashboard')}}">
+                    <button class="btn1 shadow me-5 text-white">
+                    <a class="text-white" href="{{route('revisors.dashboard')}}">
                         Revisore
-                        <span class="badge badge-pill badge-warning">
+                        <span class="badge rounded-pill">
                             {{App\Models\Announcement::ToBeRevisionedCount()}}
                         </span>
                     </a>
+                    </button>
                 </div>
                 @endif
                 <div class="nav-item dropdown">
+                    <button class="btn1 shadow me-5 text-white">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
-
+                    
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
@@ -60,7 +68,7 @@
                             @csrf
                         </form>
                     </div>
-                    
+                    </button>
                 </div>
                 </div>
             @endguest

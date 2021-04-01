@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center mt-5 text-center">
             <div class="col-12 col-md-6">
-                Ricerca per parola chiave: {{$q}}
+                <h2>Risultati di ricerca per: {{$q}}</h2>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
 
         <div class="row">
             @foreach ($announcements as $announcement)
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4 my-5 p-5">
                 <x-card 
                 title="{{$announcement->title}}"
                 price="{{$announcement->price}}"
