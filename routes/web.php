@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SearchController;
 use App\Http\Middleware\RevisorMiddleware;
 use App\Http\Controllers\ContactController;
@@ -49,3 +51,14 @@ Route::middleware([RevisorMiddleware::class])->group(function(){
     Route::post('/revisor/announcement/{id}/reject', [RevisorController::class, 'reject'])->name('revisor.reject');
     });
     
+
+
+    
+//ROUTE ADMIN
+Route::middleware([AdminMiddleware::class])->group(function(){
+    Route::get('/admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/users/{user}/toggle', [AdminController::class, 'toggleUser'])->name('users.toggle');
+    Route::delete('/users/{user}/destroy', [AdminController::class, 'destroyUser'])->name('users.destroy');
+    Route::get('/users/{user}/toggleUserDisable', [AdminController::class, 'toggleUserDisable'])->name('users.toggleUserDisable');
+
+});
