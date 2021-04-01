@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SearchController;
 use App\Http\Middleware\RevisorMiddleware;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RevisorController;
@@ -31,6 +32,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/categories/{category}/index', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('/announcements/{announcement}/show', [AnnouncementController::class, 'show'])->name('announcements.show');
 Route::get('/announcements/index', [AnnouncementController::class, 'index'])->name('announcements.index');
+Route::get('/announcements/search', [SearchController::class,'search'])->name('announcements.search');
 
  //ROTTE LOGGATE
 Route::middleware([Authenticate::class])->group(function(){

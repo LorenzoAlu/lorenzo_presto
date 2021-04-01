@@ -13,6 +13,10 @@
             <a class="text-decoration-none" href="{{route('announcements.create')}}"> 
                 <h3 class="mb-0 ps-5 d-none d-md-block font-size20 fw-light text-white"> Aggiungi annuncio </h3></a>
         </div>
+        <form class="d-flex" action="{{route('announcements.search')}}" method="GET">
+            <input type="text" name="q" placeholder="cerca annunci">
+            <button type="submit"> <i class="fas fa-search"></i> </button>
+        </form>
         <div class="px-5 py-5 d-none d-md-block">
             <!-- Authentication Links -->
             @guest
