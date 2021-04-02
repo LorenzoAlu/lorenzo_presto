@@ -55,14 +55,14 @@
     {{-- seconda parte della home --}}
     
     <section>
-        <div class="container-fluid bg-img2 bg-new2 ">
+        <div class="container-fluid bg-img2 bg-new2">
             <div class="row align-items-start mb-5 h-30">
                 <!-- DESCRIZIONE PRESTO.IT -->
                 <div class="col-12 d-flex justify-content-center">
                     <p class="font-size20 text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-3"> <span class="fs-2"> <b>Presto.it </b></span> è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti.</p>
                 </div>
             </div>
-            <div class="row pt-5 mt-lg-100  h-50">
+            <div class="row pt-lg-5 mt-lg-100  h-50">
                 <!-- ICONE SOCIAL AL LATO -->
                 <div class="col-12 col-xxl-2 d-flex flex-xxl-column justify-content-evenly  align-items-center mt-5 pt-5 display-none d-md-hidden">
                     <a href=""><i class="fab fa-facebook-square a-hover shadow  text-second-color text-lg-white"></i></a>
@@ -74,9 +74,9 @@
                 
                 <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  align-items-center mt-5 pt-5">
                     <div class="row justify-content-end text-center">
-                        
-                        <button class="btn btn2 w-25 shadow fw-bold fs-5 mx-auto mb-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">Tutti gli annunci</a></button>
-                        <h3 class="lead fw-bold mb-3">Leggi gli annunci per categoria</h3>
+                        <div>
+                        <button class="btn btn2 shadow fw-bold fs-5 mx-auto mb-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">Tutti gli annunci</a></button>
+                        </div>
                         @foreach ($categories as $category)
                         <div class="col-12 col-md-6 col-xxl-4 text-end">
                             <button class="btn btn3 w-75 shadow me-5 my-3">
@@ -111,12 +111,14 @@
         
         
     </section>
-    
-    <div class="container mt-5">
+
+    {{-- SEZIONE 3  --}}
+    <section class="bg-img3"> 
+    <div class="container pt-5">
         @if (count($announcements) > 0)
         <div class="row">
             @foreach ($announcements as $announcement)
-            <div class="col-12 col-md-4 my-5 p-5">
+            <div class="col-12 col-md-6 col-xl-4 mb-5 p-5">
                 <x-card 
                 title="{{$announcement->title}}"
                 price="{{$announcement->price}}"
@@ -137,6 +139,7 @@
         </div>
         @endif
     </div>
+{{-- </section> --}}
     
     
     
