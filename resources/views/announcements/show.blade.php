@@ -3,11 +3,21 @@
 @section('content')
 
 <div class="container my-5">
-    <div class="row text-center">
+    <div class="row text-center justify-content-center">
         <div class="col-12">
             <h2>{{$announcement->title}}</h2>
         </div>
+
+        <div class="col-12 col-md-6 mt-4">
+            @if (session('message'))
+                    <div class="alert alert-success-mail rounded-pill text-center">
+                          {{ session('message') }}
+                    </div>
+            @endif
+        </div>
+
     </div>
+
 </div>
 
 
@@ -62,8 +72,28 @@
                   </button>
             </p>
             <div class="collapse" id="contatta">
-                <div class="card card-body">
-                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+
+                <div class="col-10 bg-white p-5 form-custom">
+                        
+                    <form method="POST" action="{{route('contacts.contactSeller', $announcement)}}">
+                      @csrf
+                      @if(Auth::user() != null)
+                        <div class="mb-3 d-none">
+                          <label for="name" class="form-label">Nome</label>
+                          <input placeholder="{{Auth::user()->name}}" required value="{{Auth::user()->name}}" autofocus name="name" type="text" class="form-control input-shadow-form rounded-pill" id="name" aria-describedby="name">
+                        </div>
+                        <div class="mb-3 d-none">
+                          <label for="email" class="form-label">Email</label>
+                          <input required autofocus name="email" type="email" placeholder="{{Auth::user()->email}}" value="{{Auth::user()->email}}" class="form-control input-shadow-form rounded-pill" id="email" aria-describedby="email">
+                        </div>
+                        @endif
+                        <div class="mb-3">
+                          <label for="body" class="form-label">Contatta l'utente: {{$announcement->user->name}}</label>
+                          <textarea placeholder="Inserisci qui le tue motivazioni" required autofocus class="form-control input-shadow-form" name="body" id="body" cols="12" rows="5">{{$announcement->body}}</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-card rounded-pill text-white">Invia</button>
+                    </form>
+        
                 </div>
             </div>
             
