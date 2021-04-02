@@ -4,7 +4,7 @@
 
 {{-- prima parte della home --}}
 <header>
-
+    
     <div class="container-fluid bg-img1 new-bg1">
         <div class="row justify-content-center m-0">
             <div class="col-12 col-md-6 ">
@@ -32,13 +32,13 @@
             {{-- <div class="row justify-content-between">
             </div> --}}
             <div class="row h-75 align-items-center justify-content-around">
-                <div class="col-12 col-lg-6 ps-lg-100 my-5 text-center text-lg-start pt-md-5">
+                <div class="col-12 col-lg-6 col-xxl-4 ps-lg-100 my-5 text-center text-lg-start pt-md-5">
                     <h3 class="font-size25 text-white fw-light mb-3">Lorem Ipsum sit Facet</h3>
                     <h2 class= "text-white display-3 fw-bold mb-5">Cerchi usato <br> a prezzi <br> vantaggiosi?</h2>
                     {{-- <button class="btn2 shadow my-5 text-white font-size25" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="text-decoration-none" href="{{route('announcements.create')}}"> <h2 class="mb-0 font-size25 text-white">Inizia</h2></a>
                     </button> --}}
-                    <form class="d-flex" action="{{route('announcements.search')}}" method="GET">
+                    <form class="d-flex " action="{{route('announcements.search')}}" method="GET">
                         <input class="form-control btn bg-white rounded-pill input-shadow home-search" type="text" name="q" placeholder="cerca annunci">
                         <button class="btn btn-card rounded-pill input-shadow btn-position-search home-search" type="submit"> <i class="fas fa-search text-white"></i> </button>
                     </form>
@@ -71,11 +71,12 @@
                 </div>
                 <!-- BOTTONI CATEGORIE  -->
                 
-              
+                
                 <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  align-items-center mt-5 pt-5">
-                    <div class="row justify-content-end">
+                    <div class="row justify-content-end text-center">
                         
-                        <h3 class="text-center mb-5"><a class="text-decoration-none text-main-color p-3 text-center" href="{{route('announcements.index')}}">Tutti gli articoli</a></h3>
+                        <button class="btn btn2 w-25 shadow fw-bold fs-5 mx-auto mb-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">Tutti gli annunci</a></button>
+                        <h3 class="lead fw-bold mb-3">Leggi gli annunci per categoria</h3>
                         @foreach ($categories as $category)
                         <div class="col-12 col-md-6 col-xxl-4 text-end">
                             <button class="btn btn3 w-75 shadow me-5 my-3">

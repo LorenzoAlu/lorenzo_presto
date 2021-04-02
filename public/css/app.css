@@ -10870,6 +10870,15 @@ h1, .h1 {
   font-weight: 600;
 }
 
+h2, .h2, h3, .h3, h4, .h4 {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+}
+
 .text-align-end {
   text-align: end;
 }
@@ -10886,8 +10895,9 @@ h1, .h1 {
   font-size: 20px;
 }
 
-a {
+* a {
   text-decoration: none !important;
+  color: var(--second-color);
 }
 
 .a-category {
@@ -10948,6 +10958,11 @@ a {
   border-left: 2px solid #dad9d9;
 }
 
+/* .border-search-button{
+  // border-top: 1px solid var(--second-color);
+  // border-bottom: 1px solid var(--second-color);
+  // border-right: 1px solid var(--second-color);
+} */
 .outline-transition-none {
   outline: none !important;
   transition: none !important;
@@ -10995,16 +11010,18 @@ a {
 }
 
 .btn1 {
-  width: 150px;
+  min-width: 150px;
   height: 50px;
   border-radius: 30px;
   border: 2px solid white;
   background-color: transparent;
+  padding: 0px 18px 0px 18px;
 }
 
 .btn1-annuncio {
-  width: 200px;
+  min-width: 150px;
   height: 50px;
+  padding: 0px 18px 0px 18px;
   border-radius: 30px;
   border: 2px solid white;
   background-color: transparent;
@@ -11022,10 +11039,11 @@ a {
 
 .btn2 {
   width: 180px;
-  height: 70px;
+  height: 60px;
   border-radius: 40px;
   border: none;
   background-color: var(--accent-color);
+  padding: 0px 18px 0px 18px;
 }
 
 .btn3 {
@@ -11035,10 +11053,11 @@ a {
   border: none;
   font-size: 20px;
   transition: all 0.3s ease 0s;
+  padding: 0px 18px 0px 18px;
 }
 
 .btn3:hover {
-  height: 70px;
+  height: 60px;
   border-radius: 40px;
   background-color: transparent;
 }
