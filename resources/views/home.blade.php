@@ -9,12 +9,12 @@
         <div class="row justify-content-center m-0">
             <div class="col-12 col-md-6 ">
                 @if (session('message'))
-                <div class="alert alert-success">
+                <div class="alert alert-success-custom rounded-pill text-center">
                     {{ session('message') }}
                 </div>
                 @endif
                 @if (session('negato'))
-                <div class="alert alert-danger">
+                <div class="alert alert-danger-custom rounded-pill text-center">
                     {{ session('negato') }}
                 </div>
                 @endif
@@ -34,10 +34,14 @@
             <div class="row h-75 align-items-center justify-content-around">
                 <div class="col-12 col-lg-6 ps-lg-100 my-5 text-center text-lg-start pt-md-5">
                     <h3 class="font-size25 text-white fw-light mb-3">Lorem Ipsum sit Facet</h3>
-                    <h2 class= "text-white display-3 fw-bold">Cerchi usato <br> a prezzi <br> vantaggiosi?</h2>
-                    <button class="btn2 shadow my-5 text-white font-size25" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <h2 class= "text-white display-3 fw-bold mb-5">Cerchi usato <br> a prezzi <br> vantaggiosi?</h2>
+                    {{-- <button class="btn2 shadow my-5 text-white font-size25" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="text-decoration-none" href="{{route('announcements.create')}}"> <h2 class="mb-0 font-size25 text-white">Inizia</h2></a>
-                    </button>
+                    </button> --}}
+                    <form class="d-flex" action="{{route('announcements.search')}}" method="GET">
+                        <input class="form-control btn bg-white rounded-pill input-shadow home-search" type="text" name="q" placeholder="cerca annunci">
+                        <button class="btn btn-card rounded-pill input-shadow btn-position-search home-search" type="submit"> <i class="fas fa-search text-white"></i> </button>
+                    </form>
                 </div>
                 <div class="col-12 col-lg-6 mt-3 pt-5 mt-lg-0 pt-lg-0 order-first order-lg-last">
                     <img class="img-new img-fluid mt-5 mt-lg-0 d-block mx-auto" src="/media/tipa1.png" width="700px" alt="">

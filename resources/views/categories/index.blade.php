@@ -2,12 +2,18 @@
 
 @section('content')
 <div class="container mt-5">
-    <div class="row">
+    <div class="row justify-content-center">
         @if (count($announcements) == 0)
-            <p class="text-center fst-italic">Non ci sono ancora articoli per questa categoria.</p>
+            <p class="text-center fst-italic mb-3">Non ci sono ancora articoli per questa categoria.</p>
+            <div class="col-6 mt-3">
+                <x-searchbar></x-searchbar>
+            </div>
         @else
-        <div class="col-12">
+        <div class="col-12 text-center mb-3">
             <h2>Tutti gli articoli della categoria {{$category->name}}</h2>
+        </div>
+        <div class="col-6 mt-3">
+            <x-searchbar></x-searchbar>
         </div>
     </div>
     <div class="row">

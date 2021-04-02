@@ -112,9 +112,9 @@
   </div>
 @else
 <div class="container-fluid">
-    <div class="row">
+    <div class="row my-5">
         <div class="col-12">
-            <h2>Non sono presenti annunci da rivisionare</h2>
+            <h2 class="text-center">Non sono presenti annunci da rivisionare</h2>
         </div>
     </div>
 </div>

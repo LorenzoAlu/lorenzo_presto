@@ -10833,6 +10833,306 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --main-color:#c3c3c3;
+  --accent-color: #FF8983;
+  --text-color: #ACABB9;
+  --second-color: #1A0F91;
+}
+
+.text-main-color {
+  color: var(--main-color);
+}
+
+.text-second-color {
+  color: var(--second-color);
+}
+
+.second-color {
+  color: var(--second-color);
+}
+
+.text-accent-color {
+  color: var(--accent-color);
+}
+
+body {
+  margin: 0px;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+h1, .h1 {
+  font-weight: 600;
+}
+
+.text-align-end {
+  text-align: end;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.font-size25 {
+  font-size: 25px;
+}
+
+.font-size20 {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.a-category {
+  color: white;
+}
+
+.a-hover {
+  font-size: 25px;
+  transition: 0.4s;
+}
+
+.a-hover:hover {
+  font-size: 30px;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.ps100 {
+  padding-left: 100px;
+}
+
+.position-custom-lg {
+  position: relative;
+  top: -40px;
+}
+
+.position-custom {
+  position: relative;
+  top: -10px;
+}
+
+.position-custom2 {
+  position: relative;
+  top: -150px;
+}
+
+.h-75 {
+  height: 75%;
+}
+
+.line-height40 {
+  line-height: 40px;
+}
+
+.line-height35 {
+  line-height: 35px;
+}
+
+.border-radius-custom {
+  border-radius: 30px;
+}
+
+.border-search-input {
+  border-bottom: 2px solid #dad9d9;
+  border-top: 2px solid #dad9d9;
+  border-left: 2px solid #dad9d9;
+}
+
+.outline-transition-none {
+  outline: none !important;
+  transition: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.bg-img1 {
+  height: 1080px;
+  background-image: url("/media/bg-presto_Tavola disegno 1 copia_Tavola disegno 1 copia.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-img2 {
+  background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 1080px;
+}
+
+.bg-img3 {
+  background-image: url("/media/bg-presto_Tavola disegno 1 copia-06.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 1080px;
+}
+
+.bg-gradient-footer {
+  background: linear-gradient(90deg, #7E75FC, #7E76FC, #8487FB, #8998FB, #91B3FA);
+}
+
+.bg-gradient-navbar {
+  background: linear-gradient(90deg, #8CA4FA, #8CA4FA, #8CA4FA, #8CA4FA, #8CA4FA);
+}
+
+.img-1 {
+  width: 300px;
+  height: 250px;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn1 {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.btn1-annuncio {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.btn1:hover {
+  border: none;
+  background-color: var(--accent-color);
+}
+
+.btn1-annuncio:hover {
+  border: none;
+  background-color: var(--accent-color);
+}
+
+.btn2 {
+  width: 180px;
+  height: 70px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--accent-color);
+}
+
+.btn3 {
+  height: 60px;
+  border-radius: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn3:hover {
+  height: 70px;
+  border-radius: 40px;
+  background-color: transparent;
+}
+
+.btn3:hover a {
+  color: var(--main-color);
+  font-size: 22px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-position-search {
+  position: relative;
+  right: 40px;
+}
+
+.btn-info {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: var(--accent-color) !important;
+}
+
+.input-shadow:focus {
+  box-shadow: none !important;
+}
+
+.home-search {
+  height: 50px;
+}
+
+.card-prodotto {
+  width: 350px;
+  height: 500px;
+  border-radius: 50px;
+  box-shadow: 20px 20px 20px #b7c1c2 !important;
+}
+
+.border-card {
+  border-radius: 40px;
+}
+
+.img-card {
+  width: 100%;
+  height: 200px;
+  background-image: url("http://picsum.photos/1920/1080");
+  background-position: center;
+  background-size: cover;
+  border-radius: 40px;
+}
+
+.card-text {
+  color: var(--second-color);
+  font-size: 10px;
+}
+
+.card-shadow {
+  box-shadow: 7px 7px 15px rgba(189, 189, 189, 0.842);
+}
+
+.btn-card {
+  width: 120px;
+  background-color: var(--accent-color);
+}
+
+.btn-card a {
+  color: #fefefe;
+}
+
+.form-custom {
+  border-radius: 40px;
+  box-shadow: 7px 7px 15px rgba(189, 189, 189, 0.842);
+}
+
+.input-shadow-form:focus {
+  box-shadow: 0px 0px 8px var(--text-color) !important;
+}
+
+.alert-success-custom {
+  color: white;
+  background-color: #4749ef;
+  border: none;
+}
+
+.alert-danger-custom {
+  color: white;
+  background-color: #d64242;
+  border: none;
+}
+
 .swiper-container {
   width: 100%;
   height: 300px;
@@ -10865,204 +11165,6 @@ textarea.form-control-lg {
   opacity: 1;
 }
 
-* {
-  font-family: "Montserrat", sans-serif;
-}
-
-:root {
-  --main-color:#c3c3c3;
-  --accent-color: #FF8983;
-  --text-color: #ACABB9;
-  --second-color: #1A0F91;
-}
-
-.text-main-color {
-  color: var(--main-color);
-}
-
-.text-second-color {
-  color: var(--second-color);
-}
-
-.text-accent-color {
-  color: var(--accent-color);
-}
-
-body {
-  margin: 0px;
-  background-color: white;
-  overflow-x: hidden;
-}
-
-h1, .h1 {
-  font-weight: 600;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-.a-category {
-  color: white;
-}
-
-.fw-600 {
-  font-weight: 600;
-}
-
-.bg-img1 {
-  height: 1080px;
-  background-image: url("/media/bg-presto_Tavola disegno 1 copia_Tavola disegno 1 copia.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.text-decoration-none {
-  text-decoration: none;
-}
-
-.font-size25 {
-  font-size: 25px;
-}
-
-.btn1 {
-  width: 150px;
-  height: 50px;
-  border-radius: 30px;
-  border: 2px solid white;
-  background-color: transparent;
-}
-
-.btn2 {
-  width: 180px;
-  height: 70px;
-  border-radius: 40px;
-  border: none;
-  background-color: var(--accent-color);
-}
-
-.btn1:hover {
-  border: none;
-  background-color: var(--accent-color);
-}
-
-.bg-img2 {
-  background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 1080px;
-}
-
-.bg-img3 {
-  background-image: url("/media/bg-presto_Tavola disegno 1 copia-06.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 1080px;
-}
-
-.bg-gradient-footer {
-  background: linear-gradient(90deg, #7E75FC, #7E76FC, #8487FB, #8998FB, #91B3FA);
-}
-
-.bg-gradient-navbar {
-  background: linear-gradient(90deg, #8CA4FA, #8CA4FA, #8CA4FA, #8CA4FA, #8CA4FA);
-}
-
-.ps100 {
-  padding-left: 100px;
-}
-
-.text-align-end {
-  text-align: end;
-}
-
-.font-size20 {
-  font-size: 20px;
-}
-
-.position-custom-lg {
-  position: relative;
-  top: -40px;
-}
-
-.position-custom {
-  position: relative;
-  top: -10px;
-}
-
-.a-hover {
-  font-size: 25px;
-}
-
-.a-hover:hover {
-  font-size: 30px;
-}
-
-.h-75 {
-  height: 75%;
-}
-
-.btn3 {
-  height: 60px;
-  border-radius: 40px;
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  transition: all 0.3s ease 0s;
-}
-
-.btn3:hover {
-  height: 70px;
-  border-radius: 40px;
-  background-color: transparent;
-}
-
-.btn3:hover a {
-  color: var(--main-color);
-  font-size: 22px;
-  transition: all 0.3s ease 0s;
-}
-
-.btn-position-search {
-  position: relative;
-  right: 40px;
-}
-
-.input-shadow:focus {
-  box-shadow: none !important;
-}
-
-.second-color {
-  color: var(--second-color);
-}
-
-.line-height40 {
-  line-height: 40px;
-}
-
-.card-prodotto {
-  width: 350px;
-  height: 500px;
-  border-radius: 50px;
-  box-shadow: 20px 20px 20px #b7c1c2 !important;
-}
-
-.line-height35 {
-  line-height: 35px;
-}
-
-.border-radius-custom {
-  border-radius: 30px;
-}
-
-.img-1 {
-  width: 300px;
-  height: 250px;
-  border-radius: 50px;
-  background-size: cover;
-  background-position: center;
-}
-
 @media screen and (max-width: 1676px) {
   .new-bg1 {
     background-image: url("/media/layout-md-8_Tavola disegno 1 copia 2.jpg");
@@ -11082,32 +11184,6 @@ a {
     background-image: none;
   }
 }
-.outline-transition-none {
-  outline: none !important;
-  transition: none !important;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none !important;
-}
-
-.btn-info {
-  width: 150px;
-  height: 50px;
-  border-radius: 30px;
-  background-color: var(--accent-color);
-  border: none;
-}
-
-.btn-info:hover {
-  background-color: var(--accent-color) !important;
-}
-
-.position-custom2 {
-  position: relative;
-  top: -150px;
-}
-
 @media screen and (min-width: 1676px) {
   .img-new {
     display: none !important;
@@ -11167,43 +11243,4 @@ a {
   .img-1 {
     width: 260px;
   }
-}
-.border-card {
-  border-radius: 40px;
-}
-
-.img-card {
-  width: 100%;
-  height: 200px;
-  background-image: url("http://picsum.photos/1920/1080");
-  background-position: center;
-  background-size: cover;
-  border-radius: 40px;
-}
-
-.card-text {
-  color: var(--second-color);
-  font-size: 10px;
-}
-
-.card-shadow {
-  box-shadow: 7px 7px 15px rgba(189, 189, 189, 0.842);
-}
-
-.btn-card {
-  width: 120px;
-  background-color: var(--accent-color);
-}
-
-.btn-card a {
-  color: #fefefe;
-}
-
-.form-custom {
-  border-radius: 40px;
-  box-shadow: 7px 7px 15px rgba(189, 189, 189, 0.842);
-}
-
-.input-shadow-form:focus {
-  box-shadow: 0px 0px 8px var(--text-color) !important;
 }

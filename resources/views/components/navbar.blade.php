@@ -10,16 +10,17 @@
             <a class="text-decoration-none" href="{{ route('home') }}">
                 <h1 class="mb-0 font-size25 text-white"> Presto.it </h1>
             </a>
-            <a class="text-decoration-none" href="{{route('announcements.create')}}"> 
-                <h3 class="mb-0 ps-5 d-none d-md-block font-size20 fw-light text-white"> Aggiungi annuncio </h3></a>
+            <button class="btn1-annuncio shadow me-5 text-white d-none d-md-block ms-5">
+                <a class="text-decoration-none text-white" href="{{route('announcements.create')}}">Aggiungi annuncio</a>
+            </button>
         </div>
 
         {{-- BARRA DI RICERCA --}}
 
-        <form class="d-flex" action="{{route('announcements.search')}}" method="GET">
+        {{-- <form class="d-flex" action="{{route('announcements.search')}}" method="GET">
             <input class="form-control btn bg-white rounded-pill input-shadow" type="text" name="q" placeholder="cerca annunci">
             <button class="btn btn-card rounded-pill input-shadow btn-position-search" type="submit"> <i class="fas fa-search text-white"></i> </button>
-        </form>
+        </form> --}}
 
     
         <div class="px-5 py-5 d-none d-md-block">

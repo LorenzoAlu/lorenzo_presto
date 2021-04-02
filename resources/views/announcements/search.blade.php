@@ -8,8 +8,8 @@
         </div>
 
         @if (count($announcements)==0)
-        <div class="row">
-            <h2>Non ci sono articoli</h2>
+        <div class="row my-5 text-center">
+            <h3>Non ci sono articoli</h3>
         </div>
         @else 
 
