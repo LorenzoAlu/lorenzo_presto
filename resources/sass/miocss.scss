@@ -178,11 +178,19 @@ p{
 .ps100 {
   padding-left: 100px;
 }
+.m-150 {
+  margin-top: 150px;
+}
 
 //POSITION
 .position-custom-lg {
   position: relative;
   top: -40px;
+}
+
+.position-custom-xl {
+  position: relative;
+  top: -80px;
 }
 
 .position-custom {
@@ -253,10 +261,10 @@ p{
 
 .bg-img3 {
   background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-06.jpg');
-  background-size: cover;
-  background-position: center;
- 
-  height: 1080px;
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+  // height: 1080px;
 }
 
 .bg-gradient-footer {
@@ -306,7 +314,7 @@ p{
 }
 
 .btn2 {
-  width: 180px;
+  width: 250px;
   height: 60px;
   border-radius: 40px;
   border: none;
@@ -512,6 +520,10 @@ p{
   }
   .mt-100 {
       margin-top: 100px;
+  }
+  .position-custom {
+    position: relative;
+    top: -120px;
   }
 }
 
