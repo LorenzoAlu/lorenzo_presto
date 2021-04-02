@@ -19,14 +19,14 @@
             
             <div class="swiper-container gallery-top">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"> <img src="https://picsum.photos/1920/1082" alt="prodotto"
+                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
-                    <div class="swiper-slide"> <img src="https://picsum.photos/1920/1082" alt="prodotto"
+                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
 
-                    <div class="swiper-slide"> <img src="https://picsum.photos/1920/1082" alt="prodotto"
+                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
-                    <div class="swiper-slide"> <img src="https://picsum.photos/1920/1082" alt="prodotto"
+                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
 
                 </div>
@@ -37,14 +37,14 @@
             <div class="swiper-container gallery-thumbs">
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide"> <img src="https://picsum.photos/1920/1082" alt="prodotto"
+                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
-                    <div class="swiper-slide"> <img src="https://picsum.photos/1920/1082" alt="prodotto"
+                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
 
-                    <div class="swiper-slide"> <img src="https://picsum.photos/1920/1082" alt="prodotto"
+                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
-                    <div class="swiper-slide"> <img src="https://picsum.photos/1920/1082" alt="prodotto"
+                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
 
                 </div>
@@ -56,6 +56,16 @@
         <div class="col-12 col-md-6">
             <h3>{{$announcement->price}} €</h3>
             <p>{{$announcement->body}}</p>
+            <p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
+                    Contatta Venditore
+                  </button>
+            </p>
+            <div class="collapse" id="contatta">
+                <div class="card card-body">
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div>
             
         </div>
 

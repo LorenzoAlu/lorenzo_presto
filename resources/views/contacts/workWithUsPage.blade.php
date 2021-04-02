@@ -2,9 +2,16 @@
 
 @section('content')
 <div class="container">
-  <div class="row text-center my-5">
-    <div class="col-12">
+  <div class="row justify-content-center text-center my-5">
+    <div class="col-12 mb-3">
       <h2>Diventa uno dei nostri revisori</h2>
+    </div>
+    <div class="col-12 col-md-6">
+      @if (session('message'))
+                <div class="alert alert-success-mail rounded-pill text-center">
+                    {{ session('message') }}
+                </div>
+                @endif
     </div>
   </div>
 </div>
