@@ -112,11 +112,11 @@
         
     </section>
 
-    {{-- SEZIONE 3  --}}
+    {{-- SEZIONE 3  CARD --}}
     <section class="bg-img3"> 
     <div class="container pt-5">
         @if (count($announcements) > 0)
-        <div class="row">
+        <div class="row ">
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-6 col-xl-4 mb-5 p-5">
                 <x-card 

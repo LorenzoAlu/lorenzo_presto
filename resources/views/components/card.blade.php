@@ -1,4 +1,4 @@
-<div class="card border-0 card-shadow border-card p-4 h-100">
+<div class="card border-0 card-shadow d-flex align-items-center border-card p-4 h-100">
   <div class="img-card">
 
   </div>
