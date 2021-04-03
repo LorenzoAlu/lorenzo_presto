@@ -115,7 +115,7 @@
         @if (count($announcements) > 0)
         <div class="row">
             @foreach ($announcements as $announcement)
-            <div class="col-12 col-md-4 my-5 p-5">
+            <div class="col-12 col-md-6 col-lg-4 my-5 p-5">
                 <x-card 
                 title="{{$announcement->title}}"
                 price="{{$announcement->price}}"
