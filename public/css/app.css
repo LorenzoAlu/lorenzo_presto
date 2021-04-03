@@ -11119,15 +11119,15 @@ button {
 }
 
 .btn-elimina {
-  background-color: #d64242;
+  background-color: var(--accent-color);
   color: white;
   transition: 0.4s;
 }
 
 .btn-elimina:hover {
   background-color: white;
-  color: #d64242;
-  border: 2px solid #d64242;
+  color: var(--accent-color);
+  border: 2px solidvar(--accent-color);
 }
 
 .input-shadow:focus {
@@ -11183,6 +11183,17 @@ button {
 
 .input-shadow-form:focus {
   box-shadow: 0px 0px 8px var(--text-color) !important;
+}
+
+.border-custom-card-dashboard {
+  border: 2px solid #D4D4D4;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .alert-success-custom {

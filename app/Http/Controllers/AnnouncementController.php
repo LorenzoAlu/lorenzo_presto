@@ -28,6 +28,10 @@ class AnnouncementController extends Controller
      */
     public function create()
     {
+        if(Auth::user()->disable == true){
+            return redirect()->back()->with('message', "Utente bloccato, non puoi inserire annunci");
+        }
+        
         return view('announcements.create');
     }
 
@@ -39,6 +43,7 @@ class AnnouncementController extends Controller
      */
     public function store(AnnouncementRequest $request)
     {
+       
         $announcement = Announcement::create([
             'title' => $request->input('title'),
             'body' => $request->input('body'),
@@ -69,6 +74,9 @@ class AnnouncementController extends Controller
      */
     public function edit(Announcement $announcement)
     {
+        if(Auth::user()->disable == true){
+            return redirect()->back()->with('message', "Utente bloccato, non puoi modificare annunci");
+        }
         $categories=Category::all();
         return view('announcements.edit', compact('categories', 'announcement'));
     }

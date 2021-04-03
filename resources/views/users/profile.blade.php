@@ -39,7 +39,6 @@
                         @foreach ($user->announcements as $announcement)
                         
                         <tr>
-                            
                             <td class="ps-4">
                                 <a href="{{ route('announcements.show', $announcement) }}" class="d-block mt-2"><strong>{{ $announcement->title }}</strong></a>
                             </td>
@@ -54,9 +53,6 @@
                                     @method('DELETE')
                                     <button type="submit" href="#" class="btn btn-elimina rounded-pill mt-2" alt="cancella" > Elimina </button>
                                 </form> 
-                                 
-                                
-                                
                             </td>
                         </tr>
                         @endforeach
