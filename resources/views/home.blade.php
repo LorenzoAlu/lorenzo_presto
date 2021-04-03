@@ -5,7 +5,7 @@
 {{-- prima parte della home --}}
 <header class="m-header-fix">
     
-    <div class="container-fluid bg-img1 new-bg1">
+    <div class="container-fluid bg-img1 new-bg1 ">
         <div class="row justify-content-center m-0">
             <div class="col-12 col-md-6 ">
                 @if (session('message'))
@@ -75,7 +75,7 @@
                 <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  align-items-center mt-5 pt-5">
                     <div class="row justify-content-end row-justify-mobile text-center">
                         <div>
-                        <button class="btn btn2 shadow fw-bold fs-5 mx-auto mb-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">Tutti gli annunci</a></button>
+                        <button class="btn btn2 shadow fw-bold fs-5 mx-auto my-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">Tutti gli annunci</a></button>
                         </div>
                         @foreach ($categories as $category)
                         <div class="col-12 col-md-6 col-xxl-4 text-align-mobile text-end">
@@ -117,6 +117,9 @@
     <div class="container pt-5">
         @if (count($announcements) > 0)
         <div class="row ">
+            <div class="col-12 text-center m-150 mb-5">
+                <h3>Ultimi Annunci Inseriti</h3>
+            </div>
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-6 col-xl-4 mb-5 p-md-5">
                 <x-card 

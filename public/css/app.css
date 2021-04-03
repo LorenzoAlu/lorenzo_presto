@@ -10929,6 +10929,10 @@ p {
   margin-top: 150px;
 }
 
+.mt-50 {
+  margin-top: 50px;
+}
+
 .m-header-fix {
   margin-top: -100px;
 }
@@ -11339,6 +11343,10 @@ thead {
   .position-custom2 {
     position: relative;
     top: 40px;
+  }
+
+  .m-150 {
+    margin-top: 0px;
   }
 }
 @media screen and (min-width: 992px) {

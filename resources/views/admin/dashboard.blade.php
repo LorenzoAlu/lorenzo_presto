@@ -23,11 +23,13 @@
             <div class="col-12  my-5 text-center">
                 <h2>Lista Utenti</h2>
             </div>
-            @if (session('message'))
-                <div class="alert alert-success">
+            <div class="col-12 col-md-6 ">
+                @if (session('message'))
+                <div class="alert alert-success-custom rounded-pill text-center">
                     {{ session('message') }}
                 </div>
-            @endif
+                @endif
+            </div>
             <div class="table-responsive form-custom p-5">
                 <table class="table ">
                     <thead>

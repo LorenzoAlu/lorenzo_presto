@@ -11,10 +11,10 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-12 col-md-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 ">
             @if (session('message'))
-            <div class="alert alert-success">
+            <div class="alert alert-success-custom rounded-pill text-center">
                 {{ session('message') }}
             </div>
             @endif
