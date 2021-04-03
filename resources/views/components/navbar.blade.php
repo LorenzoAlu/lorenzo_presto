@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-gradient-navbar" aria-label="First navbar example">
+<nav class="navbar navbar-dark bg-gradient-navbar " aria-label="First navbar example">
     <div class="container-fluid ps-5">
         <div class="d-flex align-items-center">
             <button class="navbar-toggler collapsed outline-transition-none border-0 ps-2 py-5" type="button"

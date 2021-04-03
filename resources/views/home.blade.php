@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- prima parte della home --}}
-<header>
+<header class="m-header-fix">
     
     <div class="container-fluid bg-img1 new-bg1">
         <div class="row justify-content-center m-0">
