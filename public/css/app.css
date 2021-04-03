@@ -10860,6 +10860,10 @@ textarea.form-control-lg {
   color: var(--accent-color);
 }
 
+.text-gray {
+  color: var(--text-color);
+}
+
 body {
   margin: 0px;
   background-color: white;
@@ -10868,6 +10872,15 @@ body {
 
 h1, .h1 {
   font-weight: 600;
+}
+
+h2, .h2, h3, .h3, h4, .h4 {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
 }
 
 .text-align-end {
@@ -10886,8 +10899,9 @@ h1, .h1 {
   font-size: 20px;
 }
 
-a {
+* a {
   text-decoration: none !important;
+  color: var(--second-color);
 }
 
 .a-category {
@@ -10911,9 +10925,18 @@ a {
   padding-left: 100px;
 }
 
+.m-150 {
+  margin-top: 150px;
+}
+
 .position-custom-lg {
   position: relative;
   top: -40px;
+}
+
+.position-custom-xl {
+  position: relative;
+  top: -80px;
 }
 
 .position-custom {
@@ -10948,6 +10971,11 @@ a {
   border-left: 2px solid #dad9d9;
 }
 
+/* .border-search-button{
+  // border-top: 1px solid var(--second-color);
+  // border-bottom: 1px solid var(--second-color);
+  // border-right: 1px solid var(--second-color);
+} */
 .outline-transition-none {
   outline: none !important;
   transition: none !important;
@@ -10973,9 +11001,9 @@ a {
 
 .bg-img3 {
   background-image: url("/media/bg-presto_Tavola disegno 1 copia-06.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 1080px;
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
 .bg-gradient-footer {
@@ -10994,17 +11022,27 @@ a {
   background-position: center;
 }
 
+button:focus {
+  box-shadow: none !important;
+}
+
+button {
+  transition: 0.4s !important;
+}
+
 .btn1 {
-  width: 150px;
+  min-width: 150px;
   height: 50px;
   border-radius: 30px;
   border: 2px solid white;
   background-color: transparent;
+  padding: 0px 18px 0px 18px;
 }
 
 .btn1-annuncio {
-  width: 200px;
+  min-width: 150px;
   height: 50px;
+  padding: 0px 18px 0px 18px;
   border-radius: 30px;
   border: 2px solid white;
   background-color: transparent;
@@ -11021,11 +11059,12 @@ a {
 }
 
 .btn2 {
-  width: 180px;
-  height: 70px;
+  width: 250px;
+  height: 60px;
   border-radius: 40px;
   border: none;
   background-color: var(--accent-color);
+  padding: 0px 18px 0px 18px;
 }
 
 .btn3 {
@@ -11035,10 +11074,11 @@ a {
   border: none;
   font-size: 20px;
   transition: all 0.3s ease 0s;
+  padding: 0px 18px 0px 18px;
 }
 
 .btn3:hover {
-  height: 70px;
+  height: 60px;
   border-radius: 40px;
   background-color: transparent;
 }
@@ -11064,6 +11104,30 @@ a {
 
 .btn-info:hover {
   background-color: var(--accent-color) !important;
+}
+
+.btn-modifica {
+  background-color: #8CA4FA;
+  color: white;
+  transition: 0.4s;
+}
+
+.btn-modifica:hover {
+  background-color: white;
+  color: #8CA4FA;
+  border: 2px solid #8CA4FA;
+}
+
+.btn-elimina {
+  background-color: #d64242;
+  color: white;
+  transition: 0.4s;
+}
+
+.btn-elimina:hover {
+  background-color: white;
+  color: #d64242;
+  border: 2px solid #d64242;
 }
 
 .input-shadow:focus {
@@ -11139,6 +11203,30 @@ a {
   border: none;
 }
 
+td {
+  border: none !important;
+}
+
+thead {
+  color: #ACABB9;
+}
+
+.revisor-header {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #8CA4FA;
+}
+
+.revisor-shadow {
+  border-radius: 40px;
+  box-shadow: 7px 7px 15px rgba(189, 189, 189, 0.842);
+}
+
+.form-custom2 {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
 .swiper-container {
   width: 100%;
   height: 300px;
@@ -11169,6 +11257,10 @@ a {
 
 .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1;
+}
+
+.modal-content {
+  border-radius: 40px !important;
 }
 
 @media screen and (max-width: 1676px) {
@@ -11207,6 +11299,19 @@ a {
     margin-left: 200px;
   }
 }
+@media screen and (max-width: 1400px) {
+  .btn3 {
+    margin-right: 0px !important;
+  }
+
+  .row-justify-mobile {
+    justify-content: center !important;
+  }
+
+  .text-align-mobile {
+    text-align: center !important;
+  }
+}
 @media screen and (max-width: 992px) {
   .bg-img1, .bg-img2, .bg-lg-img3 {
     height: auto;
@@ -11229,6 +11334,11 @@ a {
   .mt-100 {
     margin-top: 100px;
   }
+
+  .position-custom {
+    position: relative;
+    top: -120px;
+  }
 }
 @media screen and (min-width: 576px) {
   .line-height60 {
@@ -11238,6 +11348,12 @@ a {
 @media screen and (max-width: 576px) {
   .display-none {
     display: none;
+  }
+
+  .home-search {
+    height: 50px;
+    position: relative;
+    left: 20px;
   }
 }
 @media screen and (max-width: 400px) {

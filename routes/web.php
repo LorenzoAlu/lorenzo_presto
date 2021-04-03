@@ -35,6 +35,7 @@ Route::get('/categories/{category}/index', [CategoryController::class, 'index'])
 Route::get('/announcements/{announcement}/show', [AnnouncementController::class, 'show'])->name('announcements.show');
 Route::get('/announcements/index', [AnnouncementController::class, 'index'])->name('announcements.index');
 Route::get('/announcements/search', [SearchController::class,'search'])->name('announcements.search');
+Route::post('/contacts/{announcement}/contactSeller', [ContactController::class, 'contactSeller'])->name('contacts.contactSeller');
 
  //ROTTE LOGGATE
 Route::middleware([Authenticate::class])->group(function(){
@@ -42,6 +43,10 @@ Route::get('/announcements/create', [AnnouncementController::class, 'create'])->
 Route::post('/announcements/store', [AnnouncementController::class, 'store'])->name('announcements.store');
 Route::post('/contacts/workWithUs', [ContactController::class, 'workWithUs'])->name('contacts.workWithUs');
 Route::get('/contacts/workWithUsPage', [ContactController::class, 'workWithUsPage'])->name('contacts.workWithUsPage');
+Route::get('/users/profile', [HomeController::class, 'profile'])->name('users.profile');
+Route::delete('/announcements/{announcement}/destroy', [AnnouncementController::class, 'destroy'])->name('announcements.destroy');
+Route::get('/announcements/{announcement:title}/edit', [AnnouncementController::class, 'edit'])->name('announcements.edit');
+Route::post('/announcements/{announcement}/update', [AnnouncementController::class, 'update'])->name('announcements.update');
 });
 
 //ROUTE REVISOR

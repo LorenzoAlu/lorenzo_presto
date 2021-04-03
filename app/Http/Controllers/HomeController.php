@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -26,5 +27,11 @@ class HomeController extends Controller
     {
         $announcements = Announcement::where('is_accepted', true)->orderBy('id', 'desc')->take(5)->get();
         return view('home', compact('announcements'));
+    }
+
+    public function profile()
+    {
+        $user=Auth::user();
+        return view('users.profile', compact('user'));
     }
 }

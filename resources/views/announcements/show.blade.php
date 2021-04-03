@@ -3,11 +3,22 @@
 @section('content')
 
 <div class="container my-5">
-    <div class="row text-center">
-        <div class="col-12">
-            <h2>{{$announcement->title}}</h2>
+    <div class="row text-center justify-content-center">
+      <div class="col-12 col-md-8 my-3">
+        <h2 class="text-center">{{$announcement->title}}</h2>
+      </div>
+            
+
+        <div class="col-12 col-md-6 mt-4">
+            @if (session('message'))
+                    <div class="alert alert-success-mail rounded-pill text-center">
+                          {{ session('message') }}
+                    </div>
+            @endif
         </div>
+
     </div>
+
 </div>
 
 
@@ -17,7 +28,7 @@
         <div class="col-12 col-md-6 my-3">
             
             
-            <div class="swiper-container gallery-top">
+            <div class="swiper-container gallery-top mb-4">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
@@ -54,16 +65,43 @@
         </div>
 
         <div class="col-12 col-md-6">
-            <h3>{{$announcement->price}} €</h3>
-            <p>{{$announcement->body}}</p>
+          
+            <h3 class="mt-2">{{$announcement->price}} €</h3>
+            <p class="lead">{{$announcement->body}}</p>
+            <a href="{{route('categories.index', $announcement->category)}}" class="lead fs-5 fw-bold">{{$announcement->category->name}}</a>
+            <div class="d-flex mt-4 text-second-color">
+              <small class="">{{$announcement->user->name}}</small>
+              <small class="ps-5">{{$announcement->created_at->format('d/m/Y')}}</small>
+            </div>
+            
             <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
+                <button class="btn btn2 shadow fw-normal rounded-pill text-white my-3" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
                     Contatta Venditore
                   </button>
             </p>
             <div class="collapse" id="contatta">
-                <div class="card card-body">
-                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+
+                <div class="col-10 bg-white p-5 form-custom">
+                        
+                    <form method="POST" action="{{route('contacts.contactSeller', $announcement)}}">
+                      @csrf
+                      @if(Auth::user() != null)
+                        <div class="mb-3 d-none">
+                          <label for="name" class="form-label">Nome</label>
+                          <input placeholder="{{Auth::user()->name}}" required value="{{Auth::user()->name}}" autofocus name="name" type="text" class="form-control input-shadow-form rounded-pill" id="name" aria-describedby="name">
+                        </div>
+                        <div class="mb-3 d-none">
+                          <label for="email" class="form-label">Email</label>
+                          <input required autofocus name="email" type="email" placeholder="{{Auth::user()->email}}" value="{{Auth::user()->email}}" class="form-control input-shadow-form rounded-pill" id="email" aria-describedby="email">
+                        </div>
+                        @endif
+                        <div class="mb-3">
+                          <label for="body" class="form-label">Contatta l'utente: {{$announcement->user->name}}</label>
+                          <textarea placeholder="Inserisci qui le tue motivazioni" required autofocus class="form-control input-shadow-form" name="body" id="body" cols="12" rows="5">{{$announcement->body}}</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-card rounded-pill text-white">Invia</button>
+                    </form>
+        
                 </div>
             </div>
             

@@ -9,7 +9,18 @@
 
         @if (count($announcements)==0)
         <div class="row my-5 text-center">
-            <h3>Non ci sono articoli</h3>
+            <h3>Non ci sono annunci</h3>
+            <div class="col-12">  
+            <img src="/media/20945436.jpg" class="img-fluid mx-auto w-50" alt="non-ci-sono-annunci">
+            
+            </div>
+            <div class="col-12">
+                <button class="btn btn2 shadow fw-normal rounded-pill text-white my-4 fs-5 fw-normal" >
+                   <a class="text-white" href="{{ route('home') }}">Home</a> 
+                </button>  
+            </div>
+        
+           
         </div>
         @else 
 

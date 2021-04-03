@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -68,7 +69,8 @@ class AnnouncementController extends Controller
      */
     public function edit(Announcement $announcement)
     {
-        //
+        $categories=Category::all();
+        return view('announcements.edit', compact('categories', 'announcement'));
     }
 
     /**
@@ -80,7 +82,10 @@ class AnnouncementController extends Controller
      */
     public function update(Request $request, Announcement $announcement)
     {
-        //
+        $announcement->update($request->all());
+        $announcement->is_accepted = false;
+        $announcement->save();
+        return redirect(route('users.profile'))->with('message', "L' articolo $announcement->title è stato modificato correttamente.");
     }
 
     /**
@@ -91,6 +96,8 @@ class AnnouncementController extends Controller
      */
     public function destroy(Announcement $announcement)
     {
-        //
+        $announcement->delete();
+        return redirect()->back()->with('message', "L' articolo $announcement->title è stato cancellato con successo.");
     }
 }
+

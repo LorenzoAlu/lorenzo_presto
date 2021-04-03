@@ -4,7 +4,7 @@
 
 {{-- prima parte della home --}}
 <header>
-
+    
     <div class="container-fluid bg-img1 new-bg1">
         <div class="row justify-content-center m-0">
             <div class="col-12 col-md-6 ">
@@ -32,15 +32,15 @@
             {{-- <div class="row justify-content-between">
             </div> --}}
             <div class="row h-75 align-items-center justify-content-around">
-                <div class="col-12 col-lg-6 ps-lg-100 my-5 text-center text-lg-start pt-md-5">
+                <div class="col-12 col-lg-6 col-xxl-4 ps-lg-100 my-5 text-center text-lg-start pt-md-5">
                     <h3 class="font-size25 text-white fw-light mb-3">Lorem Ipsum sit Facet</h3>
                     <h2 class= "text-white display-3 fw-bold mb-5">Cerchi usato <br> a prezzi <br> vantaggiosi?</h2>
                     {{-- <button class="btn2 shadow my-5 text-white font-size25" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="text-decoration-none" href="{{route('announcements.create')}}"> <h2 class="mb-0 font-size25 text-white">Inizia</h2></a>
                     </button> --}}
-                    <form class="d-flex" action="{{route('announcements.search')}}" method="GET">
-                        <input class="form-control btn bg-white rounded-pill input-shadow home-search" type="text" name="q" placeholder="cerca annunci">
-                        <button class="btn btn-card rounded-pill input-shadow btn-position-search home-search" type="submit"> <i class="fas fa-search text-white"></i> </button>
+                    <form class="d-flex home-search" action="{{route('announcements.search')}}" method="GET">
+                        <input class="form-control btn bg-white rounded-pill input-shadow " type="text" name="q" placeholder="cerca annunci">
+                        <button class="btn btn-card rounded-pill input-shadow btn-position-search " type="submit"> <i class="fas fa-search text-white"></i> </button>
                     </form>
                 </div>
                 <div class="col-12 col-lg-6 mt-3 pt-5 mt-lg-0 pt-lg-0 order-first order-lg-last">
@@ -55,14 +55,14 @@
     {{-- seconda parte della home --}}
     
     <section>
-        <div class="container-fluid bg-img2 bg-new2 ">
+        <div class="container-fluid bg-img2 bg-new2">
             <div class="row align-items-start mb-5 h-30">
                 <!-- DESCRIZIONE PRESTO.IT -->
                 <div class="col-12 d-flex justify-content-center">
                     <p class="font-size20 text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-3"> <span class="fs-2"> <b>Presto.it </b></span> è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti.</p>
                 </div>
             </div>
-            <div class="row pt-5 mt-lg-100  h-50">
+            <div class="row pt-lg-5 mt-lg-100  h-50">
                 <!-- ICONE SOCIAL AL LATO -->
                 <div class="col-12 col-xxl-2 d-flex flex-xxl-column justify-content-evenly  align-items-center mt-5 pt-5 display-none d-md-hidden">
                     <a href=""><i class="fab fa-facebook-square a-hover shadow  text-second-color text-lg-white"></i></a>
@@ -71,13 +71,14 @@
                 </div>
                 <!-- BOTTONI CATEGORIE  -->
                 
-              
+                
                 <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  align-items-center mt-5 pt-5">
-                    <div class="row justify-content-end">
-                        
-                        <h3 class="text-center mb-5"><a class="text-decoration-none text-main-color p-3 text-center" href="{{route('announcements.index')}}">Tutti gli articoli</a></h3>
+                    <div class="row justify-content-end row-justify-mobile text-center">
+                        <div>
+                        <button class="btn btn2 shadow fw-bold fs-5 mx-auto mb-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">Tutti gli annunci</a></button>
+                        </div>
                         @foreach ($categories as $category)
-                        <div class="col-12 col-md-6 col-xxl-4 text-end">
+                        <div class="col-12 col-md-6 col-xxl-4 text-align-mobile text-end">
                             <button class="btn btn3 w-75 shadow me-5 my-3">
                                 <a class="text-decoration-none text-main-color p-3 text-center" href="{{route('categories.index', $category)}}">{{$category->name}}</a>
                             </button>
@@ -110,12 +111,14 @@
         
         
     </section>
-    
-    <div class="container mt-5">
+
+    {{-- SEZIONE 3  CARD --}}
+    <section class="bg-img3"> 
+    <div class="container pt-5">
         @if (count($announcements) > 0)
-        <div class="row">
+        <div class="row ">
             @foreach ($announcements as $announcement)
-            <div class="col-12 col-md-6 col-lg-4 my-5 p-5">
+            <div class="col-12 col-md-6 col-xl-4 mb-5 p-md-5">
                 <x-card 
                 title="{{$announcement->title}}"
                 price="{{$announcement->price}}"
@@ -131,11 +134,12 @@
         @else
         <div class="row">
             <div class="col-12 my-5">
-                <h3 class="text-center">Non ci sono ancora articoli</h3>
+                <h3 class="text-center">Non ci sono ancora annunci</h3>
             </div>
         </div>
         @endif
     </div>
+{{-- </section> --}}
     
     
     
