@@ -28,7 +28,7 @@
         <div class="col-12 col-md-6 my-3">
             
             
-            <div class="swiper-container gallery-top mb-3">
+            <div class="swiper-container gallery-top mb-4">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
@@ -66,7 +66,7 @@
 
         <div class="col-12 col-md-6">
           
-            <h3 class="mt-4">{{$announcement->price}} €</h3>
+            <h3 class="mt-2">{{$announcement->price}} €</h3>
             <p class="lead">{{$announcement->body}}</p>
             <a href="{{route('categories.index', $announcement->category)}}" class="lead fs-5 fw-bold">{{$announcement->category->name}}</a>
             <div class="d-flex mt-4 text-second-color">
@@ -75,7 +75,7 @@
             </div>
             
             <p>
-                <button class="btn btn2 shadow fw-normal rounded-pill text-white my-4" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
+                <button class="btn btn2 shadow fw-normal rounded-pill text-white my-3" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
                     Contatta Venditore
                   </button>
             </p>
