@@ -4,9 +4,10 @@
 
 <div class="container my-5">
     <div class="row text-center justify-content-center">
-        <div class="col-12">
-            <h2>{{$announcement->title}}</h2>
-        </div>
+      <div class="col-12 col-md-8 my-3">
+        <h2 class="text-center">{{$announcement->title}}</h2>
+      </div>
+            
 
         <div class="col-12 col-md-6 mt-4">
             @if (session('message'))
@@ -27,7 +28,7 @@
         <div class="col-12 col-md-6 my-3">
             
             
-            <div class="swiper-container gallery-top">
+            <div class="swiper-container gallery-top mb-3">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
                             class="img-fluid mx-auto d-block"> </div>
@@ -64,10 +65,17 @@
         </div>
 
         <div class="col-12 col-md-6">
-            <h3>{{$announcement->price}} €</h3>
-            <p>{{$announcement->body}}</p>
+          
+            <h3 class="mt-4">{{$announcement->price}} €</h3>
+            <p class="lead">{{$announcement->body}}</p>
+            <a href="{{route('categories.index', $announcement->category)}}" class="lead fs-5 fw-bold">{{$announcement->category->name}}</a>
+            <div class="d-flex mt-4 text-second-color">
+              <small class="">{{$announcement->user->name}}</small>
+              <small class="ps-5">{{$announcement->created_at->format('d/m/Y')}}</small>
+            </div>
+            
             <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
+                <button class="btn btn2 shadow fw-normal rounded-pill text-white my-4" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
                     Contatta Venditore
                   </button>
             </p>

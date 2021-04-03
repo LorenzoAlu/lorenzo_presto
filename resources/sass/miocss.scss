@@ -468,6 +468,8 @@ p{
 }
 
 //MEDIA QUERIES
+
+//DESKTOP
 @media screen and (max-width: 1676px) {
   .new-bg1 {
       background-image: url('/media/layout-md-8_Tavola\ disegno\ 1\ copia\ 2.jpg');
@@ -501,6 +503,8 @@ p{
   } 
 }
 
+//LAPTOP
+
 @media screen and (max-width: 992px) {
   .bg-img1 , .bg-img2 , .bg-lg-img3 {
       height: auto;
@@ -527,6 +531,8 @@ p{
   }
 }
 
+//MOBILE 
+
 @media screen and (min-width: 576px) {
   .line-height60 {
       line-height: 60px;
@@ -536,6 +542,11 @@ p{
 @media screen and (max-width: 576px) {
   .display-none {
       display: none;
+  }
+  .home-search{
+    height: 50px;
+    position: relative;
+    left: 20px;
   }
 }
 

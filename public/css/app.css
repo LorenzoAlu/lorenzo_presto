@@ -11272,6 +11272,12 @@ p {
   .display-none {
     display: none;
   }
+
+  .home-search {
+    height: 50px;
+    position: relative;
+    left: 20px;
+  }
 }
 @media screen and (max-width: 400px) {
   .card-prodotto {

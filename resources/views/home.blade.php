@@ -38,9 +38,9 @@
                     {{-- <button class="btn2 shadow my-5 text-white font-size25" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="text-decoration-none" href="{{route('announcements.create')}}"> <h2 class="mb-0 font-size25 text-white">Inizia</h2></a>
                     </button> --}}
-                    <form class="d-flex " action="{{route('announcements.search')}}" method="GET">
-                        <input class="form-control btn bg-white rounded-pill input-shadow home-search" type="text" name="q" placeholder="cerca annunci">
-                        <button class="btn btn-card rounded-pill input-shadow btn-position-search home-search" type="submit"> <i class="fas fa-search text-white"></i> </button>
+                    <form class="d-flex home-search" action="{{route('announcements.search')}}" method="GET">
+                        <input class="form-control btn bg-white rounded-pill input-shadow " type="text" name="q" placeholder="cerca annunci">
+                        <button class="btn btn-card rounded-pill input-shadow btn-position-search " type="submit"> <i class="fas fa-search text-white"></i> </button>
                     </form>
                 </div>
                 <div class="col-12 col-lg-6 mt-3 pt-5 mt-lg-0 pt-lg-0 order-first order-lg-last">
@@ -134,7 +134,7 @@
         @else
         <div class="row">
             <div class="col-12 my-5">
-                <h3 class="text-center">Non ci sono ancora articoli</h3>
+                <h3 class="text-center">Non ci sono ancora annunci</h3>
             </div>
         </div>
         @endif
