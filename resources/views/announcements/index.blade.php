@@ -26,7 +26,9 @@
             route="{{route('categories.index', $announcement->category)}}"  
             date="{{$announcement->created_at->format('d/m/Y')}}"
             category="{{$announcement->category->name}}"
-            show="{{route('announcements.show', $announcement)}}"     
+            show="{{route('announcements.show', $announcement)}}" 
+            addlike="{{route('announcements.addLiked', $announcement)}}"
+            lesslike="{{route('announcements.lessLiked', $announcement)}}"     
             />
         </div>
         @endforeach 

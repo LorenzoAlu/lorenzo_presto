@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Like extends Model
 {
+    protected $fillable=[
+        'announcement_id', 'user_id'
+    ];
     use HasFactory;
 
     public function user()

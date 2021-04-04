@@ -67,9 +67,9 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
-                    
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{route('users.profile')}}">Profilo</a>
+                        
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
@@ -102,11 +102,28 @@
                     @endif
                 @else
                     <div class="nav-item dropdown d-block d-lg-none">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        @if(Auth::user() && Auth::user()->is_revisor)
+                            
+                                <a class="nav-link text-white" href="{{route('revisors.dashboard')}}">
+                                    Revisore
+                                    <span class="badge rounded-pill">
+                                        {{App\Models\Announcement::ToBeRevisionedCount()}}
+                                    </span>
+                                </a>
+                        @endif
+                        @if(Auth::user() && Auth::user()->is_admin)
+                            
+                                <a class="nav-link text-white" href="{{route('admin.dashboard')}}">
+                                    Admin
+                                </a>
+
+                        @endif
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('users.profile')}}">Profilo</a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
@@ -119,7 +136,7 @@
                     
                 @endguest
                 <div class="nav-item d-block d-md-none">
-                        <a class="text-decoration-none " href="{{route('announcements.create')}}"> <p class="mb-0 fw-bold text-white"> Aggiungi annuncio </p></a>
+                        <a class="nav-link text-white" href="{{route('announcements.create')}}">Aggiungi annuncio</a>
                 </div>
             </ul>
         </div>
