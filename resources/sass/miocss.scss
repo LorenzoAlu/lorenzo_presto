@@ -546,6 +546,25 @@ thead{
   border-radius: 40px !important;
 }
 
+//PAGINATION
+.page-link {
+  color: #8CA4FA !important;
+  border: none !important;
+}
+.page-link:hover {
+  background-color: white !important;
+  color: var(--accent-color) !important;
+}
+.page-link:focus {
+  color: white !important;
+  background-color: #8CA4FA !important;
+  box-shadow: none !important;
+}
+.page-item.active .page-link {
+  background-color: #8CA4FA !important;
+  color: white !important;
+}
+
 //MEDIA QUERIES
 
 //DESKTOP
@@ -610,7 +629,13 @@ thead{
   .m-150{
       margin-top: 0px;
   }
-
+  .w-search-mobile{
+    width: 500px;
+  }
+  .form-search{
+    position: relative;
+    right: -20px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -642,6 +667,9 @@ thead{
     height: 50px;
     position: relative;
     left: 20px;
+  }
+  .w-search-mobile{
+    width: 80%;
   }
 }
 

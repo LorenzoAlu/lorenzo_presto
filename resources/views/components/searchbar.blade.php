@@ -1,4 +1,4 @@
-<form class="d-flex" action="{{route('announcements.search')}}" method="GET">
-    <input class="form-control btn bg-white rounded-pill input-shadow border-search-input" type="text" name="q" placeholder="cerca annunci">
+<form class="d-flex form-search" action="{{route('announcements.search')}}" method="GET">
+    <input class=" form-control btn bg-white rounded-pill input-shadow border-search-input" type="text" name="q" placeholder="cerca annunci">
     <button class="btn btn-card rounded-pill input-shadow btn-position-search border-search-button" type="submit"> <i class="fas fa-search text-white"></i> </button>
 </form>
