@@ -8,7 +8,7 @@
         <h4 class="card-title">{{$title}}</h4>
         <div class="d-flex justify-content-between">
           <p class="fs-3 fw-bold">{{$price}} €</p>
-          @if ($liked == false)
+          {{-- @if ({{$liked}} == false)
                     <form action="{{$addlike}}" method="POST">
                         @csrf
                         <button type='submit' class="btn">
@@ -22,7 +22,7 @@
                             <i class="btn-like fas fa-heart fa-2x"></i>
                         </button>
                     </form>
-                @endif
+                @endif --}}
         </div>
       </div>
       <div>

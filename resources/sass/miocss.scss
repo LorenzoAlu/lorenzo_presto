@@ -411,6 +411,15 @@ button{
   height: 50px;
 }
 
+.btn-like{
+  color: red;
+  transition:  1s;
+}
+
+.btn-like:hover{
+  transform: scale(1.2);
+}
+
 //CARD
 .card-prodotto {
   width: 350px;

@@ -62,7 +62,32 @@
         </div>
     </div>
 </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>Annunci Preferiti</h3>
+        </div>
+        @if (count(Auth::user()->likes()->get())== 0)
+            <p class="text-center">Non Ci sono annunci salvati nei preferiti</p>
+        @else
+        @foreach ($user->likes as $like)
+        <div class="col-12 col-md-6 col-lg-4 my-5 p-5">
+            <x-card 
+            title="{{$like->announcement->title}}"
+            price="{{$like->announcement->price}}"
+            user="{{$like->announcement->user->name}}"
+            route="{{route('categories.index', $like->announcement->category)}}"  
+            date="{{$like->announcement->created_at->format('d/m/Y')}}"
+            category="{{$like->announcement->category->name}}"
+            show="{{route('announcements.show', $like->announcement)}}" 
+            {{-- addlike="{{route('announcements.addLiked',$announcement)}}"
+            lesslike="{{route('announcements.lessLiked',$announcement)}}"    --}}
+            />
+        </div>
+        @endforeach
+        @endif
+    </div>
+</div>
 
 
 @endsection

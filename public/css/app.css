@@ -11146,6 +11146,15 @@ button {
   height: 50px;
 }
 
+.btn-like {
+  color: red;
+  transition: 1s;
+}
+
+.btn-like:hover {
+  transform: scale(1.2);
+}
+
 .card-prodotto {
   width: 350px;
   height: 500px;

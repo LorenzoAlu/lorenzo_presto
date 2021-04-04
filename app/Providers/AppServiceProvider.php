@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\Models\Like;
 use App\Models\Announcement;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
@@ -31,20 +32,7 @@ class AppServiceProvider extends ServiceProvider
     {
         if(Schema::hasTable('categories','announcements')){
             $categories = Category::all();
-            $announcements = Announcement::all();
-            foreach ($announcements as $announcement) {
-                $likes= $announcement->likes()->get();
-                $liked = false;
-                foreach($likes as $like){
-                if($like->user_id == Auth::id()){
-                    $liked= true;
-                    break;
-                }
-            }
-        }
-
-
-            View::share(compact('categories','liked','likes','announcements'));
+            View::share(compact('categories'));
         }
 
         Paginator::useBootstrap();

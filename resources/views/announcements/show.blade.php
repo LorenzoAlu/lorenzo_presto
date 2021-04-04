@@ -65,8 +65,26 @@
         </div>
 
         <div class="col-12 col-md-6">
-          
+            <div class="d-flex justify-content-between">
             <h3 class="mt-2">{{$announcement->price}} €</h3>
+             {{-- Prova like button --}}
+             @if ($liked == false)
+             <form action="{{ route('announcements.addLiked', $announcement) }}" method="POST">
+                 @csrf
+                 <button type='submit' class="btn">
+                     <i class="btn-like far fa-heart fa-2x"></i>
+                 </button>
+             </form>
+         @else
+             <form action="{{ route('announcements.lessLiked', $announcement) }}" method="POST">
+                 @csrf
+                 <button type='submit' class="btn ">
+                     <i class="btn-like fas fa-heart fa-2x"></i>
+                 </button>
+             </form>
+         @endif
+
+            </div>
             <p class="lead">{{$announcement->body}}</p>
             <a href="{{route('categories.index', $announcement->category)}}" class="lead fs-5 fw-bold">{{$announcement->category->name}}</a>
             <div class="d-flex mt-4 text-second-color">

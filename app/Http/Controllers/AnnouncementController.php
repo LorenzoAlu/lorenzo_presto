@@ -64,7 +64,15 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcement)
     {
-        return view('announcements.show', compact('announcement'));
+        $likes= $announcement->likes()->get();
+        $liked = false;
+        foreach($likes as $like){
+            if($like->user_id == Auth::id()){
+                $liked= true;
+                break;
+            }
+        }
+        return view('announcements.show', compact('announcement','liked'));
     }
 
     /**
@@ -119,7 +127,7 @@ class AnnouncementController extends Controller
             'user_id'=>Auth::id(),
         ]);
    
-        return redirect()->back(); 
+        return redirect()->back()->with('message','Aggiunto ai preferiti'); 
     }
 
     public function lessLiked(Announcement $announcement ){
@@ -127,7 +135,7 @@ class AnnouncementController extends Controller
         $like = $announcement->likes()->where('user_id', '=', Auth::id())->delete();
 
 
-        return redirect()->back();
+        return redirect()->back()->with('message','tolto dai preferiti');
     }
  
 }
