@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
+use App\Models\Like;
 use App\Models\User;
 use App\Models\Category;
-use Laravel\Scout\Searchable;
 
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -27,6 +28,11 @@ class Announcement extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 
     static public function ToBeRevisionedCount()

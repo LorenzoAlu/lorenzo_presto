@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Like;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
@@ -107,5 +108,27 @@ class AnnouncementController extends Controller
         $announcement->delete();
         return redirect()->back()->with('message', "L' articolo $announcement->title è stato cancellato con successo.");
     }
+
+    public function addLiked(Announcement $announcement ){
+
+        if(Auth::user() == null){
+            return redirect()->back()->with('message',"Devi essere loggato !");
+        }
+        $like= Like::create([
+            'announcement_id'=> $announcement->id,
+            'user_id'=>Auth::id(),
+        ]);
+   
+        return redirect()->back(); 
+    }
+
+    public function lessLiked(Announcement $announcement ){
+
+        $like = $announcement->likes()->where('user_id', '=', Auth::id())->delete();
+
+
+        return redirect()->back();
+    }
+ 
 }
 

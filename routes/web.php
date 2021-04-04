@@ -47,6 +47,8 @@ Route::get('/users/profile', [HomeController::class, 'profile'])->name('users.pr
 Route::delete('/announcements/{announcement}/destroy', [AnnouncementController::class, 'destroy'])->name('announcements.destroy');
 Route::get('/announcements/{announcement:title}/edit', [AnnouncementController::class, 'edit'])->name('announcements.edit');
 Route::post('/announcements/{announcement}/update', [AnnouncementController::class, 'update'])->name('announcements.update');
+Route::post('/announcements/{announcement}/addLiked', [AnnouncementController::class, 'addLiked'])->name('announcements.addLiked');
+Route::post('/announcements/{announcement}/lessLiked', [AnnouncementController::class, 'lessLiked'])->name('announcements.lessLiked');
 });
 
 //ROUTE REVISOR
