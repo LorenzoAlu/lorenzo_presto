@@ -364,7 +364,7 @@ button{
 
 .btn-position-search{
   position:relative;
-  right:40px;
+  right:35px;
 }
 
 .btn-info {
@@ -615,6 +615,12 @@ thead{
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .bg-gradient-navbar {
+    background: linear-gradient(120deg, #90B0F9,#8EA9FA, #8A9DFB, #8588FB,#8280FD)
+  }
+}
+
 @media screen and (max-width: 992px) {
   .bg-img1 , .bg-img2 , .bg-lg-img3 {
       height: auto;
@@ -649,6 +655,9 @@ thead{
     position: relative;
     top: -120px;
   }
+  .border-search-input {
+    width: 100%;
+  }
 }
 
 //MOBILE 
@@ -656,6 +665,9 @@ thead{
 @media screen and (min-width: 576px) {
   .line-height60 {
       line-height: 60px;
+  }
+  .mb-100 {
+    margin-bottom: 100px;
   }
 }
 

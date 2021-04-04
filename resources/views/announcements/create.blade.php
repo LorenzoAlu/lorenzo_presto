@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container mb-5 pb-5">
         <div class="row justify-content-center mx-3 mb-3">
             <div class="col-12 col-md-8 col-lg-6 bg-white p-5 form-custom">
                 <form method="POST" action="{{route('announcements.store')}}">

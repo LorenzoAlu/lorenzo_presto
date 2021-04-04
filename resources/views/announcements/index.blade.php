@@ -18,7 +18,7 @@
     </div>
     <div class="row mt-5">
         @foreach ($announcements as $announcement)
-        <div class="col-12 col-md-6 col-lg-4 my-5 p-5">
+        <div class="col-12 col-md-6 col-lg-4 my-2 my-md-5 p-5">
             <x-card 
             title="{{$announcement->title}}"
             price="{{$announcement->price}}"

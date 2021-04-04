@@ -23,7 +23,7 @@
         </form> --}}
 
     
-        <div class="px-5 py-5 d-none d-md-block">
+        <div class="px-5 py-5 d-none d-lg-block">
             <!-- Authentication Links -->
             @guest
                 @if (Route::has('login'))
@@ -90,18 +90,18 @@
             <ul class="navbar-nav me-auto mb-2 ">
                 @guest
                     @if (Route::has('login'))
-                        <li class="nav-item pt-2 fw-600 text-white d-block d-md-none">
+                        <li class="nav-item pt-2 fw-600 text-white d-block d-lg-none">
                             <a class="nav-link" href="{{ route('login') }}">Accedi</a>
                         </li>
                     @endif
                     @if (Route::has('register'))
 
-                        <li class="nav-item py-2 fw-600 text-white d-block d-md-none">
+                        <li class="nav-item py-2 fw-600 text-white d-block d-lg-none">
                             <a class="nav-link" href="{{ route('register') }}">Registrati</a>
                         </li>
                     @endif
                 @else
-                    <div class="nav-item dropdown d-block d-md-none">
+                    <div class="nav-item dropdown d-block d-lg-none">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}

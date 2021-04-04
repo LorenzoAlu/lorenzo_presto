@@ -33,7 +33,7 @@
             <div class="table-responsive form-custom p-5">
                 <table class="table ">
                     <thead>
-                        <tr>
+                        <tr class="p-5">
                             <th scope="col">Nome</th>
                             <th scope="col">Email</th>
                             <th scope="col">Annunci Pubblicati</th>
@@ -45,7 +45,7 @@
                     </thead>
                     <tbody>
                         @foreach ($users as $user)
-                            <tr class="p-4">
+                            <tr class="p-5">
                                 <th class="text-second-color" scope="row">{{ $user->name }}</th>
                                 <td>{{ $user->email }}</td>
                                 <td class="text-center ">
