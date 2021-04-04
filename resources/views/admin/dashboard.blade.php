@@ -46,30 +46,30 @@
                     <tbody>
                         @foreach ($users as $user)
                             <tr class="p-5">
-                                <th class="text-second-color" scope="row">{{ $user->name }}</th>
-                                <td>{{ $user->email }}</td>
-                                <td class="text-center ">
+                                <th class="text-second-color py-3" scope="row">{{ $user->name }}</th>
+                                <td class="py-3">{{ $user->email }}</td>
+                                <td class="text-center py-3">
                                     <a class="text-dark"
                                         href="">
                                         {{ count($user->announcements) }}
                                     </a>
                                 </td>
-                                <td>{{ $user->created_at->format('d/m/Y') }}</td>
-                                <td>
+                                <td class="py-3">{{ $user->created_at->format('d/m/Y') }}</td>
+                                <td class="py-3">
                                     @if ($user->is_revisor == false)
                                     <a href="{{route('users.toggle',$user)}}" class="btn btn-modifica rounded-pill w-100">Abilita</a>
                                 @else
                                     <a href="{{route('users.toggle',$user)}}" class="btn btn-card rounded-pill text-white w-100">Disabilita</a>
                                 @endif
                                 </td>
-                                <td>
+                                <td class="py-3">
                                     @if ($user->disable == false)
                                         <a href="{{ route('users.toggleUserDisable', $user) }}" class="btn btn-card rounded-pill text-white w-100">Blocca</a>
                                     @else
                                         <a href="{{ route('users.toggleUserDisable', $user) }}" class="btn btn-modifica rounded-pill w-100">Sblocca</a>
                                     @endif
                                 </td>
-                                <td>
+                                <td class="py-3">
                                     <form action="{{route('users.destroy',$user)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
