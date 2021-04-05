@@ -78,7 +78,7 @@
                         <button class="btn btn2 shadow fw-bold fs-5 mx-auto my-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">Tutti gli annunci</a></button>
                         </div>
                         @foreach ($categories as $category)
-                        <div class="col-12 col-md-3 col-xxl-4 text-align-mobile text-end">
+                        <div class="col-12 col-md-6 col-xxl-4 text-align-mobile text-end">
                             <button class="btn btn3 w-75 shadow me-5 my-3">
                                 <a class="text-decoration-none text-main-color p-3 text-center" href="{{route('categories.index', $category)}}">{{$category->name}}</a>
                             </button>
