@@ -19,7 +19,7 @@
     </div>
 
     <div class="container ">
-        <div class="row justify-content-center my-5">
+        <div class="row justify-content-center my-5 p-4">
             <div class="col-12  my-5 text-center">
                 <h2>Lista Utenti</h2>
             </div>
@@ -46,7 +46,7 @@
                     <tbody>
                         @foreach ($users as $user)
                             <tr class="p-5">
-                                <th class="text-second-color py-3" scope="row">{{ $user->name }}</th>
+                                <td class="text-second-color fw-bold py-3" scope="row"><a href="{{route('users.profile')}}">{{ $user->name }}</a></td>
                                 <td class="py-3">{{ $user->email }}</td>
                                 <td class="text-center py-3">
                                     <a class="text-dark"
@@ -84,6 +84,9 @@
         </div>
     </div>
     @if($users != null)
-    {{ $users->links() }}
+    <div class="col-12 d-flex justify-content-center">
+        {{ $users->links() }} 
+    </div>
+   
     @endif
 @endsection
