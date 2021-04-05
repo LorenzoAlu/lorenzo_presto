@@ -673,6 +673,12 @@ thead{
   }
 }
 
+@media screen and (min-width: 768px) {
+.w-md-50{
+  width: 50% !important ;
+}
+}
+
 //MOBILE 
 
 @media screen and (min-width: 576px) {
