@@ -132,7 +132,7 @@
                 show="{{route('announcements.show', $announcement)}}"
                 addlike="{{route('announcements.addLiked', $announcement)}}"
                 lesslike="{{route('announcements.lessLiked', $announcement)}}" 
-                {{-- liked='{{$liked}}'     --}}
+                liked='{{$announcement->DoYouLikeIt()}}'    
                 />
             </div>
             @endforeach
