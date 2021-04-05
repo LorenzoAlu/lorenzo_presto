@@ -9,6 +9,7 @@
         <div class="d-flex justify-content-between">
           <p class="fs-3 fw-bold">{{$price}} €</p>
           {{-- @if ('{{$liked}}' == false)
+          
                     <form action="{{$addlike}}" method="POST">
                         @csrf
                         <button type='submit' class="btn">

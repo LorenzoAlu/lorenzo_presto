@@ -10937,6 +10937,10 @@ p {
   margin-top: -100px;
 }
 
+.m-allert-fix {
+  margin-top: 100px;
+}
+
 .position-custom-lg {
   position: relative;
   top: -40px;
