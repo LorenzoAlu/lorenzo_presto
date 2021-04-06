@@ -42,6 +42,8 @@ Route::middleware([Authenticate::class])->group(function(){
 Route::get('/announcements/create', [AnnouncementController::class, 'create'])->name('announcements.create');
 Route::post('/announcements/store', [AnnouncementController::class, 'store'])->name('announcements.store');
 Route::post('/announcement/images/upload', [AnnouncementController::class, 'uploadImages'])->name('announcement.images.upload');
+Route::delete('/announcement/images/remove', [AnnouncementController::class, 'removeImages'])->name('announcement.images.remove');
+Route::get('/announcement/images', [AnnouncementController::class, 'getImages'])->name('announcement.images');
 Route::post('/contacts/workWithUs', [ContactController::class, 'workWithUs'])->name('contacts.workWithUs');
 Route::get('/contacts/workWithUsPage', [ContactController::class, 'workWithUsPage'])->name('contacts.workWithUsPage');
 Route::get('/users/profile', [HomeController::class, 'profile'])->name('users.profile');
