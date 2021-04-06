@@ -40,7 +40,11 @@ class AdminController extends Controller
             $user->disable = !$user->disable;
             $user->save();
     
-            return redirect()->back();
+            if($user->disable == true){
+                return redirect()->back()->with('message',"l'utente $user->name ora è bloccato");
+            }else{
+                return redirect()->back()->with('message',"l'utente $user->name non è sbloccato");
+            }
         }
 }
 
