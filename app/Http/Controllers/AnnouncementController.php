@@ -100,7 +100,7 @@ class AnnouncementController extends Controller
     public function update(Request $request, Announcement $announcement)
     {
         $announcement->update($request->all());
-        $announcement->is_accepted = false;
+        $announcement->is_accepted = null;
         $announcement->save();
         return redirect(route('users.profile'))->with('message', "L' articolo $announcement->title è stato modificato correttamente.");
     }

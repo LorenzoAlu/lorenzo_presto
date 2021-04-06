@@ -80,8 +80,9 @@
             date="{{$like->announcement->created_at->format('d/m/Y')}}"
             category="{{$like->announcement->category->name}}"
             show="{{route('announcements.show', $like->announcement)}}" 
-            {{-- addlike="{{route('announcements.addLiked',$announcement)}}"
-            lesslike="{{route('announcements.lessLiked',$announcement)}}"    --}}
+            addlike="{{route('announcements.addLiked', $like->announcement)}}"
+            lesslike="{{route('announcements.lessLiked', $like->announcement)}}" 
+            liked='{{$like->announcement->DoYouLikeIt()}}'    
             />
         </div>
         @endforeach
