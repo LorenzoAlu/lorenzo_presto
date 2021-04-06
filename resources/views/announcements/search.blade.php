@@ -31,6 +31,8 @@
             <div class="col-6 mt-5 w-search-mobile">
                 <x-searchbar></x-searchbar>
             </div>
+        </div>
+        <div class="row">
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-4 my-5 p-5">
                 <x-card 
