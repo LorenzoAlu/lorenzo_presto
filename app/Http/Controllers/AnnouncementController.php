@@ -6,7 +6,10 @@ use App\Models\Like;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use App\Models\AnnouncementImage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
@@ -27,13 +30,15 @@ class AnnouncementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         if(Auth::user()->disable == true){
             return redirect()->back()->with('message', "Utente bloccato, non puoi inserire annunci");
         }
+
+        $uniqueSecret = request()->old('uniqueSecret', base_convert(sha1(uniqid(mt_rand())),16,36));
         
-        return view('announcements.create');
+        return view('announcements.create', compact('uniqueSecret'));
     }
 
     /**
@@ -52,8 +57,70 @@ class AnnouncementController extends Controller
             'user_id' => Auth::id(),
             'price' => $request->input('price')
         ]);
+
+        $uniqueSecret = $request->input('uniqueSecret');
+
+        $images = session()->get("images.{$uniqueSecret}", []);
+        $removedImages = session()->get("removedimages.{$uniqueSecret}", []);
+
+        $images = array_diff($images, $removedImages);
+
+        foreach ($images as $image) {
+            $i = new AnnouncementImage();
+            $fileName = basename($image);
+            $newFileName = "public/announcements/{$announcement->id}/{$fileName}";
+            Storage::move($image, $newFileName);
+            $i->file = $newFileName;
+            $i->announcement_id = $announcement->id;
+
+            $i->save();
+        }
+
+        File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
+
         return redirect(route('home'))->with('message', "L'annuncio $announcement->title è stato creato con successo");
 
+    }
+
+    public function uploadImages(Request $request)
+    {
+        $uniqueSecret = $request->input('uniqueSecret');
+        $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
+
+        session()->push("images.{$uniqueSecret}", $fileName);
+
+        return response()->json([
+            'id'=>$fileName
+        ]);
+    }
+
+    public function removeImages(Request $request)
+    {
+        $uniqueSecret = $request->input('uniqueSecret');
+
+        $fileName = $request->input('id');
+        session()->push("removedimages.{$uniqueSecret}", $fileName);
+
+        Storage::delete($fileName);
+        return response()->json('ok');
+    }
+
+    public function getImages(Request $request)
+    {
+        $uniqueSecret = $request->input('uniqueSecret');
+        $images = session()->get("images.{$uniqueSecret}", []);
+        $removedImages = session()->get("removedimages.{$uniqueSecret}", []);
+        $images = array_diff($images, $removedImages);
+        $data = [];
+
+        foreach ($images as $image) {
+            $data[]=[
+                'id' => $image,
+                'src' => Storage::url($image)
+            ];
+        }
+
+        return response()->json($data);
     }
 
     /**
@@ -87,6 +154,8 @@ class AnnouncementController extends Controller
             return redirect()->back()->with('message', "Utente bloccato, non puoi modificare annunci");
         }
         $categories=Category::all();
+
+
         return view('announcements.edit', compact('categories', 'announcement'));
     }
 
