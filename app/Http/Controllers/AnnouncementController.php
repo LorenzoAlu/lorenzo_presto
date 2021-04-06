@@ -108,7 +108,11 @@ class AnnouncementController extends Controller
     public function getImages(Request $request)
     {
         $uniqueSecret = $request->input('uniqueSecret');
+<<<<<<< HEAD
         $images = session()->get("images.{$uniqueSecret}", []);
+=======
+        $image = session()->get("images.{$uniqueSecret}", []);
+>>>>>>> f17ebe5d755b051998c73756175a290909b496b3
         $removedImages = session()->get("removedimages.{$uniqueSecret}", []);
         $images = array_diff($images, $removedImages);
         $data = [];
