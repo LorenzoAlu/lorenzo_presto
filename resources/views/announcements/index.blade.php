@@ -18,7 +18,7 @@
     </div>
     <div class="row mt-5">
         @foreach ($announcements as $announcement)
-        <div class="col-12 col-md-6 col-lg-4 my-2 my-md-5 p-5">
+        <div class="col-12 col-md-6 col-lg-4 my-2 my-md-5 p-4">
             <x-card 
             title="{{$announcement->title}}"
             price="{{$announcement->price}}"
@@ -33,11 +33,22 @@
             />
         </div>
         @endforeach 
-        <div class="col-12 d-flex justify-content-center">
-            <div class="">{{$announcements->links()}}</div>
-        </div>
+      
+        
         @endif
+        
+       
+        
+    </div> 
+    
+    
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-center text-center">
+         <div class="col-12">
+            {{ $announcements->links() }} 
+         </div>
     </div>
 </div>
-    
+   
 @endsection

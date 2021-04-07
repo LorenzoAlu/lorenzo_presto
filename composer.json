@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -12,6 +15,7 @@
         "laravel/framework": "^8.12",
         "laravel/scout": "^8.6",
         "laravel/tinker": "^2.5",
+        "spatie/image": "^1.10",
         "teamtnt/laravel-scout-tntsearch-driver": "^11.2",
         "teamtnt/tntsearch": "^2.7"
     },

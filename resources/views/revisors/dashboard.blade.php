@@ -48,20 +48,17 @@
                         </div>
                         <div class="col-12 col-md-10">
                             <div class="row mb-2">
-                                <div class="col-12 col-md-4">
-                                    <img src="http://picsum.photos/1920/1080" class="img-fluid d-block" alt="#">
-                                </div>
-                                <div class="col-12 col-md-8">
-                                    ...
-                                </div>
-                            </div>
-                            <div class="row mb-2">
-                                <div class="col-12 col-md-4">
-                                    <img src="http://picsum.photos/1920/1080" class="img-fluid d-block" alt="#">
-                                </div>
-                                <div class="col-12 col-md-8">
-                                    ...
-                                </div>
+                                @foreach ($announcement->images as $image)
+                                    <div class="col-12 col-md-4">
+                                        <img src="{{$image->getUrl(300,150)}}" class="img-fluid d-block" alt="#">
+                                    </div>
+                                    <div class="col-12 col-md-8">
+                                        {{$image->id}}<br>
+                                        {{$image->file}}<br>
+                                        {{Storage::url($image->file)}}
+                                    </div>
+                                    {{-- {{dd($image->getUrl(300,150))}} --}}
+                                @endforeach
                             </div>
                         </div>
                     </div>
