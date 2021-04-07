@@ -18,15 +18,27 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <form action="{{route('locale', 'it')}}" method="POST">
                     @csrf
-                    <li><button type="submit" class="dropdown-item">Italiano</button></li>
+                    <li>
+                        <button type="submit" class="dropdown-item">
+                            <img class="flag me-2" src="/media/italy.svg" alt="bandiera Italia"> Italiano
+                        </button>
+                    </li>
                 </form>
                 <form action="{{route('locale', 'en')}}" method="POST">
                     @csrf
-                <li><button type="submit" class="dropdown-item">English</button></li>
+                <li>
+                    <button type="submit" class="dropdown-item">
+                        <img class="flag me-2" src="/media/inglese.svg" alt="bandiera Gran Bretagna"> English
+                    </button>
+                </li>
                 </form>
                 <form action="{{route('locale', 'es')}}" method="POST">
                     @csrf
-                    <li><button type="submit" class="dropdown-item">Español</button></li>
+                    <li>
+                        <button type="submit" class="dropdown-item">
+                            <img class="flag me-2" src="/media/spagna.svg" alt="bandiera Spagna"> Español
+                        </button>
+                    </li>
                 </form>
             </ul>
         </div>
@@ -161,21 +173,33 @@
     <a class="nav-link text-white" href="{{route('announcements.create')}}">{{__('ui.add_announcement')}}</a>
 </div>
 <div class="nav-item dropdown ms-md-4 d-block d-lg-none">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{__('ui.languages')}}
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <form action="{{route('locale', 'it')}}" method="POST">
             @csrf
-            <li><button type="submit" class="dropdown-item">Italiano</button></li>
+            <li>
+                <button type="submit" class="dropdown-item">
+                    <img class="flag me-2" src="/media/italy.svg" alt="bandiera Italia"> Italiano
+                </button>
+            </li>
         </form>
         <form action="{{route('locale', 'en')}}" method="POST">
             @csrf
-        <li><button type="submit" class="dropdown-item">English</button></li>
+        <li>
+            <button type="submit" class="dropdown-item">
+                <img class="flag me-2" src="/media/inglese.svg" alt="bandiera Gran Bretagna"> English
+            </button>
+        </li>
         </form>
         <form action="{{route('locale', 'es')}}" method="POST">
             @csrf
-            <li><button type="submit" class="dropdown-item">Español</button></li>
+            <li>
+                <button type="submit" class="dropdown-item">
+                    <img class="flag me-2" src="/media/spagna.svg" alt="bandiera Spagna"> Español
+                </button>
+            </li>
         </form>
     </ul>
 </div>
