@@ -33,4 +33,10 @@ class HomeController extends Controller
         $user=Auth::user();
         return view('users.profile', compact('user'));
     }
+
+    public function locale($locale)
+    {
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
 }

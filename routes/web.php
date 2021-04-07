@@ -36,6 +36,7 @@ Route::get('/announcements/{announcement}/show', [AnnouncementController::class,
 Route::get('/announcements/index', [AnnouncementController::class, 'index'])->name('announcements.index');
 Route::get('/announcements/search', [SearchController::class,'search'])->name('announcements.search');
 Route::post('/contacts/{announcement}/contactSeller', [ContactController::class, 'contactSeller'])->name('contacts.contactSeller');
+Route::post('/locale/{locale}', [HomeController::class, 'locale'])->name('locale');
 
  //ROTTE LOGGATE
 Route::middleware([Authenticate::class])->group(function(){
