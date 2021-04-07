@@ -165,9 +165,18 @@
         Lingue
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="#">Italiano</a></li>
-        <li><a class="dropdown-item" href="#">English</a></li>
-        <li><a class="dropdown-item" href="#">Español</a></li>
+        <form action="{{route('locale', 'it')}}" method="POST">
+            @csrf
+            <li><button type="submit" class="dropdown-item">Italiano</button></li>
+        </form>
+        <form action="{{route('locale', 'en')}}" method="POST">
+            @csrf
+        <li><button type="submit" class="dropdown-item">English</button></li>
+        </form>
+        <form action="{{route('locale', 'es')}}" method="POST">
+            @csrf
+            <li><button type="submit" class="dropdown-item">Español</button></li>
+        </form>
     </ul>
 </div>
 </ul>

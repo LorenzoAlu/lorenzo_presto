@@ -34,7 +34,7 @@
             <div class="row h-75 align-items-center justify-content-around">
                 <div class="col-12 col-lg-6 col-xxl-4 ps-lg-100 my-5 text-center text-lg-start pt-md-5">
                     <h3 class="font-size25 text-white fw-light mb-3">Lorem Ipsum sit Facet</h3>
-                    <h2 class= "text-white display-3 fw-bold mb-5">Cerchi usato <br> a prezzi <br> vantaggiosi?</h2>
+                    <h2 class= "text-white display-3 fw-bold mb-5">{{__('ui.welcome')}}</h2>
                     {{-- <button class="btn2 shadow my-5 text-white font-size25" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="text-decoration-none" href="{{route('announcements.create')}}"> <h2 class="mb-0 font-size25 text-white">Inizia</h2></a>
                     </button> --}}
