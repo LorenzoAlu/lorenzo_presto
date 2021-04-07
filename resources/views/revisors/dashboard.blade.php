@@ -52,10 +52,10 @@
                                     <div class="col-12 col-md-4">
                                         <img src="{{$image->getUrl(300,150)}}" class="img-fluid d-block" alt="#">
                                     </div>
-                                    <div class="col-12 col-md-8">
-                                        {{$image->id}}<br>
-                                        {{$image->file}}<br>
-                                        {{Storage::url($image->file)}}
+                                    <div class="col-12 col-md-8 " style="overflow: auto">
+                                       <p><strong>ID: </strong>{{$image->id}} </p> 
+                                       <p><strong>Url: </strong>{{$image->file}} </p>
+                                       <p><strong>Crop_Url: </strong>{{$image->getUrl(300,150)}}</p>
                                     </div>
                                     {{-- {{dd($image->getUrl(300,150))}} --}}
                                 @endforeach

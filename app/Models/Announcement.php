@@ -10,6 +10,7 @@ use Laravel\Scout\Searchable;
 use App\Models\AnnouncementImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
@@ -69,5 +70,16 @@ class Announcement extends Model
     public function images()
     {
         return $this->hasMany(AnnouncementImage::class);
+    }
+
+    public function getCover()
+    {
+        $img=$this->images->first();
+        if($img==null){
+            return '/storage/default/default.png';
+        }else{
+            // return Storage::url($img->file);   
+            return $img->getUrl(400,300);
+        }
     }
 }

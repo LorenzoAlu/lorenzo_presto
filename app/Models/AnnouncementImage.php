@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Models\Announcement;
-use App\Models\AnnouncementImage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -25,6 +24,7 @@ class AnnouncementImage extends Model
         $path = dirname($filePath);
         $fileName = basename($filePath);
         $file = "{$path}/crop{$w}x{$h}_{$fileName}";
+
         return Storage::url($file);
     }
 
@@ -32,4 +32,6 @@ class AnnouncementImage extends Model
     {
         return AnnouncementImage::getUrlByFilePath($this->file,$w,$h);
     }
+
+    
 }

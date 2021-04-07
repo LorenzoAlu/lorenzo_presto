@@ -73,6 +73,7 @@
         @foreach ($user->likes as $like)
         <div class="col-12 col-md-6 col-lg-4 my-5 p-5">
             <x-card 
+            image="{{$like->announcement->getCover()}}"
             title="{{$like->announcement->title}}"
             price="{{$like->announcement->price}}"
             user="{{$like->announcement->user->name}}"

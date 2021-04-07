@@ -36,6 +36,7 @@ Route::get('/announcements/{announcement}/show', [AnnouncementController::class,
 Route::get('/announcements/index', [AnnouncementController::class, 'index'])->name('announcements.index');
 Route::get('/announcements/search', [SearchController::class,'search'])->name('announcements.search');
 Route::post('/contacts/{announcement}/contactSeller', [ContactController::class, 'contactSeller'])->name('contacts.contactSeller');
+Route::post('/locale/{locale}', [HomeController::class, 'locale'])->name('locale');
 
  //ROTTE LOGGATE
 Route::middleware([Authenticate::class])->group(function(){
@@ -52,6 +53,7 @@ Route::get('/announcements/{announcement:title}/edit', [AnnouncementController::
 Route::post('/announcements/{announcement}/update', [AnnouncementController::class, 'update'])->name('announcements.update');
 Route::post('/announcements/{announcement}/addLiked', [AnnouncementController::class, 'addLiked'])->name('announcements.addLiked');
 Route::post('/announcements/{announcement}/lessLiked', [AnnouncementController::class, 'lessLiked'])->name('announcements.lessLiked');
+Route::delete('/announcement/images/{image}/destroyImage', [AnnouncementController::class, 'destroyImage'])->name('announcement.images.destroyImage');
 });
 
 //ROUTE REVISOR

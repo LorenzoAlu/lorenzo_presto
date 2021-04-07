@@ -33,13 +33,13 @@
             </div> --}}
             <div class="row h-75 align-items-center justify-content-around">
                 <div class="col-12 col-lg-6 col-xxl-4 ps-lg-100 my-5 text-center text-lg-start pt-md-5">
-                    <h3 class="font-size25 text-white fw-light mb-3">Lorem Ipsum sit Facet</h3>
-                    <h2 class= "text-white display-3 fw-bold mb-5">Cerchi usato <br> a prezzi <br> vantaggiosi?</h2>
+                    <h3 class="font-size25 text-white fw-light mb-3">{{__('ui.welcome')}}</h3>
+                    <h2 class= "text-white display-3 fw-bold mb-5">{{__('ui.claim')}}</h2>
                     {{-- <button class="btn2 shadow my-5 text-white font-size25" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="text-decoration-none" href="{{route('announcements.create')}}"> <h2 class="mb-0 font-size25 text-white">Inizia</h2></a>
                     </button> --}}
                     <form class="d-flex home-search" action="{{route('announcements.search')}}" method="GET">
-                        <input class="form-control btn bg-white rounded-pill input-shadow " type="text" name="q" placeholder="cerca annunci">
+                        <input class="form-control btn bg-white rounded-pill input-shadow " type="text" name="q" placeholder="{{__('ui.search_announcements')}}">
                         <button class="btn btn-card rounded-pill input-shadow btn-position-search " type="submit"> <i class="fas fa-search text-white"></i> </button>
                     </form>
                 </div>
@@ -58,8 +58,10 @@
         <div class="container-fluid bg-img2 bg-new2">
             <div class="row align-items-start mb-5 h-30">
                 <!-- DESCRIZIONE PRESTO.IT -->
-                <div class="col-12 d-flex justify-content-center">
-                    <p class="font-size20 text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-3"> <span class="fs-2"> <b>Presto.it </b></span> è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti.</p>
+                <div class="col-12 col-md-7 d-flex justify-content-center">
+                    <p class="font-size20 text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-5"> <span class="fs-2"> <b>Presto.it </b></span> 
+                        {{__('ui.description')}}<br>
+                        {{-- è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti. --}}</p>
                 </div>
             </div>
             <div class="row pt-lg-5 mt-lg-100  h-50">
@@ -75,7 +77,7 @@
                 <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  align-items-center mt-5 pt-5">
                     <div class="row justify-content-end row-justify-mobile text-center">
                         <div>
-                        <button class="btn btn2 shadow fw-bold fs-5 mx-auto my-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">Tutti gli annunci</a></button>
+                        <button class="btn btn2 shadow fw-bold fs-5 mx-auto my-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">{{__('ui.announcements')}}</a></button>
                         </div>
                         @foreach ($categories as $category)
                         <div class="col-12 col-md-6 col-xxl-4 text-align-mobile text-end">
@@ -118,11 +120,12 @@
         @if (count($announcements) > 0)
         <div class="row ">
             <div class="col-12 text-center m-150 mb-5">
-                <h3>Ultimi Annunci Inseriti</h3>
+                <h3>{{__('ui.last_announcements')}}</h3>
             </div>
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-6 col-xl-4 mb-5 p-md-5">
                 <x-card 
+                image="{{$announcement->getCover()}}"
                 title="{{$announcement->title}}"
                 price="{{$announcement->price}}"
                 user="{{$announcement->user->name}}"
@@ -140,7 +143,7 @@
         @else
         <div class="row">
             <div class="col-12 my-5">
-                <h3 class="text-center">Non ci sono ancora annunci</h3>
+                <h3 class="text-center"{{__('ui.missing_announcements')}}>Non ci sono ancora annunci</h3>
             </div>
         </div>
         @endif

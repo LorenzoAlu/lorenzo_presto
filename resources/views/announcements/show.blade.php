@@ -25,20 +25,18 @@
     <div class="row">
         
         <div class="col-12 col-md-6 my-3">
-            
+          @if(count($announcement->images()->get())== 0)
+           <img class="img-fluid d-block mx-auto" src="/storage/default/default.png" alt="img default">
+          @else
             
             <div class="swiper-container gallery-top mb-4">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
-                            class="img-fluid mx-auto d-block"> </div>
-                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
-                            class="img-fluid mx-auto d-block"> </div>
-
-                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
-                            class="img-fluid mx-auto d-block"> </div>
-                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
-                            class="img-fluid mx-auto d-block"> </div>
-
+                      
+                  @foreach ($announcement->images as $image)
+                  <div class="swiper-slide"> <img src="{{Storage::url($image->file)}}" alt="prodotto"
+                          class="img-fluid mx-auto d-block"> </div>       
+                  @endforeach
+                  
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next swiper-button-white"></div>
@@ -46,21 +44,14 @@
             </div>
             <div class="swiper-container gallery-thumbs">
                 <div class="swiper-wrapper">
-
-                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
-                            class="img-fluid mx-auto d-block"> </div>
-                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
-                            class="img-fluid mx-auto d-block"> </div>
-
-                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
-                            class="img-fluid mx-auto d-block"> </div>
-                    <div class="swiper-slide"> <img src="/media/computer.jpg" alt="prodotto"
-                            class="img-fluid mx-auto d-block"> </div>
-
+                  @foreach ($announcement->images as $image)
+                  <div class="swiper-slide"> <img src="{{$image->getUrl(120,120)}}" alt="prodotto"
+                          class="img-fluid mx-auto d-block"> </div>
+                  @endforeach
                 </div>
             </div>
               
-
+            @endif
         </div>
 
         <div class="col-12 col-md-6">
