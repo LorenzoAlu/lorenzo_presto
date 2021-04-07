@@ -266,6 +266,12 @@ class AnnouncementController extends Controller
 
         return redirect()->back()->with('message','tolto dai preferiti');
     }
+
+    public function destroyImage(AnnouncementImage $image)
+    {
+        $image->delete();
+        return redirect()->back();
+    }
  
 }
 

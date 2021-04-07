@@ -53,6 +53,7 @@ Route::get('/announcements/{announcement:title}/edit', [AnnouncementController::
 Route::post('/announcements/{announcement}/update', [AnnouncementController::class, 'update'])->name('announcements.update');
 Route::post('/announcements/{announcement}/addLiked', [AnnouncementController::class, 'addLiked'])->name('announcements.addLiked');
 Route::post('/announcements/{announcement}/lessLiked', [AnnouncementController::class, 'lessLiked'])->name('announcements.lessLiked');
+Route::delete('/announcement/images/{image}/destroyImage', [AnnouncementController::class, 'destroyImage'])->name('announcement.images.destroyImage');
 });
 
 //ROUTE REVISOR

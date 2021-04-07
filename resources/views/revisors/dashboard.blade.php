@@ -55,7 +55,7 @@
                                     <div class="col-12 col-md-8">
                                        <p> {{$image->id}} </p> 
                                        <p>{{$image->file}} </p> 
-                                       <p> {{Storage::url($image->file)}}  </p> 
+                                       <p> {{$image->getUrl(300,150)}}  </p> 
                                     </div>
                                     {{-- {{dd($image->getUrl(300,150))}} --}}
                                 @endforeach
