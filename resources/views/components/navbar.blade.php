@@ -11,7 +11,7 @@
             <h1 class="mb-0 font-size25 text-white"> Presto.it </h1>
         </a>
         
-        <div class="nav-item dropdown ms-5 d-none d-lg-block">
+        <div class="nav-item dropdown ms-2 d-none d-lg-block">
             <a class="nav-link dropdown-toggle text-white  fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{__('ui.languages')}}
             </a>
