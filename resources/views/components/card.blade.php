@@ -1,8 +1,5 @@
 <div class="card border-0 card-shadow d-flex align-items-center border-card p-4 h-100">
-  <div class="img-card">
-
-  </div>
-    {{-- <img src="http://picsum.photos/400/300" class="card-img-top" alt="..."> --}}
+    <img src="{{$image}}" class="card-img-top " alt="...">
     <div class="card-body card-text px-0 d-flex flex-column justify-content-between">
       <div>
         <h4 class="card-title">{{$title}}</h4>

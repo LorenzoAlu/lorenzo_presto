@@ -81,6 +81,13 @@ class AnnouncementController extends Controller
                 400,
                 300
             ));
+
+            dispatch(new ResizeImage(
+                $newFileName,
+                120,
+                120
+            ));
+            
             $i->file = $newFileName;
             $i->announcement_id = $announcement->id;
 

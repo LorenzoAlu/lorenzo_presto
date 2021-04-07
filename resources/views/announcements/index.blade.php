@@ -20,6 +20,7 @@
         @foreach ($announcements as $announcement)
         <div class="col-12 col-md-6 col-lg-4 my-2 my-md-5 p-4">
             <x-card 
+            image="{{$announcement->getCover()}}"
             title="{{$announcement->title}}"
             price="{{$announcement->price}}"
             user="{{$announcement->user->name}}"
