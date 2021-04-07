@@ -84,7 +84,7 @@
             
             <p>
                 <button class="btn btn2 shadow fw-normal rounded-pill text-white my-3" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
-                    Contatta Venditore
+                    {{__('ui.contact_seller')}}
                   </button>
             </p>
             <div class="collapse" id="contatta">
@@ -95,7 +95,7 @@
                       @csrf
                       @if(Auth::user() != null)
                         <div class="mb-3 d-none">
-                          <label for="name" class="form-label">Nome</label>
+                          <label for="name" class="form-label">{{__('ui.name')}}</label>
                           <input placeholder="{{Auth::user()->name}}" required value="{{Auth::user()->name}}" autofocus name="name" type="text" class="form-control input-shadow-form rounded-pill" id="name" aria-describedby="name">
                         </div>
                         <div class="mb-3 d-none">
@@ -104,10 +104,10 @@
                         </div>
                         @endif
                         <div class="mb-3">
-                          <label for="body" class="form-label">Contatta l'utente: {{$announcement->user->name}}</label>
-                          <textarea placeholder="Inserisci qui le tue motivazioni" required autofocus class="form-control input-shadow-form" name="body" id="body" cols="12" rows="5">{{$announcement->body}}</textarea>
+                          <label for="body" class="form-label">{{__('ui.contact_user')}}: {{$announcement->user->name}}</label>
+                          <textarea placeholder="{{__('ui.insert_reasons')}}" required autofocus class="form-control input-shadow-form" name="body" id="body" cols="12" rows="5">{{$announcement->body}}</textarea>
                         </div>
-                        <button type="submit" class="btn btn-card rounded-pill text-white">Invia</button>
+                        <button type="submit" class="btn btn-card rounded-pill text-white">{{__('ui.send')}}</button>
                     </form>
         
                 </div>

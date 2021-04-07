@@ -11321,6 +11321,11 @@ thead {
   color: white !important;
 }
 
+.flag {
+  width: 12px;
+  height: 8px;
+}
+
 @media screen and (max-width: 1676px) {
   .new-bg1 {
     background-image: url("/media/layout-md-8_Tavola disegno 1 copia 2.jpg");

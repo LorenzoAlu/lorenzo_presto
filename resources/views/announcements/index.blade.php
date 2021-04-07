@@ -4,13 +4,13 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         @if (count($announcements) == 0)
-            <p class="text-center fst-italic mb-3">Non ci sono ancora articoli.</p>
+            <p class="text-center fst-italic mb-3">{{__('ui.no_announcement_yet')}}</p>
             <div class="col-6 mt-3">
                 <x-searchbar></x-searchbar>
             </div>
         @else
         <div class="col-12">
-            <h2 class="text-center mb-3">Esplora tutti gli articoli</h2>
+            <h2 class="text-center mb-3">{{__('ui.explore_announcements')}}</h2>
         </div>
         <div class="col-6 mt-3 w-search-mobile">
             <x-searchbar></x-searchbar>
