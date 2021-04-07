@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row text-center my-5">
             <div class="col-12">
-                <h2>Modifica annuncio</h2>
+                <h2>{{__('ui.modify_announcement')}}</h2>
             </div>
         </div>
     </div>
@@ -15,8 +15,8 @@
                     @csrf
                     <input type="hidden" name="uniqueSecret" value="{{ $uniqueSecret }}">
                     <div class="mb-3">
-                        <label for="title" class="form-label">Titolo</label>
-                        <input placeholder="Inserisci qui il titolo del tuo annuncio" required
+                        <label for="title" class="form-label">{{__('ui.title')}}</label>
+                        <input placeholder="{{__('ui.insert_title_announcement')}}" required
                             value="{{ $announcement->title }}" autofocus name="title" type="text"
                             class="form-control input-shadow-form rounded-pill" id="title" aria-describedby="title">
                         @error('title')
@@ -25,8 +25,8 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="price" class="form-label">Prezzo</label>
-                        <input placeholder="Inserisci qui il prezzo del tuo annuncio" required autofocus name="price"
+                        <label for="price" class="form-label">{{__('ui.price')}}</label>
+                        <input placeholder="{{__('ui.insert_price_announcement')}}" required autofocus name="price"
                             type="number" min="0" value="{{ $announcement->price }}" step=".01"
                             class="form-control input-shadow-form rounded-pill" id="price" aria-describedby="price">
                         @error('price')
@@ -35,8 +35,8 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="descrizione" class="form-label">Descrizione</label>
-                        <textarea placeholder="Inserisci qui la descrizione del tuo annuncio" required autofocus
+                        <label for="descrizione" class="form-label">{{__('ui.description')}}</label>
+                        <textarea placeholder="{{__('ui.insert_description_announcement')}}" required autofocus
                             class="form-control input-shadow-form " name="body" id="descrizione" cols="30"
                             rows="10">{{ $announcement->body }}</textarea>
                         @error('body')
@@ -45,10 +45,10 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="categoria">Categoria</label>
+                        <label class="form-label" for="categoria">{{__('ui.category')}}</label>
                         <select required class="form-control input-shadow-form rounded-pill" name="category_id"
                             id="categoria">
-                            <option selected disabled value="">Seleziona categoria</option>
+                            <option selected disabled value="">{{__('ui.choose_category')}}</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}"
                                     {{ $announcement->category->id == $category->id ? 'selected' : ' ' }}>
@@ -58,7 +58,7 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="images" class="form-label">Immagini</label>
+                        <label for="images" class="form-label">{{__('ui.images')}}</label>
                         <div class="dropzone" id="drophere"></div>
                         @error('images')
                             <div class="alert background-accent d-inline-block my-3 text-dark text-uppercase">
@@ -66,11 +66,11 @@
                         @enderror
                     </div>
 
-                    <button type="submit" class="btn btn-card rounded-pill text-white ">Modifica</button>
+                    <button type="submit" class="btn btn-card rounded-pill text-white ">{{__('ui.modify')}}</button>
                 </form>
                 <div class="row my-3">
                   <div class="col-12">
-                    <h3 class="text-center">Immagini Caricate</h3>
+                    <h3 class="text-center">{{__('ui.uploaded_images')}}</h3>
                   </div>
                   @foreach ($announcement->images as $image)
                       <div class="col-12 col-md-4 mb-3 d-flex flex-column justify-content-between">
@@ -83,7 +83,7 @@
                                 @csrf
                                 @method('DELETE')
                                   <button type="submit" class="btn btn-danger text-white">
-                                      Elimina
+                                      {{__('ui.delete')}}
                                   </button>
                               </form>
                           </div>
