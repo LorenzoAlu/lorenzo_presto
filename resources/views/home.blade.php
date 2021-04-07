@@ -56,7 +56,7 @@
     
     <section>
         <div class="container-fluid bg-img2 bg-new2">
-            <div class="row align-items-start mb-5 h-30">
+            <div class="row align-items-start mb-5 h-30 justify-content-center">
                 <!-- DESCRIZIONE PRESTO.IT -->
                 <div class="col-12 col-md-7 d-flex justify-content-center">
                     <p class="font-size20 text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-5"> <span class="fs-2"> <b>Presto.it </b></span> 
