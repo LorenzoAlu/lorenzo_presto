@@ -13,6 +13,7 @@
             <div class="col-12 col-md-6 bg-white p-5 form-custom">
                 <form method="POST" action="{{route('announcements.update', $announcement)}}">
                   @csrf
+                  <input type="hidden" name="uniqueSecret" value="{{$uniqueSecret}}">
                     <div class="mb-3">
                       <label for="title" class="form-label">Titolo</label>
                       <input placeholder="Inserisci qui il titolo del tuo annuncio" required value="{{$announcement->title}}" autofocus name="title" type="text" class="form-control input-shadow-form rounded-pill" id="title" aria-describedby="title">
@@ -48,7 +49,19 @@
                         @endforeach
                           
                       </select>
-                      
+                    </div>
+                    <div class="mb-3">
+                      <label for="images" class="form-label">Immagini</label>
+                      <div class="dropzone" id="drophere"></div>
+                      @error('images')
+                            <div class="alert background-accent d-inline-block my-3 text-dark text-uppercase">
+                                {{ $message }}</div>
+                      @enderror
+                    </div>
+                    <div>
+                      @foreach ($announcement->images as $image)
+                      <img src="{{Storage::url($image->file)}}" width="100px" height="100px" alt="">
+                      @endforeach
                     </div>
                     <button type="submit" class="btn btn-card rounded-pill text-white ">Modifica</button>
                 </form>
