@@ -11,8 +11,10 @@
     <div class="container mb-5 pb-5">
         <div class="row justify-content-center mx-3 mb-3">
             <div class="col-12 col-md-8 col-lg-6 bg-white p-5 form-custom">
+              <h3>DEBUG:: SECRET {{$uniqueSecret}}</h3>
                 <form method="POST" action="{{route('announcements.store')}}">
                   @csrf
+                    <input type="hidden" name="uniqueSecret" value="{{$uniqueSecret}}">
                     <div class="mb-3">
                       <label for="title" class="form-label">Titolo</label>
                       <input placeholder="Inserisci qui il titolo del tuo annuncio" required value="{{old('title')}}" autofocus name="title" type="text" class="form-control input-shadow-form rounded-pill" id="title" aria-describedby="title">
@@ -49,6 +51,14 @@
                           
                       </select>
                       
+                    </div>
+                    <div class="mb-3">
+                      <label for="images" class="form-label">Immagini</label>
+                      <div class="dropzone" id="drophere"></div>
+                      @error('images')
+                            <div class="alert background-accent d-inline-block my-3 text-dark text-uppercase">
+                                {{ $message }}</div>
+                      @enderror
                     </div>
                     <button type="submit" class="btn btn-card rounded-pill text-white ">Crea</button>
                 </form>

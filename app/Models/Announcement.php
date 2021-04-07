@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Category;
 
 use Laravel\Scout\Searchable;
+use App\Models\AnnouncementImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -63,5 +64,10 @@ class Announcement extends Model
             } 
         
         return true;
+    }
+
+    public function images()
+    {
+        return $this->hasMany(AnnouncementImage::class);
     }
 }
