@@ -11361,6 +11361,14 @@ thead {
   .ms-xl-200 {
     margin-left: 200px;
   }
+
+  .bg-img3 {
+    background-image: url("/media/bg-presto_Tavola disegno 1 copia-06.jpg");
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 92%;
+  }
 }
 @media screen and (max-width: 1400px) {
   .btn3 {
