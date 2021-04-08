@@ -11,7 +11,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
-class GoogleVisionImage implements ShouldQueue
+class GoogleVisionSafeSearchImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -48,7 +48,7 @@ class GoogleVisionImage implements ShouldQueue
         $violence=$safe->getViolence();
         $racy=$safe->getRacy();
 
-        echo json_encode([$adult,$medical,$spoof,$violence,$racy]);
+        // echo json_encode([$adult,$medical,$spoof,$violence,$racy]);
         $likelihoodName=[
             'UNKNOWN', 'VERY_UNLIKELY', 'UNLIKELY', 'POSSIBLE', 'LIKELY', 'VERY_LIKELY'
         ];

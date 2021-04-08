@@ -53,7 +53,12 @@
                                         <img src="{{$image->getUrl(300,150)}}" class="img-fluid d-block" alt="#">
                                     </div>
                                     <div class="col-12 col-md-8 " style="overflow: auto">
-                                       <p><strong>ID: </strong>{{$image->id}} </p> 
+                                       Adult:{{$image->adult}} <br> 
+                                       Spoof:{{$image->spoof}} <br> 
+                                       Medical:{{$image->medical}} <br> 
+                                       Violence:{{$image->violence}} <br> 
+                                       Racy:{{$image->racy}} <br> 
+                                        <p><strong>ID: </strong>{{$image->id}} </p> 
                                        <p><strong>Url: </strong>{{$image->file}} </p>
                                        <p><strong>Crop_Url: </strong>{{$image->getUrl(300,150)}}</p>
                                     </div>
