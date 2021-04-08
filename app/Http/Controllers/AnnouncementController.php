@@ -78,6 +78,7 @@ class AnnouncementController extends Controller
                 300,
                 150
             ));
+            
             dispatch(new ResizeImage(
                 $newFileName,
                 400,
@@ -92,7 +93,6 @@ class AnnouncementController extends Controller
 
             $i->file = $newFileName;
             $i->announcement_id = $announcement->id;
-
             $i->save();
             dispatch(new GoogleVisionSafeSearchImage($i->id));
             dispatch(new GoogleVisionLabelImage($i->id));
