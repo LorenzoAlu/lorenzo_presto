@@ -10,13 +10,13 @@
         <div class="col-12">
             <div class="revisor-shadow">
                 <div class="revisor-header text-center text-white py-2">
-                    Annuncio # {{$announcement->id}}
+                    {{__('ui.announcement')}} # {{$announcement->id}}
                     
                 </div>
                 <div class="form-custom2 p-4">
                     <div class="row mt-3">
                         <div class="col-12 col-md-2">
-                            <h3 class="fs-4">Utente</h3>
+                            <h3 class="fs-4">{{__('ui.user')}}</h3>
                         </div>
                         <div class="col-12 col-md-10">
                             #{{$announcement->user->id}},
@@ -27,7 +27,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-12 col-md-2">
-                            <h3 class="fs-4">Titolo</h3>
+                            <h3 class="fs-4">{{__('ui.title')}}</h3>
                         </div>
                         <div class="col-12 col-md-10">
                             {{$announcement->title}}
@@ -36,7 +36,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-12 col-md-2">
-                            <h3 class="fs-4">Descrizione</h3>
+                            <h3 class="fs-4">{{__('ui.description')}}</h3>
                         </div>
                         <div class="col-12 col-md-10">
                             {{$announcement->body}}
@@ -44,7 +44,7 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-12 col-md-2">
-                            <h3 class="fs-4">Immagini</h3>
+                            <h3 class="fs-4">{{__('ui.images')}}</h3>
                         </div>
                         <div class="col-12 col-md-10">
                             <div class="row mb-2">
@@ -52,10 +52,10 @@
                                     <div class="col-12 col-md-4">
                                         <img src="{{$image->getUrl(300,150)}}" class="img-fluid d-block" alt="#">
                                     </div>
-                                    <div class="col-12 col-md-8">
-                                        {{$image->id}}<br>
-                                        {{$image->file}}<br>
-                                        {{Storage::url($image->file)}}
+                                    <div class="col-12 col-md-8 " style="overflow: auto">
+                                       <p><strong>ID: </strong>{{$image->id}} </p> 
+                                       <p><strong>Url: </strong>{{$image->file}} </p>
+                                       <p><strong>Crop_Url: </strong>{{$image->getUrl(300,150)}}</p>
                                     </div>
                                     {{-- {{dd($image->getUrl(300,150))}} --}}
                                 @endforeach
@@ -71,14 +71,14 @@
             <form action="{{route('revisor.accept', $announcement->id)}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-modifica rounded-pill">
-                    Accetta
+                    {{__('ui.accept')}}
                 </button>
             </form>
         </div>
         <div class="col-6 text-center">
             
             <button type="button" class="btn btn-elimina mb-5 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Rifiuta
+                {{__('ui.reject')}}
               </button>  
     </div>
     </div>
@@ -87,19 +87,19 @@
     <div class="modal-dialog">
       <div class="modal-content p-4">
         <div class="modal-header">
-          <h5 class="modal-title text-gray" id="exampleModalLabel">Elimina annuncio</h5>
+          <h5 class="modal-title text-gray" id="exampleModalLabel">{{__('ui.delete_announcement')}}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-gray">
-          Sei sicuro?
+          {{__('ui.are_you_sure')}}
         </div>
         <div class="modal-footer">
             
-            <button type="button" class="btn btn-modifica rounded-pill" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-modifica rounded-pill" data-bs-dismiss="modal">{{__('ui.no')}}</button>
             <form action="{{route('revisor.reject', $announcement->id)}}" method="POST">
               @csrf
             <button type="submit" class="btn btn-elimina rounded-pill">
-              Sì
+              {{__('ui.yes')}}
           </button>
             </form>
           </div>
@@ -110,7 +110,7 @@
 <div class="container-fluid">
     <div class="row my-5">
         <div class="col-12">
-            <h2 class="text-center">Non sono presenti annunci da rivisionare</h2>
+            <h2 class="text-center">{{__('ui.no_announcement_revised')}}</h2>
         </div>
     </div>
 </div>

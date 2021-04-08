@@ -10921,6 +10921,11 @@ p {
   text-decoration: none;
 }
 
+.padding-descrizione {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .ps100 {
   padding-left: 100px;
 }
@@ -11314,6 +11319,11 @@ thead {
 .page-item.active .page-link {
   background-color: #8CA4FA !important;
   color: white !important;
+}
+
+.flag {
+  width: 12px;
+  height: 8px;
 }
 
 @media screen and (max-width: 1676px) {

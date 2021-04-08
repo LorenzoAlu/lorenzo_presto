@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-center mt-5 text-center">
             <div class="col-12 col-md-6">
-                <h2>Risultati di ricerca per: {{$q}}</h2>
+                <h2>{{__('ui.results_search_for')}}: {{$q}}</h2>
             </div>
         </div>
        
@@ -15,7 +15,7 @@
         </div>
         <div class="row  text-center justify-content-center">
             
-            <h3 class="my-5">Non ci sono annunci</h3>
+            <h3 class="my-5">{{__('ui.no_announcement_yet')}}</h3>
             <div class="col-12">  
             <img src="/media/20945436.jpg" class="img-fluid mx-auto w-75 w-md-50" alt="non-ci-sono-annunci">
             
@@ -41,6 +41,7 @@
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-4 my-5 p-5">
                 <x-card 
+                image="{{$announcement->getCover()}}"
                 title="{{$announcement->title}}"
                 price="{{$announcement->price}}"
                 user="{{$announcement->user->name}}"

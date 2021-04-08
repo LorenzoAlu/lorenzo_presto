@@ -81,6 +81,13 @@ class AnnouncementController extends Controller
                 400,
                 300
             ));
+
+            dispatch(new ResizeImage(
+                $newFileName,
+                120,
+                120
+            ));
+
             $i->file = $newFileName;
             $i->announcement_id = $announcement->id;
 
@@ -171,9 +178,9 @@ class AnnouncementController extends Controller
             return redirect()->back()->with('message', "Utente bloccato, non puoi modificare annunci");
         }
         $categories=Category::all();
+        $uniqueSecret = request()->old('uniqueSecret', base_convert(sha1(uniqid(mt_rand())),16,36));
 
-
-        return view('announcements.edit', compact('categories', 'announcement'));
+        return view('announcements.edit', compact('categories', 'announcement','uniqueSecret'));
     }
 
     /**
@@ -188,6 +195,42 @@ class AnnouncementController extends Controller
         $announcement->update($request->all());
         $announcement->is_accepted = null;
         $announcement->save();
+        $uniqueSecret = $request->input('uniqueSecret');
+
+        $images = session()->get("images.{$uniqueSecret}", []);
+        $removedImages = session()->get("removedimages.{$uniqueSecret}", []);
+
+        $images = array_diff($images, $removedImages);
+
+        foreach ($images as $image) {
+            $i = new AnnouncementImage();
+            $fileName = basename($image);
+            $newFileName = "public/announcements/{$announcement->id}/{$fileName}";
+            Storage::move($image, $newFileName);
+            dispatch(new ResizeImage(
+                $newFileName,
+                300,
+                150
+            ));
+            dispatch(new ResizeImage(
+                $newFileName,
+                400,
+                300
+            ));
+
+            dispatch(new ResizeImage(
+                $newFileName,
+                120,
+                120
+            ));
+
+            $i->file = $newFileName;
+            $i->announcement_id = $announcement->id;
+
+            $i->save();
+        }
+
+        File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
         return redirect(route('users.profile'))->with('message', "L' articolo $announcement->title è stato modificato correttamente.");
     }
 
@@ -222,6 +265,12 @@ class AnnouncementController extends Controller
 
 
         return redirect()->back()->with('message','tolto dai preferiti');
+    }
+
+    public function destroyImage(AnnouncementImage $image)
+    {
+        $image->delete();
+        return redirect()->back();
     }
  
 }
