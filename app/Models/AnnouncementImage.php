@@ -11,10 +11,15 @@ class AnnouncementImage extends Model
 {
     use HasFactory;
 
+    protected $casts=[
+        'labels'=>'array',
+    ];
+
     public function announcement()
     {
         return $this->belongsTo(Announcement::class);
     }
+
 
     static public function getUrlByFilePath($filePath, $w = null, $h = null)
     {
