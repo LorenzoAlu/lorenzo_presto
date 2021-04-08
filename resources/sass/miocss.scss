@@ -285,7 +285,7 @@ p{
   background-size: contain;
   background-position: top left;
   background-repeat: no-repeat;
-  // height: 1080px;
+  //height: 1080px;
 }
 
 .bg-gradient-footer {
@@ -623,6 +623,17 @@ thead{
   .ms-xl-200 {
       margin-left: 200px;
   } 
+
+  .bg-img3 {
+    background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-06.jpg');
+    background-size: contain;
+    
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 92%;
+    //height: 1080px;
+  }
+  
 }
 
 //LAPTOP
