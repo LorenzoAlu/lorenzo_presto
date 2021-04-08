@@ -58,6 +58,16 @@
                                        Medical:{{$image->medical}} <br> 
                                        Violence:{{$image->violence}} <br> 
                                        Racy:{{$image->racy}} <br> 
+
+                                        <b>Labels</b> <br>
+                                        <ul>
+                                            @if($image->labels)
+                                                @foreach ($image->labels as $label)
+                                                    <li>{{$label}}</li>
+                                                @endforeach
+                                            @endif
+                                        </ul>
+
                                         <p><strong>ID: </strong>{{$image->id}} </p> 
                                        <p><strong>Url: </strong>{{$image->file}} </p>
                                        <p><strong>Crop_Url: </strong>{{$image->getUrl(300,150)}}</p>
