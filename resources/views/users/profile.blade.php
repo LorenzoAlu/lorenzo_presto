@@ -36,7 +36,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($user->announcements as $announcement)
+                        @foreach ($user->announcements->reverse() as $announcement)
                         
                         <tr>
                             <td class="ps-4">
