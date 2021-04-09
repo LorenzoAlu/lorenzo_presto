@@ -11,7 +11,7 @@
             <h1 class="mb-0 font-size25 text-white"> Presto.it </h1>
         </a>
         
-        <div class="nav-item dropdown ms-2 d-none d-lg-block">
+        <div class="nav-item dropdown ms-5 d-none d-lg-block">
             <a class="nav-link dropdown-toggle text-white  fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{__('ui.languages')}}
             </a>
@@ -120,7 +120,7 @@
 </div>
 
 <div class="navbar-collapse collapse" id="navbarsExample01" style="">
-    <ul class="navbar-nav me-auto mb-2 ">
+    <ul class="navbar-nav ps-4 me-auto mb-2 ">
         @guest
         @if (Route::has('login'))
         <li class="nav-item pt-2 fw-600 text-white d-block d-lg-none">
@@ -172,7 +172,7 @@
 <div class="nav-item d-block d-lg-none">
     <a class="nav-link text-white" href="{{route('announcements.create')}}">{{__('ui.add_announcement')}}</a>
 </div>
-<div class="nav-item dropdown ms-md-4 d-block d-lg-none">
+<div class="nav-item dropdown d-block d-lg-none">
     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{__('ui.languages')}}
     </a>

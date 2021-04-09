@@ -11352,6 +11352,14 @@ thead {
   .bg-img3 {
     background-image: none;
   }
+
+  .bg-img2 {
+    background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
 }
 @media screen and (min-width: 1676px) {
   .img-new {
@@ -11472,6 +11480,13 @@ thead {
 
   .d-sm-none {
     display: none;
+  }
+
+  .bg-img2 {
+    background-image: none;
+    background-size: none;
+    width: 100%;
+    background-position: center;
   }
 }
 @media screen and (max-width: 400px) {
