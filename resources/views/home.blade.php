@@ -67,7 +67,7 @@
             </div>
             <div class="row pt-lg-5 mt-lg-100  h-50">
                 <!-- ICONE SOCIAL AL LATO -->
-                <div class="col-12 col-xxl-2 d-flex flex-xxl-column justify-content-evenly  align-items-center mt-5 pt-5 d-none d-md-hidden">
+                <div class="col-12 col-xxl-2 d-flex flex-xxl-column justify-content-evenly  align-items-center mt-5 pt-5 dispaly-none d-md-hidden">
                     <a href=""><i class="fab fa-facebook-square a-hover shadow  text-second-color text-lg-white"></i></a>
                     <a href=""><i class="fab fa-instagram shadow a-hover text-second-color text-lg-white"></i></a>
                     <a href=""><i class="fab fa-twitter shadow a-hover text-second-color text-lg-white"></i></a>
