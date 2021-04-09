@@ -76,7 +76,7 @@ class Announcement extends Model
     {
         $img=$this->images->first();
         if($img==null){
-            return '/storage/default/default.jpg';
+            return '/storage/default/default.png';
         }else{
             // return Storage::url($img->file);   
             return $img->getUrl(400,300);

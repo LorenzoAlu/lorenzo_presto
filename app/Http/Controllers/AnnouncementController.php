@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use App\Jobs\GoogleVisionSafeSearchImage;
 use App\Http\Requests\AnnouncementRequest;
+use App\Jobs\GoogleVisionRemoveFaces;
 
 class AnnouncementController extends Controller
 {
@@ -73,29 +74,35 @@ class AnnouncementController extends Controller
             $fileName = basename($image);
             $newFileName = "public/announcements/{$announcement->id}/{$fileName}";
             Storage::move($image, $newFileName);
-            dispatch(new ResizeImage(
-                $newFileName,
-                300,
-                150
-            ));
+            // dispatch(new ResizeImage(
+            //     $newFileName,
+            //     300,
+            //     150
+            // ));
             
-            dispatch(new ResizeImage(
-                $newFileName,
-                400,
-                300
-            ));
+            // dispatch(new ResizeImage(
+            //     $newFileName,
+            //     400,
+            //     300
+            // ));
 
-            dispatch(new ResizeImage(
-                $newFileName,
-                120,
-                120
-            ));
+            // dispatch(new ResizeImage(
+            //     $newFileName,
+            //     120,
+            //     120
+            // ));
 
             $i->file = $newFileName;
             $i->announcement_id = $announcement->id;
             $i->save();
-            dispatch(new GoogleVisionSafeSearchImage($i->id));
-            dispatch(new GoogleVisionLabelImage($i->id));
+            GoogleVisionSafeSearchImage::withChain([
+                new GoogleVisionLabelImage($i->id),
+                new GoogleVisionRemoveFaces($i->id),
+                new ResizeImage($i->file,300,150),
+                new ResizeImage($i->file,400,300),
+                new ResizeImage($i->file,120,120),
+            ])->dispatch($i->id);
+
         }
 
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
@@ -211,30 +218,20 @@ class AnnouncementController extends Controller
             $fileName = basename($image);
             $newFileName = "public/announcements/{$announcement->id}/{$fileName}";
             Storage::move($image, $newFileName);
-            dispatch(new ResizeImage(
-                $newFileName,
-                300,
-                150
-            ));
-            dispatch(new ResizeImage(
-                $newFileName,
-                400,
-                300
-            ));
-
-            dispatch(new ResizeImage(
-                $newFileName,
-                120,
-                120
-            ));
-
+            
             $i->file = $newFileName;
             $i->announcement_id = $announcement->id;
 
             $i->save();
 
-            dispatch(new GoogleVisionSafeSearchImage($i->id));
-            dispatch(new GoogleVisionLabelImage($i->id));
+            GoogleVisionSafeSearchImage::withChain([
+                new GoogleVisionLabelImage($i->id),
+                new GoogleVisionRemoveFaces($i->id),
+                new ResizeImage($i->file,300,150),
+                new ResizeImage($i->file,400,300),
+                new ResizeImage($i->file,120,120),
+            ])->dispatch($i->id);
+
         }
 
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
