@@ -53,10 +53,10 @@
                                     <div class="col-12 col-md-4 mb-3">
                                         <img src="{{$image->getUrl(300,150)}}" class="img-fluid d-block border-card" alt="#">
                                         <div class="ms-2 my-3">
-                                            <button class="btn-labels fw-bold text-gray" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                            <button class="btn-labels fw-bold text-gray" type="button" data-bs-toggle="collapse" data-bs-target="#d{{$image->id}}" aria-expanded="false" aria-controls="d{{$image->id}}">
                                                 Show Labels
                                               </button>
-                                              <div class="collapse" id="collapseExample">
+                                              <div class="collapse" id="d{{$image->id}}">
                                                 <div class="card card-body">
                                                     <ul>
                                                         @if($image->labels)
