@@ -10864,6 +10864,10 @@ textarea.form-control-lg {
   color: var(--text-color);
 }
 
+.bg-accent-color {
+  background-color: var(--accent-color);
+}
+
 body {
   margin: 0px;
   background-color: white;
@@ -11045,6 +11049,17 @@ button:focus {
 
 button {
   transition: 0.4s !important;
+}
+
+.btn-labels {
+  border: none;
+  box-shadow: none;
+  background-color: white;
+  padding: 0px;
+}
+
+.btn-labels:hover {
+  color: var(--accent-color);
 }
 
 .btn1 {
@@ -11332,6 +11347,11 @@ thead {
 .flag {
   width: 12px;
   height: 8px;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: white !important;
+  background-color: var(--accent-color) !important;
 }
 
 @media screen and (max-width: 1676px) {
