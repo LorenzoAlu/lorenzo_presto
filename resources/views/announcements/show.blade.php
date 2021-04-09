@@ -26,15 +26,15 @@
         
         <div class="col-12 col-md-6 my-3">
           @if(count($announcement->images()->get())== 0)
-           <img class="img-fluid d-block mx-auto" src="/storage/default/default.png" alt="img default">
+           <img class="img-fluid d-block mx-auto img-rounded" src="/storage/default/default.png" alt="img default">
           @else
             
-            <div class="swiper-container gallery-top mb-4">
+            <div class="swiper-container gallery-top">
                 <div class="swiper-wrapper">
                       
                   @foreach ($announcement->images as $image)
-                  <div class="swiper-slide"> <img src="{{Storage::url($image->file)}}" alt="prodotto"
-                          class="img-fluid mx-auto d-block"> </div>       
+                  <div class="swiper-slide d-flex align-items-center"> <img src="{{Storage::url($image->file)}}" alt="prodotto"
+                          class="img-fluid mx-auto d-block img-rounded"> </div>       
                   @endforeach
                   
                 </div>
@@ -42,11 +42,12 @@
                 <div class="swiper-button-next swiper-button-white"></div>
                 <div class="swiper-button-prev swiper-button-white"></div>
             </div>
-            <div class="swiper-container gallery-thumbs">
+            <div class="swiper-container h-120 gallery-thumbs">
                 <div class="swiper-wrapper">
                   @foreach ($announcement->images as $image)
-                  <div class="swiper-slide"> <img src="{{$image->getUrl(120,120)}}" alt="prodotto"
-                          class="img-fluid mx-auto d-block"> </div>
+                  <div class="swiper-slide">
+                    <img src="{{$image->getUrl(120,120)}}" alt="prodotto" class="img-fluid mx-auto d-block img-rounded">
+                  </div>
                   @endforeach
                 </div>
             </div>
@@ -54,7 +55,7 @@
             @endif
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mt-3 px-5">
             <div class="d-flex justify-content-between">
             <h3 class="mt-2">{{$announcement->price}} €</h3>
              {{-- Prova like button --}}

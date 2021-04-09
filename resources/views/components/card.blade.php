@@ -24,7 +24,7 @@
         </div>
       </div>
       <div>
-        <a href="{{$route}}" class="fs-4 fw-bold card-text d-block">{{__('ui.category')}}: {{$category}}</a>
+        <a href="{{$route}}" class="fs-4 fw-bold card-text d-block">{{$category}}</a>
         <div class="d-flex justify-content-between">
         <small class="card-text">{{$user}}</small>
         <small class="card-text pe-2">{{$date}}</small>

@@ -11271,6 +11271,10 @@ thead {
   margin-right: auto;
 }
 
+.h-120 {
+  height: 130px !important;
+}
+
 .swiper-slide {
   background-size: cover;
   background-position: center;
@@ -11294,6 +11298,10 @@ thead {
 
 .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1;
+}
+
+.img-rounded {
+  border-radius: 40px;
 }
 
 .modal-content {
