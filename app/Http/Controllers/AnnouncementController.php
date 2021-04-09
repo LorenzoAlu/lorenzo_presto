@@ -174,6 +174,12 @@ class AnnouncementController extends Controller
                 break;
             }
         }
+        
+        if(!$announcement)
+        {
+            abort(404);
+        }
+
         return view('announcements.show', compact('announcement','liked'));
     }
 

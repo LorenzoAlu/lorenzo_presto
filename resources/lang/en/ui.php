@@ -8,11 +8,7 @@ return [
     'admin' => 'Admin',
     'login' => 'Login',
     'register' => 'Sign Up',
-<<<<<<< HEAD
-    'languages' => 'Lang',
-=======
     'languages' => 'Languages',
->>>>>>> b04446d731d334b82a4011f33f25c3582d676a63
     'profile' => 'Profile',
     'logout' => 'Logout',
     'search_announcements' => 'Search Announcements',

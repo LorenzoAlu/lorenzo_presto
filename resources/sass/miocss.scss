@@ -119,6 +119,10 @@
   color: var(--text-color);
 }
 
+.bg-accent-color{
+  background-color: var(--accent-color);
+}
+
 body {
   margin: 0px;
   background-color: white;
@@ -179,6 +183,7 @@ p{
 }
 
 //MARGIN-PADDING
+
 
 .padding-descrizione{
   padding-right: 20px;
@@ -312,6 +317,18 @@ button:focus{
 button{
   transition: 0.4s !important;
 }
+
+.btn-labels{
+  border: none;
+  box-shadow: none;
+  background-color: white;
+  padding: 0px;
+}
+
+.btn-labels:hover{
+  color: var(--accent-color);
+}
+
 .btn1 {
   min-width: 150px;
   height: 50px;
@@ -597,6 +614,12 @@ thead{
   height: 8px;
 }
 
+//DROPDOWN
+.dropdown-item:hover, .dropdown-item:focus {
+  color: white !important;
+  background-color: var(--accent-color) !important;
+}
+
 //MEDIA QUERIES
 
 //DESKTOP
@@ -615,6 +638,14 @@ thead{
   }
   .bg-img3 {
       background-image: none;
+  }
+
+  .bg-img2 {
+    background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
   }
 }  
 
@@ -715,6 +746,7 @@ thead{
   .line-height60 {
       line-height: 60px;
   }
+  
   .mb-100 {
     margin-bottom: 100px;
   }
@@ -733,6 +765,20 @@ thead{
   .w-search-mobile{
     width: 80%;
   }
+
+  .d-sm-none{
+    display: none;
+  }
+
+  .bg-img2 {
+    background-image: none;
+    background-size: none;
+    width: 100%;
+    background-position: center;
+    //height: 1080px;
+  }
+
+
 }
 
 @media screen and (max-width: 400px) {
@@ -740,7 +786,27 @@ thead{
       width: 300px;
       box-shadow: 20px 20px 10px #b7c1c2 !important;
   }
+
+  .d-sm-none{
+    display: none;
+  }
   .img-1 {
       width: 260px;
   }
+
+  .line-height40 {
+    line-height: 35px;
+  }
+
+  .bg-img2 {
+    background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 1080px !important;
+  }
+
+  .font-size20 {
+    font-size: 16px;
+  }
+
 }

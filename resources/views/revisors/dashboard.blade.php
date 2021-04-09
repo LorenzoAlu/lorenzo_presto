@@ -14,7 +14,7 @@
                     
                 </div>
                 <div class="form-custom2 p-4">
-                    <div class="row mt-3">
+                    <div class="row mb-3 mt-3">
                         <div class="col-12 col-md-2">
                             <h3 class="fs-4">{{__('ui.user')}}</h3>
                         </div>
@@ -24,8 +24,8 @@
                             {{$announcement->user->email}}
                         </div>
                     </div>
-                    <hr>
-                    <div class="row">
+                    
+                    <div class="row mb-3">
                         <div class="col-12 col-md-2">
                             <h3 class="fs-4">{{__('ui.title')}}</h3>
                         </div>
@@ -33,8 +33,8 @@
                             {{$announcement->title}}
                         </div>
                     </div>
-                    <hr>
-                    <div class="row">
+                    
+                    <div class="row mb-3">
                         <div class="col-12 col-md-2">
                             <h3 class="fs-4">{{__('ui.description')}}</h3>
                         </div>
@@ -42,6 +42,7 @@
                             {{$announcement->body}}
                         </div>
                     </div>
+                    
                     <div class="row mt-3">
                         <div class="col-12 col-md-2">
                             <h3 class="fs-4">{{__('ui.images')}}</h3>
@@ -49,28 +50,58 @@
                         <div class="col-12 col-md-10">
                             <div class="row mb-2">
                                 @foreach ($announcement->images as $image)
-                                    <div class="col-12 col-md-4">
-                                        <img src="{{$image->getUrl(300,150)}}" class="img-fluid d-block" alt="#">
+                                    <div class="col-12 col-md-4 mb-3">
+                                        <img src="{{$image->getUrl(300,150)}}" class="img-fluid d-block border-card" alt="#">
+                                        <div class="ms-2 my-3">
+                                            <button class="btn-labels fw-bold text-gray" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                Show Labels
+                                              </button>
+                                              <div class="collapse" id="collapseExample">
+                                                <div class="card card-body">
+                                                    <ul>
+                                                        @if($image->labels)
+                                                            @foreach ($image->labels as $label)
+                                                                <li>{{$label}}</li>
+                                                            @endforeach
+                                                        @endif
+                                                    </ul>
+                                                </div>
+                                              </div>
+                                          </div>
                                     </div>
-                                    <div class="col-12 col-md-8 " style="overflow: auto">
-                                       Adult:{{$image->adult}} <br> 
-                                       Spoof:{{$image->spoof}} <br> 
-                                       Medical:{{$image->medical}} <br> 
-                                       Violence:{{$image->violence}} <br> 
-                                       Racy:{{$image->racy}} <br> 
+                                    <div class="col-12 col-md-8 mb-5">
+                                       {{-- Adult:{{$image->adult}} <br>  --}}
+                                       <span>Adult: {{$image->adult}}%</span>
+                                       <div class="progress mb-2">
+                                         <div class="progress-bar bg-accent-color" role="progressbar" style="width: {{$image->adult}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                       </div>
+                                       <span>Spoof: {{$image->spoof}}%</span>
+                                       <div class="progress mb-2">
+                                        <div class="progress-bar bg-accent-color" role="progressbar" style="width: {{$image->spoof}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                      <span>Medical: {{$image->medical}}%</span>
+                                      <div class="progress mb-2">
+                                        <div class="progress-bar bg-accent-color" role="progressbar" style="width: {{$image->medical}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                      <span>Violence: {{$image->violence}}%</span>
+                                      <div class="progress mb-2">
+                                        <div class="progress-bar bg-accent-color" role="progressbar" style="width: {{$image->violence}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                      <span>Racy: {{$image->racy}}%</span>
+                                      <div class="progress mb-2">
+                                        <div class="progress-bar bg-accent-color" role="progressbar" style="width: {{$image->racy}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
 
-                                        <b>Labels</b> <br>
-                                        <ul>
-                                            @if($image->labels)
-                                                @foreach ($image->labels as $label)
-                                                    <li>{{$label}}</li>
-                                                @endforeach
-                                            @endif
-                                        </ul>
+                                      
+                                        
 
-                                        <p><strong>ID: </strong>{{$image->id}} </p> 
-                                       <p><strong>Url: </strong>{{$image->file}} </p>
-                                       <p><strong>Crop_Url: </strong>{{$image->getUrl(300,150)}}</p>
+                                        <div style="overflow: auto">
+                                            <p><strong>ID: </strong>{{$image->id}} </p> 
+                                            <p><strong>Url: </strong>{{$image->file}} </p>
+                                            <p><strong>Crop_Url: </strong>{{$image->getUrl(300,150)}}</p>
+                                        </div>
+
+                                        
                                     </div>
                                     {{-- {{dd($image->getUrl(300,150))}} --}}
                                 @endforeach
@@ -130,30 +161,6 @@
     </div>
 </div>
 @endif
-
-{{-- <div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Elimina annuncio</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Sei sicuro?</p>
-        </div>
-        <div class="modal-footer">
-            
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-          <form action="{{route('revisor.reject', $announcement->id)}}" method="POST">
-            @csrf
-          <button type="submit" class="btn btn-danger">
-            Sì
-        </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div> --}}
 
   
 @endsection
