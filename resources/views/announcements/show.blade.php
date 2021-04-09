@@ -33,7 +33,7 @@
                 <div class="swiper-wrapper">
                       
                   @foreach ($announcement->images as $image)
-                  <div class="swiper-slide d-flex align-items-center"> <img src="{{Storage::url($image->file)}}" alt="prodotto"
+                  <div class="swiper-slide d-flex align-items-center"> <img src="{{$image->getUrl(700,420)}}" class="img-fluid d-block mx-auto" alt="prodotto"
                           class="img-fluid mx-auto d-block img-rounded"> </div>       
                   @endforeach
                   

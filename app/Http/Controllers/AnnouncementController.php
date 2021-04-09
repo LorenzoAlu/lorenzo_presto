@@ -99,6 +99,7 @@ class AnnouncementController extends Controller
                 new GoogleVisionLabelImage($i->id),
                 new GoogleVisionRemoveFaces($i->id),
                 new ResizeImage($i->file,300,150),
+                new ResizeImage($i->file,700,420),
                 new ResizeImage($i->file,400,300),
                 new ResizeImage($i->file,120,120),
             ])->dispatch($i->id);
