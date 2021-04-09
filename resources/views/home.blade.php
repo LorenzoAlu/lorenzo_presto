@@ -59,6 +59,7 @@
             <div class="row align-items-start mb-5 h-30 justify-content-center">
                 <!-- DESCRIZIONE PRESTO.IT -->
                 <div class="col-12 col-md-7 d-flex justify-content-center">
+                    
                     <p class="font-size20 text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-5"> <span class="fs-2"> <b>Presto.it </b></span> 
                         {{__('ui.description_home')}}<br>
                         {{-- è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti. --}}</p>
@@ -66,7 +67,7 @@
             </div>
             <div class="row pt-lg-5 mt-lg-100  h-50">
                 <!-- ICONE SOCIAL AL LATO -->
-                <div class="col-12 col-xxl-2 d-flex flex-xxl-column justify-content-evenly  align-items-center mt-5 pt-5 display-none d-md-hidden">
+                <div class="col-12 col-xxl-2 d-flex flex-xxl-column justify-content-evenly  align-items-center mt-5 pt-5 d-none d-md-hidden">
                     <a href=""><i class="fab fa-facebook-square a-hover shadow  text-second-color text-lg-white"></i></a>
                     <a href=""><i class="fab fa-instagram shadow a-hover text-second-color text-lg-white"></i></a>
                     <a href=""><i class="fab fa-twitter shadow a-hover text-second-color text-lg-white"></i></a>
@@ -74,13 +75,13 @@
                 <!-- BOTTONI CATEGORIE  -->
                 
                 
-                <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  align-items-center mt-5 pt-5">
-                    <div class="row justify-content-end row-justify-mobile text-center">
+                <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  justify-content-center align-items-center mt-5 pt-5">
+                    <div class="row justify-content-end  row-justify-mobile text-center">
                         <div>
                         <button class="btn btn2 shadow fw-bold fs-5 mx-auto my-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">{{__('ui.announcements')}}</a></button>
                         </div>
                         @foreach ($categories as $category)
-                        <div class="col-12 col-md-6 col-xxl-4 text-align-mobile text-end">
+                        <div class="col-12 col-md-6 col-xxl-4 d-none d-md-block text-align-mobile text-end">
                             <button class="btn btn3 w-75 shadow me-5 my-3">
                                 <a class="text-decoration-none text-main-color p-3 text-center" href="{{route('categories.index', $category)}}">{{$category->name}}</a>
                             </button>
