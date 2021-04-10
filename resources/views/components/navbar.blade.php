@@ -43,7 +43,7 @@
             </ul>
         </div>
         
-        <button class="btn1-annuncio shadow me-5 text-white d-none d-lg-block ms-5">
+        <button class="btn1-annuncio shadow me-0 text-white d-none d-lg-block ms-0">
             <a class="text-decoration-none text-white" href="{{route('announcements.create')}}">{{__('ui.add_announcement')}}</a>
         </button>
     </div>
@@ -67,7 +67,7 @@
         @endif
         
         @if (Route::has('register'))
-        <button class="btn1 shadow me-5 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button class="btn1 shadow me-0 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <a class="nav-link text-white" href="{{ route('register') }}">{{ __('ui.register') }}</a>
         </button>
         @endif
@@ -75,7 +75,7 @@
         <div class="d-flex">
             @if(Auth::user() && Auth::user()->is_revisor)
             <div class="nav-item d-inline">
-                <button class="btn1 shadow me-5 text-white">
+                <button class="btn1 shadow me-4 text-white">
                     <a class="text-white" href="{{route('revisors.dashboard')}}">
                         {{__('ui.revisor')}}
                         <span class="badge rounded-pill">
@@ -95,7 +95,7 @@
             </div>
             @endif
             <div class="nav-item dropdown">
-                <button class="btn1 shadow me-5 text-white">
+                <button class="btn1 shadow me-0 text-white">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }}

@@ -374,6 +374,7 @@ button{
   font-size:20px;
   transition: all 0.3s ease 0s;
   padding: 0px 18px 0px 18px;
+  width: 75%;
 }
 
 .btn3:hover {
@@ -703,6 +704,28 @@ thead{
 @media screen and (min-width: 1400px) {
   .bg-gradient-navbar {
     background: linear-gradient(120deg, #90B0F9,#8EA9FA, #8A9DFB, #8588FB,#8280FD)
+  }
+}
+
+@media (min-width: 1010px) and (max-width: 1400px){
+  .bg-img2{
+
+    //background-image:url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+
+  .btn3-1 {
+    height: 60px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: none;
+    font-size:20px;
+    transition: all 0.3s ease 0s;
+    padding: 0px 18px 0px 18px;
+    width: 50%;
   }
 }
 

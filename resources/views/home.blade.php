@@ -76,16 +76,18 @@
                 
                 
                 <!-- BOTTONI CATEGORIE  -->
+               {{--  <div class="col-12 col-md-2">
+
+                </div> --}}
                 
-                
-                <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  justify-content-center align-items-center mt-lg-5 pt-lg-5">
+                <div class="col-12  col-xxl-8 offset-xxl-1 d-flex  justify-content-center align-items-center mt-lg-5 pt-lg-5">
                     <div class="row justify-content-end  row-justify-mobile text-center">
                         <div>
                         <button class="btn btn2 shadow fw-bold fs-5 mx-auto my-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">{{__('ui.announcements')}}</a></button>
                         </div>
                         @foreach ($categories as $category)
-                        <div class="col-12 col-md-5 col-xxl-4 d-none d-md-block text-align-mobile text-end">
-                            <button class="btn btn3 w-75 shadow me-5 my-3">
+                        <div class="col-12  col-md-5 col-xxl-4 d-none d-md-block text-align-mobile text-center">
+                            <button class="btn  btn3 btn3-1 shadow  my-3">
                                 <a class="text-decoration-none text-main-color p-3 text-center" href="{{route('categories.index', $category)}}">{{$category->name}}</a>
                             </button>
                         </div>
