@@ -634,6 +634,7 @@ thead{
 
 //MEDIA QUERIES
 
+//DESKTOP
 @media screen and (max-width: 1676px) {
   .new-bg1 {
       background-image: url('/media/layout-md-8_Tavola\ disegno\ 1\ copia\ 2.jpg');
@@ -650,31 +651,15 @@ thead{
   .bg-img3 {
       background-image: none;
   }
+
+  .bg-img2 {
+    background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
 }  
-
-.outline-transition-none {
-  outline: none !important;
-  transition: none !important;
-}
-.navbar-toggler:focus {
-  box-shadow: none !important;
-}
-.btn-info {
-  width: 150px;
-  height: 50px;
-  border-radius: 30px;
-  background-color: var(--accent-color);
-  border: none;
-}
-.btn-info:hover {
-  background-color:var(--accent-color)!important;
-}
-
-.position-custom2 {
-  position: relative;
-  top: -150px;
-}
-
 
 @media screen and (min-width: 1676px) {
   .img-new {
@@ -688,8 +673,17 @@ thead{
   }
   .ms-xl-200 {
       margin-left: 200px;
-  }
+  } 
 
+  .bg-img3 {
+    background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-06.jpg');
+    background-size: contain;
+    
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 92%;
+    //height: 1080px;
+  }
   
 }
 @media (min-width:1400px) and (max-width:1676px){
@@ -725,7 +719,37 @@ thead{
   .row-justify-mobile{
     justify-content: center !important;
   }
+  .text-align-mobile{
+    text-align: center !important;
+  }
+}
 
+@media screen and (min-width: 1400px) {
+  .bg-gradient-navbar {
+    background: linear-gradient(120deg, #90B0F9,#8EA9FA, #8A9DFB, #8588FB,#8280FD)
+  }
+}
+
+@media (min-width: 1010px) and (max-width: 1400px){
+  .bg-img2{
+
+    //background-image:url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+
+  .btn3-1 {
+    height: 60px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: none;
+    font-size:20px;
+    transition: all 0.3s ease 0s;
+    padding: 0px 18px 0px 18px;
+    width: 50%;
+  }
 }
 
 @media (min-width: 1010px) and (max-width: 1400px){
@@ -779,9 +803,6 @@ thead{
   .d-md-hidden {
       visibility: hidden;
   }
-  .swiper-container {
-      width: 100%; 
-  }
   .position-custom2 {
       position: relative;
       top: 40px;
@@ -825,17 +846,31 @@ thead{
   }
   .position-custom {
     position: relative;
-    top: -200px;
+    top: -120px;
   }
-  .text-align-center {
-    text-align: center !important;
+  .border-search-input {
+    width: 100%;
   }
 }
+
+@media screen and (min-width: 768px) {
+.w-md-50{
+  width: 50% !important ;
+}
+}
+
+//MOBILE 
+
 @media screen and (min-width: 576px) {
   .line-height60 {
       line-height: 60px;
   }
+  
+  .mb-100 {
+    margin-bottom: 100px;
+  }
 }
+
 @media screen and (max-width: 576px) {
   .display-none {
       display: none;
@@ -853,9 +888,9 @@ thead{
     background-color:#8588fb;
   }
 
-  .icon-socials{
-    color:white;
-    text-shadow: none;
+  
+  .d-sm-none{
+    display: none;
   }
 
   .icon-socials{
@@ -890,6 +925,15 @@ thead{
   .bg-descrizione{
     background-color:#8588fb;
   }
+@media screen and (max-width: 400px) {
+  .card-prodotto {
+      width: 300px;
+      box-shadow: 20px 20px 10px #b7c1c2 !important;
+  }
+
+  .d-sm-none{
+    display: none;
+  }
   .bg-img2 {
     //background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
     background-color:#8588fb;
@@ -906,7 +950,27 @@ thead{
     font-size: 16px;
   }
 
+  .line-height40 {
+    line-height: 35px;
+  }
 
-@media screen and (max-width: 768px) {
-  
+  .bg-descrizione{
+    background-color:#8588fb;
+  }
+  .bg-img2 {
+    //background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+    background-color:#8588fb;
+    background-size: cover;
+    background-position: center;
+    //height: 800px !important;
+  }
+
+  .bg-white1{
+    background-color:white;
+  }
+
+  .font-size20 {
+    font-size: 16px;
+  }
+
 }
