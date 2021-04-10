@@ -8,7 +8,7 @@ return [
     'admin' => 'Admin',
     'login' => 'Login',
     'register' => 'Sign Up',
-    'languages' => 'Languages',
+    'languages' => 'Lang',
     'profile' => 'Profile',
     'logout' => 'Logout',
     'search_announcements' => 'Search Announcements',
