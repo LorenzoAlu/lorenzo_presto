@@ -11383,15 +11383,33 @@ thead {
   .bg-img3 {
     background-image: none;
   }
-
-  .bg-img2 {
-    background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
-    background-size: cover;
-    width: 100%;
-    background-position: center;
-    height: 1080px;
-  }
 }
+.outline-transition-none {
+  outline: none !important;
+  transition: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.btn-info {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: var(--accent-color) !important;
+}
+
+.position-custom2 {
+  position: relative;
+  top: -150px;
+}
+
 @media screen and (min-width: 1676px) {
   .img-new {
     display: none !important;
@@ -11408,73 +11426,19 @@ thead {
   .ms-xl-200 {
     margin-left: 200px;
   }
-
-  .bg-img3 {
-    background-image: url("/media/bg-presto_Tavola disegno 1 copia-06.jpg");
-    background-size: contain;
-    background-position: top left;
-    background-repeat: no-repeat;
-    width: 92%;
-  }
 }
-@media (min-width: 1400px) and (max-width: 1676px) {
-  .bg-img2 {
-    background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
-    background-size: cover;
-    width: 100%;
-    background-position: center;
-    height: 1080px;
-  }
-
-  .new-bg1 {
-    background-image: url("/media/layout-md-8_Tavola disegno 1 copia 2.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-  }
-
-  .bg-new2 {
-    background-image: url("/media/layout-md-9-09.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+@media screen and (min-width: 1400px) {
+  .swiper-container {
+    width: 1400px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .btn3 {
-    margin-right: 0px !important;
+  .bg-descrizione-md {
+    background-color: #8588fb !important;
   }
 
   .row-justify-mobile {
     justify-content: center !important;
-  }
-
-  .text-align-mobile {
-    text-align: center !important;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .bg-gradient-navbar {
-    background: linear-gradient(120deg, #90B0F9, #8EA9FA, #8A9DFB, #8588FB, #8280FD);
-  }
-}
-@media (min-width: 1010px) and (max-width: 1400px) {
-  .bg-img2 {
-    background-size: cover;
-    width: 100%;
-    background-position: center;
-    height: 1080px;
-  }
-
-  .btn3-1 {
-    height: 60px;
-    border-radius: 40px;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    transition: all 0.3s ease 0s;
-    padding: 0px 18px 0px 18px;
-    width: 50%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -11486,38 +11450,13 @@ thead {
     visibility: hidden;
   }
 
+  .swiper-container {
+    width: 100%;
+  }
+
   .position-custom2 {
     position: relative;
     top: 40px;
-  }
-
-  .m-150 {
-    margin-top: 0px;
-  }
-
-  .w-search-mobile {
-    width: 500px;
-  }
-
-  .form-search {
-    position: relative;
-    right: -20px;
-  }
-
-  .bg-descrizione-md {
-    background-color: #8588fb !important;
-  }
-
-  .line-height40 {
-    line-height: 35px;
-  }
-
-  .line-height60 {
-    line-height: 45px !important;
-  }
-
-  .font-size20 {
-    font-size: 18px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -11531,57 +11470,21 @@ thead {
 
   .position-custom {
     position: relative;
-    top: -120px;
+    top: -200px;
   }
 
-  .border-search-input {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .w-md-50 {
-    width: 50% !important;
+  .text-align-center {
+    text-align: center !important;
   }
 }
 @media screen and (min-width: 576px) {
   .line-height60 {
     line-height: 60px;
   }
-
-  .mb-100 {
-    margin-bottom: 100px;
-  }
 }
 @media screen and (max-width: 576px) {
   .display-none {
     display: none;
-  }
-
-  .home-search {
-    height: 50px;
-    position: relative;
-    left: 10px;
-  }
-
-  .w-search-mobile {
-    width: 80%;
-  }
-
-  .bg-descrizione {
-    background-color: #8588fb;
-  }
-
-  .d-sm-none {
-    display: none;
-  }
-
-  .icon-socials {
-    color: white;
-    text-shadow: none;
-  }
-
-  .bg-img2 {
-    background-image: none;
   }
 }
 @media screen and (max-width: 400px) {
@@ -11590,34 +11493,16 @@ thead {
     box-shadow: 20px 20px 10px #b7c1c2 !important;
   }
 
-  .d-sm-none {
-    display: none;
-  }
-
   .img-1 {
     width: 260px;
   }
 
-  .line-height40 {
-    line-height: 35px;
+  .swiper-button-next {
+    display: none;
   }
 
-  .bg-descrizione {
-    background-color: #8588fb;
-  }
-
-  .bg-img2 {
-    background-color: #8588fb;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .bg-white1 {
-    background-color: white;
-  }
-
-  .font-size20 {
-    font-size: 16px;
+  .swiper-button-prev {
+    display: none;
   }
 }
 .dropzone, .dropzone * {

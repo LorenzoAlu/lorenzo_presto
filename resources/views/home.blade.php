@@ -56,11 +56,11 @@
     
     <section>
         <div class="container-fluid bg-img2 bg-new2">
-            <div class="row align-items-start mb-lg-5 bg-descrizione-md h-30 justify-content-center col-description">
+            <div class="row align-items-start mb-lg-5 bg-descrizione-md h-30 justify-content-center ">
                 <!-- DESCRIZIONE PRESTO.IT -->
                 <div class="col-12 col-md-7 d-flex bg-descrizione justify-content-center pt-xxl-5">
                     
-                    <p class="font-size20  text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-xl-5"> <span class="fs-2"> <b>Presto.it </b></span> 
+                    <p class="font-size20 text-align-center text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-xl-5"> <span class="fs-2"> <b>Presto.it </b></span> 
                         {{__('ui.description_home')}}<br>
                         {{-- è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti. --}}</p>
                 </div>
@@ -68,7 +68,7 @@
             <div class="row pt-lg-5 mt-lg-100 bg-white1 h-md-50">
                 <!-- ICONE SOCIAL AL LATO -->
                 
-                    <div class=" col-12 col-xxl-2 d-flex  flex-xxl-column  justify-content-evenly  align-items-center mt-md-5 pt-md-5 d-lg-hidden">
+                    <div class=" col-12 col-xxl-2 d-flex flex-xxl-column justify-content-evenly  align-items-center mt-5 pt-5 display-none d-md-hidden">
                     <a href=""><i class="fab fa-facebook-square a-hover shadow-lg icon-socials text-second-color text-lg-white"></i></a>
                     <a href=""><i class="fab fa-instagram shadow-lg  a-hover icon-socials text-second-color text-lg-white"></i></a>
                     <a href=""><i class="fab fa-twitter shadow-lg  a-hover icon-socials text-second-color text-lg-white"></i></a>
