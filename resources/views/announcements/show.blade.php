@@ -24,7 +24,7 @@
 <div class="container my-5">
     <div class="row">
         
-        <div class="col-12 col-md-6 my-3">
+        <div class="col-12 col-md-6 my-3 h-100">
           @if(count($announcement->images()->get())== 0)
            <img class="img-fluid d-block mx-auto img-rounded" src="/storage/default/default.png" alt="img default">
           @else
@@ -42,7 +42,7 @@
                 <div class="swiper-button-next swiper-button-white"></div>
                 <div class="swiper-button-prev swiper-button-white"></div>
             </div>
-            <div class="swiper-container h-120 gallery-thumbs">
+            <div class="swiper-container h-120 gallery-thumbs mt-3">
                 <div class="swiper-wrapper">
                   @foreach ($announcement->images as $image)
                   <div class="swiper-slide">
@@ -55,7 +55,7 @@
             @endif
         </div>
 
-        <div class="col-12 col-md-6 mt-3 px-5">
+        <div class="col-12 col-md-6 mt-md-3 mt-5 px-5 ">
             <div class="d-flex justify-content-between">
             <h3 class="mt-2">{{$announcement->price}} €</h3>
              {{-- Prova like button --}}
@@ -83,14 +83,14 @@
               <small class="ps-5">{{$announcement->created_at->format('d/m/Y')}}</small>
             </div>
             
-            <p>
-                <button class="btn btn2 shadow fw-normal rounded-pill text-white my-3" type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
+            <p class="text-center text-md-start">
+                <button class="btn btn2 shadow fw-normal rounded-pill text-white my-3 " type="button" data-bs-toggle="collapse" data-bs-target="#contatta" aria-expanded="false" aria-controls="contatta">
                     {{__('ui.contact_seller')}}
                   </button>
             </p>
             <div class="collapse" id="contatta">
 
-                <div class="col-10 bg-white p-5 form-custom">
+                <div class="col-md-10 col-12 w-100 bg-white p-5 form-custom">
                         
                     <form method="POST" action="{{route('contacts.contactSeller', $announcement)}}">
                       @csrf
@@ -106,7 +106,7 @@
                         @endif
                         <div class="mb-3">
                           <label for="body" class="form-label">{{__('ui.contact_user')}}: {{$announcement->user->name}}</label>
-                          <textarea placeholder="{{__('ui.insert_reasons')}}" required autofocus class="form-control input-shadow-form" name="body" id="body" cols="12" rows="5">{{$announcement->body}}</textarea>
+                          <textarea placeholder="{{__('ui.insert_reasons')}}" required autofocus class="form-control input-shadow-form" name="body" id="body" cols="12" rows="5">Salve {{$announcement->user->name}} ti contatto per l'oggetto {{$announcement->title}} in vendita..</textarea>
                         </div>
                         <button type="submit" class="btn btn-card rounded-pill text-white">{{__('ui.send')}}</button>
                     </form>
@@ -130,7 +130,7 @@
     var galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,
       slidesPerView: 4,
-      loop: true,
+      loop: false,
       freeMode: true,
       loopedSlides: 5, //looped slides should be the same
       watchSlidesVisibility: true,
