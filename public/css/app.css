@@ -11460,6 +11460,22 @@ thead {
     position: relative;
     right: -20px;
   }
+
+  .bg-descrizione-md {
+    background-color: #8588fb !important;
+  }
+
+  .line-height40 {
+    line-height: 35px;
+  }
+
+  .line-height60 {
+    line-height: 45px !important;
+  }
+
+  .font-size20 {
+    font-size: 18px;
+  }
 }
 @media screen and (min-width: 992px) {
   .ps-lg-100 {
@@ -11508,15 +11524,21 @@ thead {
     width: 80%;
   }
 
+  .bg-descrizione {
+    background-color: #8588fb;
+  }
+
   .d-sm-none {
     display: none;
   }
 
+  .icon-socials {
+    color: white;
+    text-shadow: none;
+  }
+
   .bg-img2 {
     background-image: none;
-    background-size: none;
-    width: 100%;
-    background-position: center;
   }
 }
 @media screen and (max-width: 400px) {
@@ -11537,11 +11559,18 @@ thead {
     line-height: 35px;
   }
 
+  .bg-descrizione {
+    background-color: #8588fb;
+  }
+
   .bg-img2 {
-    background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+    background-color: #8588fb;
     background-size: cover;
     background-position: center;
-    height: 1080px !important;
+  }
+
+  .bg-white1 {
+    background-color: white;
   }
 
   .font-size20 {
