@@ -179,7 +179,11 @@
                 Vuoi essere sempre aggiornato? Iscriviti alla nostra newsletter per ricevere le ultime news!
             </h4>
             <div  class="row justify-content-center" >
-                <button class="btn btn2 shadow fw-bold fs-5 mx-auto text-white my-5">Iscriviti!</button>
+                <button  class="btn btn2 shadow fw-bold fs-5 mx-auto text-white my-5">
+                    <a class="text-decoration-none text-white" href="{{route('users.activeNewsletter')}}">
+                        Iscriviti
+                    </a>!
+                </button>
             </div>
         </div>
     </div>

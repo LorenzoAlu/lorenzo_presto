@@ -29,6 +29,6 @@
     @endforeach
 </div>
 
-<h4>Non vuoi ricevere piu la newsletter?<a href="">clicca qui!</a> </h4>
+<h4>Non vuoi ricevere piu la newsletter?<a href="{{route('users.deleteNewsletter')}}">clicca qui!</a> </h4>
 
 </html>

@@ -41,8 +41,34 @@ class ContactController extends Controller
         
         Mail::to($announcement->user->email)->send(New ContactMailSeller($content));
         return redirect()->back()->with('message', "La mail è stata inviata al venditore {$announcement->user->name} ");
-        
-        
-        
+
+    }
+
+    public function activeNewsletter()
+    {
+        if(Auth::user() == null)
+        {
+            return redirect()->back()->with('message', "Accedi per poter iscriverti alla newsletter");
+        }
+
+        $user=Auth::user();
+        $user->active_newsletter = true;
+        $user->save();
+        return redirect()->back()->with('message', "L'iscrizione alla newsletter è andta a buon fine!");
+
+    }
+
+    public function deleteNewsletter()
+    {
+        if(Auth::user() == null)
+        {
+            return redirect()->back()->with('message', "Accedi per poter iscriverti alla newsletter");
+        }
+        dd('ciolla');
+        $user=Auth::user();
+        $user->active_newsletter = false;
+        $user->save();
+        return redirect(route('home'))->with('message', "Hai disattivato l'iscrione alla newsletter");
+
     }
 }

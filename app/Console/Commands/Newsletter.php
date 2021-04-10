@@ -40,7 +40,7 @@ class Newsletter extends Command
      */
     public function handle()
     {
-        $users = User::all();
+        $users = User::where('active_newsletter', true)->get();
         $messaggio = 'ti ricordi di noi? Ti aspettiamo';
         $content=compact('messaggio');
         foreach ($users as $user) {

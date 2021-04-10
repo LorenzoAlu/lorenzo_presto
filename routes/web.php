@@ -54,6 +54,9 @@ Route::post('/announcements/{announcement}/update', [AnnouncementController::cla
 Route::post('/announcements/{announcement}/addLiked', [AnnouncementController::class, 'addLiked'])->name('announcements.addLiked');
 Route::post('/announcements/{announcement}/lessLiked', [AnnouncementController::class, 'lessLiked'])->name('announcements.lessLiked');
 Route::delete('/announcement/images/{image}/destroyImage', [AnnouncementController::class, 'destroyImage'])->name('announcement.images.destroyImage');
+Route::get('/users/activeNewsletter', [ContactController::class, 'activeNewsletter'])->name('users.activeNewsletter');
+Route::get('/users/deleteNewsletter', [ContactController::class, 'deleteNewsletter'])->name('users.deleteNewsletter');
+
 });
 
 //ROUTE REVISOR
