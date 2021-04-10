@@ -56,36 +56,38 @@
     
     <section>
         <div class="container-fluid bg-img2 bg-new2">
-            <div class="row align-items-start mb-5 h-30 justify-content-center col-description">
+            <div class="row align-items-start mb-lg-5 bg-descrizione-md h-30 justify-content-center col-description">
                 <!-- DESCRIZIONE PRESTO.IT -->
-                <div class="col-12 col-md-7 d-flex justify-content-center pt-xxl-5">
+                <div class="col-12 col-md-7 d-flex bg-descrizione justify-content-center pt-xxl-5">
                     
-                    <p class="font-size20  text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-5"> <span class="fs-2"> <b>Presto.it </b></span> 
+                    <p class="font-size20  text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-xl-5"> <span class="fs-2"> <b>Presto.it </b></span> 
                         {{__('ui.description_home')}}<br>
                         {{-- è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti. --}}</p>
                 </div>
             </div>
-            <div class="row pt-lg-5 mt-lg-100  h-md-50">
+            <div class="row pt-lg-5 mt-lg-100 bg-white1 h-md-50">
                 <!-- ICONE SOCIAL AL LATO -->
                 
-                    <div class=" col-12 col-xxl-2  d-flex flex-xxl-column  justify-content-evenly  align-items-center mt-md-5 pt-md-5  d-md-hidden">
-                    <a href=""><i class="fab fa-facebook-square a-hover shadow  text-second-color text-lg-white"></i></a>
-                    <a href=""><i class="fab fa-instagram shadow a-hover text-second-color text-lg-white"></i></a>
-                    <a href=""><i class="fab fa-twitter shadow a-hover text-second-color text-lg-white"></i></a>
+                    <div class=" col-12 col-xxl-2 d-flex  flex-xxl-column  justify-content-evenly  align-items-center mt-md-5 pt-md-5 d-lg-hidden">
+                    <a href=""><i class="fab fa-facebook-square a-hover shadow-lg icon-socials text-second-color text-lg-white"></i></a>
+                    <a href=""><i class="fab fa-instagram shadow-lg  a-hover icon-socials text-second-color text-lg-white"></i></a>
+                    <a href=""><i class="fab fa-twitter shadow-lg  a-hover icon-socials text-second-color text-lg-white"></i></a>
                     </div>
                 
                 
                 <!-- BOTTONI CATEGORIE  -->
+               {{--  <div class="col-12 col-md-2">
+
+                </div> --}}
                 
-                
-                <div class="col-12 col-xxl-8 offset-xxl-1 d-flex  justify-content-center align-items-center mt-md-5 pt-md-5">
+                <div class="col-12  col-xxl-8 offset-xxl-1 d-flex  justify-content-center align-items-center mt-lg-5 pt-lg-5">
                     <div class="row justify-content-end  row-justify-mobile text-center">
                         <div>
                         <button class="btn btn2 shadow fw-bold fs-5 mx-auto my-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">{{__('ui.announcements')}}</a></button>
                         </div>
                         @foreach ($categories as $category)
-                        <div class="col-12 col-md-6 col-xxl-4 d-none d-md-block text-align-mobile text-end">
-                            <button class="btn btn3 w-75 shadow me-5 my-3">
+                        <div class="col-12  col-md-5 col-xxl-4 d-none d-md-block text-align-mobile text-center">
+                            <button class="btn  btn3 btn3-1 shadow  my-3">
                                 <a class="text-decoration-none text-main-color p-3 text-center" href="{{route('categories.index', $category)}}">{{$category->name}}</a>
                             </button>
                         </div>

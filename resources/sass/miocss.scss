@@ -374,6 +374,7 @@ button{
   font-size:20px;
   transition: all 0.3s ease 0s;
   padding: 0px 18px 0px 18px;
+  width: 75%;
 }
 
 .btn3:hover {
@@ -685,7 +686,30 @@ thead{
   }
   
 }
+@media (min-width:1400px) and (max-width:1676px){
+  
+  .bg-img2 {
+    background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+  .new-bg1 {
+    background-image: url('/media/layout-md-8_Tavola\ disegno\ 1\ copia\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.bg-new2 {
+    background-image: url('/media/layout-md-9-09.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
 
+
+}
 //LAPTOP
 
 @media screen and(max-width: 1400px){
@@ -703,6 +727,28 @@ thead{
 @media screen and (min-width: 1400px) {
   .bg-gradient-navbar {
     background: linear-gradient(120deg, #90B0F9,#8EA9FA, #8A9DFB, #8588FB,#8280FD)
+  }
+}
+
+@media (min-width: 1010px) and (max-width: 1400px){
+  .bg-img2{
+
+    //background-image:url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+
+  .btn3-1 {
+    height: 60px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: none;
+    font-size:20px;
+    transition: all 0.3s ease 0s;
+    padding: 0px 18px 0px 18px;
+    width: 50%;
   }
 }
 
@@ -727,6 +773,23 @@ thead{
     position: relative;
     right: -20px;
   }
+
+  .bg-descrizione-md{
+    background-color:#8588fb !important;
+  }
+
+  .line-height40 {
+    line-height: 35px;
+  }
+
+  .line-height60{
+    line-height: 45px !important;
+  }
+
+  .font-size20{
+    font-size: 18px;
+  }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -776,19 +839,38 @@ thead{
   .w-search-mobile{
     width: 80%;
   }
+  .bg-descrizione{
+    background-color:#8588fb;
+  }
 
   .d-sm-none{
     display: none;
   }
 
-  .bg-img2 {
-    background-image: none;
-    background-size: none;
-    width: 100%;
-    background-position: center;
-    //height: 1080px;
+  .icon-socials{
+    color:white;
+    text-shadow: none;
   }
 
+  // .bg-img2 {
+  //   background-image: none;
+  //   background-size: none;
+  //   width: 100%;
+  //   background-position: center;
+  //   //height: 1080px;
+  // }
+
+ .bg-img2 {
+    background-image:none;
+    //background-color:#8588fb;
+    //background-size: cover;
+    //background-position: center;
+    //height: 800px !important;
+  }
+
+  // .bg-white{
+  //   background-color:white;
+  // } 
 
 }
 
@@ -809,11 +891,19 @@ thead{
     line-height: 35px;
   }
 
+  .bg-descrizione{
+    background-color:#8588fb;
+  }
   .bg-img2 {
-    background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+    //background-image: url('/media/bg-presto_Tavola\ disegno\ 1\ copia-05.jpg');
+    background-color:#8588fb;
     background-size: cover;
     background-position: center;
-    height: 1080px !important;
+    //height: 800px !important;
+  }
+
+  .bg-white1{
+    background-color:white;
   }
 
   .font-size20 {
