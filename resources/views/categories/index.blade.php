@@ -12,13 +12,13 @@
         <div class="col-12 text-center mb-3">
             <h2>{{__('ui.all_announcements_category')}} {{$category->name}}</h2>
         </div>
-        <div class="col-6 mt-3 w-search-mobile">
+        <div class="col-6 mt-3 w-search-mobile ">
             <x-searchbar></x-searchbar>
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-5">
         @foreach ($announcements as $announcement)
-        <div class="col-12 col-md-6 col-lg-4 my-5 p-5">
+        <div class="col-12 col-md-6 col-lg-4 mb-5 p-md-5">
             <x-card 
             image="{{$announcement->getCover()}}"
             title="{{$announcement->title}}"
