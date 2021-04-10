@@ -11417,6 +11417,29 @@ thead {
     width: 92%;
   }
 }
+@media (min-width: 1400px) and (max-width: 1676px) {
+  .bg-img2 {
+    background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+
+  .new-bg1 {
+    background-image: url("/media/layout-md-8_Tavola disegno 1 copia 2.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .bg-new2 {
+    background-image: url("/media/layout-md-9-09.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1400px) {
   .btn3 {
     margin-right: 0px !important;
