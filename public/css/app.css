@@ -11432,6 +11432,52 @@ thead {
     width: 1400px;
   }
 }
+@media (min-width: 1400px) and (max-width: 1676px) {
+  .bg-img2 {
+    background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+
+  .new-bg1 {
+    background-image: url("/media/layout-md-8_Tavola disegno 1 copia 2.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .bg-new2 {
+    background-image: url("/media/layout-md-9-09.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1676px) {
+  .bg-img2 {
+    background-image: url("/media/bg-presto_Tavola disegno 1 copia-05.jpg");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+
+  .new-bg1 {
+    background-image: url("/media/layout-md-8_Tavola disegno 1 copia 2.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .bg-new2 {
+    background-image: url("/media/layout-md-9-09.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1400px) {
   .bg-descrizione-md {
     background-color: #8588fb !important;
@@ -11439,6 +11485,44 @@ thead {
 
   .row-justify-mobile {
     justify-content: center !important;
+  }
+}
+@media (min-width: 1010px) and (max-width: 1400px) {
+  .bg-img2 {
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+
+  .btn3-1 {
+    height: 60px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+    padding: 0px 18px 0px 18px;
+    width: 50%;
+  }
+}
+@media (min-width: 1010px) and (max-width: 1400px) {
+  .bg-img2 {
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 1080px;
+  }
+
+  .btn3-1 {
+    height: 60px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+    padding: 0px 18px 0px 18px;
+    width: 50%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -11457,6 +11541,38 @@ thead {
   .position-custom2 {
     position: relative;
     top: 40px;
+  }
+
+  .bg-descrizione-md {
+    background-color: #8588fb !important;
+  }
+
+  .line-height40 {
+    line-height: 35px;
+  }
+
+  .line-height60 {
+    line-height: 45px !important;
+  }
+
+  .font-size20 {
+    font-size: 18px;
+  }
+
+  .bg-descrizione-md {
+    background-color: #8588fb !important;
+  }
+
+  .line-height40 {
+    line-height: 35px;
+  }
+
+  .line-height60 {
+    line-height: 45px !important;
+  }
+
+  .font-size20 {
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -11486,6 +11602,36 @@ thead {
   .display-none {
     display: none;
   }
+<<<<<<< HEAD
+=======
+
+  .home-search {
+    height: 50px;
+    position: relative;
+    left: 10px;
+  }
+
+  .w-search-mobile {
+    width: 80%;
+  }
+
+  .bg-descrizione {
+    background-color: #8588fb;
+  }
+
+  .d-sm-none {
+    display: none;
+  }
+
+  .icon-socials {
+    color: white;
+    text-shadow: none;
+  }
+
+  .bg-img2 {
+    background-image: none;
+  }
+>>>>>>> 6b11662 (pull lollo da simona)
 }
 @media screen and (max-width: 400px) {
   .card-prodotto {
@@ -11497,8 +11643,34 @@ thead {
     width: 260px;
   }
 
+<<<<<<< HEAD
   .swiper-button-next {
     display: none;
+=======
+  .line-height40 {
+    line-height: 35px;
+  }
+
+  .bg-descrizione {
+    background-color: #8588fb;
+  }
+
+  .bg-img2 {
+    background-color: #8588fb;
+    background-size: cover;
+    background-position: center;
+<<<<<<< HEAD
+=======
+  }
+
+  .bg-white1 {
+    background-color: white;
+>>>>>>> master
+  }
+
+  .bg-white1 {
+    background-color: white;
+>>>>>>> 6b11662 (pull lollo da simona)
   }
 
   .swiper-button-prev {
