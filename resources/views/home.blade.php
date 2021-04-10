@@ -56,10 +56,10 @@
     
     <section>
         <div class="container-fluid bg-img2 bg-new2">
-            <div class="row align-items-start mb-lg-5 bg-descrizione-md h-30 justify-content-center ">
+            <div class="row align-items-start mb-lg-1 bg-descrizione-md h-30 justify-content-center col-description">
                 <!-- DESCRIZIONE PRESTO.IT -->
-                <div class="col-12 col-md-7 d-flex bg-descrizione justify-content-center pt-xxl-5">
-                    
+                <div class="col-12 col-md-7 d-flex bg-descrizione py-5 mt-3 py-md-0 mt-md-0 justify-content-center pt-xxl-5">
+                     
                     <p class="font-size20 text-align-center text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-xl-5"> <span class="fs-2"> <b>Presto.it </b></span> 
                         {{__('ui.description_home')}}<br>
                         {{-- è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti. --}}</p>
@@ -67,6 +67,7 @@
             </div>
             <div class="row pt-lg-5 mt-lg-100 bg-white1 h-md-50">
                 <!-- ICONE SOCIAL AL LATO -->
+                
                 
                     <div class=" col-12 col-xxl-2 d-flex flex-xxl-column justify-content-evenly  align-items-center mt-5 pt-5 display-none d-md-hidden">
                     <a href=""><i class="fab fa-facebook-square a-hover shadow-lg icon-socials text-second-color text-lg-white"></i></a>
@@ -80,7 +81,7 @@
 
                 </div> --}}
                 
-                <div class="col-12  col-xxl-8 offset-xxl-1 d-flex  justify-content-center align-items-center mt-lg-5 pt-lg-5">
+                <div class="col-12  col-xxl-8 offset-xxl-1 d-flex  justify-content-center align-items-center mt-lg-1 pt-lg-5">
                     <div class="row justify-content-end  row-justify-mobile text-center">
                         <div>
                         <button class="btn btn2 shadow fw-bold fs-5 mx-auto my-5"> <a class="text-decoration-none text-white p-3 text-center" href="{{route('announcements.index')}}">{{__('ui.announcements')}}</a></button>
@@ -92,25 +93,7 @@
                             </button>
                         </div>
                         @endforeach
-                        {{-- <button class="btn3 shadow mx-5 my-3">
-                            <a class="text-decoration-none text-main-color font-size20 p-5 text-center" href="">Motori</a>
-                        </button> --}}
                         
-                        {{--  <div class="col-12 col-md-6 col-xxl-3 text-center">
-                            <button class="btn3 shadow mx-5 my-3">
-                                <a class="text-decoration-none text-main-color font-size20 p-5 text-center" href="">Market</a>
-                            </button>
-                        </div>
-                        <div class="col-12 col-md-6 col-xxl-3 text-center">
-                            <button class="btn3 shadow mx-5 my-3">
-                                <a class="text-decoration-none text-main-color font-size20 p-5 text-center"href="">Immobili</a>
-                            </button>
-                        </div>
-                        <div class="col-12 col-md-6 col-xxl-3 text-center">
-                            <button class="btn3 shadow mx-5 my-3">
-                                <a class="text-decoration-none text-main-color font-size20 p-5 text-center" href="">Lavoro</a>
-                            </button>
-                        </div> --}}
                     </div>
                 </div>
             </div>
