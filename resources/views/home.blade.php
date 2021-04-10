@@ -170,6 +170,21 @@
         </div>
     </section>
 
+{{-- sezione 4 newsletter  --}}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-10 form-custom p-5">
+            <h4 class="text-center">
+                Vuoi essere sempre aggiornato? Iscriviti alla nostra newsletter per ricevere le ultime news!
+            </h4>
+            <div  class="row justify-content-center" >
+                <button class="btn btn2 shadow fw-bold fs-5 mx-auto text-white my-5">Iscriviti!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 
