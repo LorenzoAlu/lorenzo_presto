@@ -32,7 +32,7 @@ class ContactDailyUser extends Mailable
     public function build()
     {
         $announcements=Announcement::orderBy('id','desc')->take(5)->get();
-        $user=Auth::all();
+        $user=Auth::user();
         return $this->from('presto@presto.it')
                     ->view('contacts.newsletter',compact('announcements','user'));
       

@@ -1,5 +1,5 @@
 <div class="card border-0 card-shadow d-flex align-items-center border-card p-4 h-100">
-    <img src="{{$image}}" class="card-img-top " alt="...">
+    <img src="{{$image}}" class="card-img-top border-card" alt="...">
     <div class="py-3 padding-card d-flex w-100 flex-column justify-content-between">
       <div>
         <h4 class="card-title"> {{substr($title, 0 , 180) }}...</h4>
