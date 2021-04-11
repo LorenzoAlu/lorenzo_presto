@@ -29,6 +29,6 @@
     @endforeach
 </div>
 {{-- {{dd($announcements)}} --}}
-<h4>Non vuoi ricevere piu la newsletter?<a href="{{route('users.deleteNewsletter')}}">clicca qui!</a> </h4>
+<h4>Non vuoi ricevere piu la newsletter?<a href="http://127.0.0.1:8000/users/deleteNewsletter">clicca qui!</a> </h4>
 
 </html>

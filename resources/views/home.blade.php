@@ -119,7 +119,7 @@
              {{-- Icono Categories Mobile --}}
              <div class="col-12  col-md-5 col-xxl-4 d-block d-md-none text-align-mobile text-center ">
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn3 btn3-1 shadow  my-3 d-block d-md-none" type="button"
+                    <button class="btn btn3 btn3-1 shadow text-main-color my-3 d-block d-md-none" type="button"
                         data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
                         aria-controls="collapseExample">
                         Categorie
@@ -175,6 +175,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-10 form-custom p-5">
+            @if(Auth::user() && Auth::user()->active_newsletter == false )
             <h4 class="text-center">
                 Vuoi essere sempre aggiornato? Iscriviti alla nostra newsletter per ricevere le ultime news!
             </h4>
@@ -185,6 +186,21 @@
                     </a>!
                 </button>
             </div>
+            
+            @else
+
+            <h4 class="text-center">
+              L'iscrizione alla newsletter è andata a buon fine. 
+            </h4>
+            <div  class="row justify-content-center" >
+                <button  class="btn btn2 shadow fw-bold fs-5 mx-auto text-white my-5">
+                    <a class="text-decoration-none text-white" href="{{route('users.deleteNewsletter')}}">
+                        Annulla iscrizione
+                    </a>!
+                </button>
+            </div>
+            
+            @endif
         </div>
     </div>
 </div>
