@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Mail\ContactMail;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
@@ -64,7 +65,6 @@ class ContactController extends Controller
         {
             return redirect()->back()->with('message', "Accedi per poter iscriverti alla newsletter");
         }
-        dd('ciolla');
         $user=Auth::user();
         $user->active_newsletter = false;
         $user->save();

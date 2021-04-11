@@ -4,9 +4,10 @@ namespace App\Mail;
 
 use App\Models\Announcement;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ContactDailyUser extends Mailable
 {
@@ -31,9 +32,9 @@ class ContactDailyUser extends Mailable
     public function build()
     {
         $announcements=Announcement::orderBy('id','desc')->take(5)->get();
-
+        $user=Auth::all();
         return $this->from('presto@presto.it')
-                    ->view('contacts.newsletter',compact('announcements'));
+                    ->view('contacts.newsletter',compact('announcements','user'));
       
     }
 }
