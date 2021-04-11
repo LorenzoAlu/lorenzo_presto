@@ -61,10 +61,10 @@
             <div class="row align-items-start mb-lg-1 bg-descrizione-md h-30 justify-content-center col-description">
                 <!-- DESCRIZIONE PRESTO.IT -->
                 <div
-                    class="col-12 col-md-7 d-flex bg-descrizione py-5 mt-3 py-md-0 mt-md-0 justify-content-center pt-xxl-5">
+                    class="col-12 col-md-7 d-flex bg-descrizione py-5 mt-5 py-lg-0 mt-lg-0 justify-content-center pt-xxl-5">
 
                     <p
-                        class="font-size20 text-align-center text-white line-height60 line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-xl-5">
+                        class="font-size20 text-align-center text-white line-height60 margin-custom-lg line-height40 position-custom position-custom-lg text-center text-lg-start mt-0 px-xl-5">
                         <span class="fs-2"> <b>Presto.it </b></span>
                         {{ __('ui.description_home') }}<br>
                         {{-- è uno dei portali più conosciuti dedicato agli annunci per vendite <br> e acquisti online. Esso permette a centinaia di migliaia di persone di  mettersi in <br> contatto e concludere numerosi affari vendendo in maniera diretta i propri prodotti. --}}</p>
@@ -119,7 +119,7 @@
              {{-- Icono Categories Mobile --}}
              <div class="col-12  col-md-5 col-xxl-4 d-block d-md-none text-align-mobile text-center ">
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn3 btn3-1 shadow text-main-color my-3 d-block d-md-none" type="button"
+                    <button class="btn btn3 btn3-1 shadow text-main-color hover-color my-3 d-block d-md-none" type="button"
                         data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
                         aria-controls="collapseExample">
                         Categorie

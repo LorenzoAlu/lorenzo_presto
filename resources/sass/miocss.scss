@@ -209,10 +209,7 @@ p{
 }
 
 //POSITION
-.position-custom-lg {
-  position: relative;
-  top: -40px;
-}
+
 
 .position-custom-xl {
   position: relative;
@@ -433,6 +430,7 @@ button{
 
 .home-search{
   height: 50px;
+  
 }
 
 .btn-like{
@@ -605,6 +603,10 @@ thead{
   background-color: var(--accent-color) !important;
 }
 
+.btn3:hover{
+ color: var(--accent-color);
+}
+
 //MEDIA QUERIES
 
 
@@ -648,6 +650,13 @@ thead{
   top: -150px;
 }
 
+@media screen and (max-width:1662px){
+  .position-custom-lg {
+    position: relative;
+    top: -105px;
+  }
+}
+
 @media screen and (min-width: 1676px) {
   .img-new {
       display: none !important;
@@ -660,6 +669,10 @@ thead{
   }
   .ms-xl-200 {
       margin-left: 200px;
+  }
+
+  .margin-custom-lg{
+    padding-top: 100px;
   }
 
   
@@ -714,6 +727,10 @@ thead{
 @media screen and (max-width: 576px) {
   .display-none {
       display: none;
+  }
+  .home-search{
+    height: 50px;
+    padding-left:18px;
   }
 }
 

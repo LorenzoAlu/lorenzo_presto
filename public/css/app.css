@@ -10950,11 +10950,6 @@ p {
   margin-top: 100px;
 }
 
-.position-custom-lg {
-  position: relative;
-  top: -40px;
-}
-
 .position-custom-xl {
   position: relative;
   top: -80px;
@@ -11332,6 +11327,10 @@ thead {
   background-color: var(--accent-color) !important;
 }
 
+.btn3:hover {
+  color: var(--accent-color);
+}
+
 @media screen and (max-width: 1676px) {
   .new-bg1 {
     background-image: url("/media/layout-md-8_Tavola disegno 1 copia 2.jpg");
@@ -11377,6 +11376,12 @@ thead {
   top: -150px;
 }
 
+@media screen and (max-width: 1662px) {
+  .position-custom-lg {
+    position: relative;
+    top: -105px;
+  }
+}
 @media screen and (min-width: 1676px) {
   .img-new {
     display: none !important;
@@ -11392,6 +11397,10 @@ thead {
 
   .ms-xl-200 {
     margin-left: 200px;
+  }
+
+  .margin-custom-lg {
+    padding-top: 100px;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -11444,6 +11453,11 @@ thead {
 @media screen and (max-width: 576px) {
   .display-none {
     display: none;
+  }
+
+  .home-search {
+    height: 50px;
+    padding-left: 18px;
   }
 }
 @media screen and (max-width: 400px) {
