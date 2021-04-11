@@ -24,7 +24,7 @@
         <div class="card">
             <h2>{{ $announcement->title }}</h2>
             <p>{{ $announcement->price }}</p>
-            <p>{{ $announcement->body }}</p>
+            <p>{{substr( $announcement->body ,0 , 10) }}...</p>
         </div>
     @endforeach
 </div>

@@ -2,7 +2,7 @@
     <img src="{{$image}}" class="card-img-top border-card" alt="...">
     <div class="py-3 padding-card d-flex w-100 flex-column justify-content-between">
       <div>
-        <h4 class="card-title"> {{substr($title, 0 , 180) }}...</h4>
+        <h4 class="card-title"> {{substr($title, 0 , 10) }}...</h4>
         <div class="d-flex justify-content-between">
           <p class="fs-3 fw-bold">{{$price}} €</p>
           @if ($liked == true)
