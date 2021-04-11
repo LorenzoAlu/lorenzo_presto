@@ -171,7 +171,7 @@
     </section>
 
 {{-- sezione 4 newsletter  --}}
-
+@if (Auth::user() != null)
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-10 form-custom p-5">
@@ -204,7 +204,9 @@
         </div>
     </div>
 </div>
+<img src="/media/aeroplano.png" class="aeroplano" alt="aeroplano">
 
+@endif
 
 
 

@@ -11021,7 +11021,7 @@ p {
 }
 
 .bg-gradient-navbar {
-  background: linear-gradient(90deg, #8CA4FA, #8CA4FA, #8CA4FA, #8CA4FA, #8CA4FA);
+  background: linear-gradient(90deg, #90adfb, #8ca4fa, #8a9dfb, #8691fb, #848afc);
 }
 
 .img-1 {
@@ -11322,6 +11322,58 @@ thead {
   height: 8px;
 }
 
+.aeroplano {
+  -webkit-animation-name: volo;
+          animation-name: volo;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes volo {
+  0% {
+    transform: translateX(-100px);
+  }
+  20% {
+    transform: translate(20vw, -70px) rotateZ(0deg);
+  }
+  40% {
+    transform: translate(40vw, -50px) rotateZ(25deg);
+  }
+  60% {
+    transform: translate(60vw, -160px) rotateZ(0deg);
+  }
+  80% {
+    transform: translate(80vw, -140px) rotateZ(25deg);
+  }
+  100% {
+    transform: translate(100vw, -190px) rotateZ(0deg);
+  }
+}
+
+@keyframes volo {
+  0% {
+    transform: translateX(-100px);
+  }
+  20% {
+    transform: translate(20vw, -70px) rotateZ(0deg);
+  }
+  40% {
+    transform: translate(40vw, -50px) rotateZ(25deg);
+  }
+  60% {
+    transform: translate(60vw, -160px) rotateZ(0deg);
+  }
+  80% {
+    transform: translate(80vw, -140px) rotateZ(25deg);
+  }
+  100% {
+    transform: translate(100vw, -190px) rotateZ(0deg);
+  }
+}
 .dropdown-item:hover, .dropdown-item:focus {
   color: white !important;
   background-color: var(--accent-color) !important;
