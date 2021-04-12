@@ -17,7 +17,7 @@
             
             <h3 class="my-5">{{__('ui.no_announcement_yet')}}</h3>
             <div class="col-12">  
-            <img src="/media/20944110.jpg" class="img-fluid mx-auto w-75 w-md-50" alt="non-ci-sono-annunci">
+            <img src="/media/20945433.jpg" class="img-fluid mx-auto img-desk1 img-mobile1" alt="non-ci-sono-annunci">
             
             </div>
             <div class="col-12">

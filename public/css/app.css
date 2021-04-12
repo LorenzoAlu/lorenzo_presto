@@ -11501,6 +11501,10 @@ thead {
   .line-height60 {
     line-height: 60px;
   }
+
+  .img-desk1 {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 576px) {
   .display-none {
@@ -11510,6 +11514,10 @@ thead {
   .home-search {
     height: 50px;
     padding-left: 18px;
+  }
+
+  .img-mobile1 {
+    width: 75%;
   }
 }
 @media screen and (max-width: 400px) {
