@@ -28,6 +28,12 @@ class HomeController extends Controller
         return view('home', compact('announcements'));
     }
 
+    public function homenew()
+    {
+        $announcements = Announcement::where('is_accepted', true)->orderBy('id', 'desc')->take(6)->get();
+        return view('homenew', compact('announcements'));
+    }
+
     public function profile()
     {
         $user=Auth::user();

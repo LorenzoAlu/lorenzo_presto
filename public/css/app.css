@@ -10833,6 +10833,21 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.background {
+  background: url("/media/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vh100 {
+  height: 100vh;
+}
+
+.overflow {
+  overflow-y: scroll;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -11383,153 +11398,6 @@ thead {
   color: var(--accent-color);
 }
 
-@media screen and (max-width: 1676px) {
-  .new-bg1 {
-    background-image: url("/media/layout-md-8_Tavola disegno 1 copia 2.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-  }
-
-  .bg-new2 {
-    background-image: url("/media/layout-md-9-09.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-  }
-
-  .bg-img3 {
-    background-image: none;
-  }
-}
-.outline-transition-none {
-  outline: none !important;
-  transition: none !important;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none !important;
-}
-
-.btn-info {
-  width: 150px;
-  height: 50px;
-  border-radius: 30px;
-  background-color: var(--accent-color);
-  border: none;
-}
-
-.btn-info:hover {
-  background-color: var(--accent-color) !important;
-}
-
-.position-custom2 {
-  position: relative;
-  top: -150px;
-}
-
-@media screen and (max-width: 1662px) {
-  .position-custom-lg {
-    position: relative;
-    top: -105px;
-  }
-}
-@media screen and (min-width: 1676px) {
-  .img-new {
-    display: none !important;
-  }
-
-  .text-lg-white {
-    color: white;
-  }
-
-  .w-lg-75 {
-    width: 75% !important;
-  }
-
-  .ms-xl-200 {
-    margin-left: 200px;
-  }
-
-  .margin-custom-lg {
-    padding-top: 100px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .row-justify-mobile {
-    display: flex;
-    justify-content: center !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  .bg-img1, .bg-img2, .bg-lg-img3 {
-    height: auto;
-  }
-
-  .d-md-hidden {
-    visibility: hidden;
-  }
-
-  .bg-descrizione-md {
-    background-color: #8588fb !important;
-  }
-
-  .position-custom2 {
-    position: relative;
-    top: 40px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .ps-lg-100 {
-    padding-left: 100px;
-  }
-
-  .mt-100 {
-    margin-top: 100px;
-  }
-
-  .position-custom {
-    position: relative;
-    top: -200px;
-  }
-
-  .text-align-center {
-    text-align: center !important;
-  }
-}
-@media screen and (min-width: 576px) {
-  .line-height60 {
-    line-height: 60px;
-  }
-
-  .img-desk1 {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 576px) {
-  .display-none {
-    display: none;
-  }
-
-  .home-search {
-    height: 50px;
-    padding-left: 18px;
-  }
-
-  .img-mobile1 {
-    width: 75%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .card-prodotto {
-    width: 300px;
-    box-shadow: 20px 20px 10px #b7c1c2 !important;
-  }
-
-  .img-1 {
-    width: 260px;
-  }
-}
 .dropzone, .dropzone * {
   box-sizing: border-box;
 }
