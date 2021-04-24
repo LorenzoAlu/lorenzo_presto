@@ -43,7 +43,7 @@
 
         <section class="container-fluid ">
             <div class="pt-5 mt-2">
-                <div class="row align-items-start  mb-lg-1 h-30 justify-content-center mt-5 pt-5 ">
+                <div class="row align-items-start   h-30 justify-content-center  ">
                     <!-- DESCRIZIONE PRESTO.IT -->
                     <div class="col-12 col-md-6 d-flex  justify-content-center ">
                         <p class="font-size20 text-align-center text-white  text-center text-md-start ">

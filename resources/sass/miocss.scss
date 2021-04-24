@@ -29,10 +29,29 @@
 
 .background{
   background: url('/media/background.png');
-  
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
+
+}
+
+@media screen and (max-width:1024px){
+
+  .background{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+    
+  .btn3 {
+    height: 60px;
+    border-radius: 40px;
+    font-size:12px!important;
+    padding: 0px 10px 0px 10px !important;
+    width: 75%;
+  }
+
 
 }
 
