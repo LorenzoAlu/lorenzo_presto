@@ -28,7 +28,7 @@ use App\Http\Controllers\AnnouncementController;
 */
 
 //test
-Route::get('/homenew', [HomeController::class, 'homenew'])->name('homenew');
+// Route::get('/homenew', [HomeController::class, 'homenew'])->name('homenew');
 //fine test
 
 
