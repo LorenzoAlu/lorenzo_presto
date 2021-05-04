@@ -106,10 +106,10 @@
 
 
         {{-- SEZIONE 3  CARD --}}
-        <section class="bg3 ">
-            <div class="container mt-5 ">
+        <section class="bg3 mt-5 pt-5 ">
+            <div class="container mt-5 pt-5">
                 @if (count($announcements) > 0)
-                    <div class="row ">
+                    <div class="row mt-5 pt-5">
                         <div class="col-12 text-center  my-5">
                             <h3>{{ __('ui.last_announcements') }}</h3>
                         </div>
